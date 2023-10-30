@@ -55,4 +55,26 @@ body {
 			color: $ods-black;
 		}
 	}
+	&.bttn-primary-dark {
+		border-color: $ods-black;
+		span {
+			color: $ods-black;
+		}
+		&:before {
+			background: rgba($ods-black, 1);
+		}
+		&:hover {
+			span {
+				color: $ods-white;
+			}
+		}
+	}
+}
+
+.section-title-main {
+	font-family: "galano-grotesque-medium", Arial, sans-serif;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 96px;
 }

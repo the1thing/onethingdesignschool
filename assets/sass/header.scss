@@ -2,6 +2,14 @@ header {
 	&.header {
 		padding: 24px 0;
 		border-bottom: 1px solid $ods-deep-grey;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+		transition: background .5s ease,padding ease,transform 1s ease;
+		background: transparent;
+		height: 108px;
 		.container-wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -17,8 +25,143 @@ header {
 				}
 			}
 		}
+		&.active {
+			padding: 0;
+			position: fixed;
+			&.nav-down {
+				height: 80px;
+				@include phone {
+					height: 60px;
+				}
+				.container-wrapper {
+					padding: 10px 0;
+					@include phone {
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		&.nav-up {
+			transform: translateY(-100%);
+			background: transparent;
+		}
+		&.nav-down {
+			transform: translateY(0);
+			background: transparent;
+			&.is-fixed {
+				background: $ods-black;
+			}
+		}
+		.container-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include phone {
+				padding: 0;
+				display: block;
+			}
+			.logo {
+				margin-right: 100px;
+				@include phone {
+					margin-right: 0;
+				}
+			}
+			.main-navigation {
+				margin-right: 190px;
+				@include phone {
+					margin-right: 0;
+					display: none;
+				}
+				ul {
+					display: flex;
+					@include phone {
+						flex-direction: column;
+					}
+					li {
+						margin-right: 40px;
+						font-family: "gilroy-regular";
+						a {
+							&:before {
+								background: black;
+								bottom: -2px;
+							}
+						}
+						&:last-of-type {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+			.header-contact {
+				@include phone {
+					display: none;
+				}
+			}
+		}
+		&.dark {
+			.container-wrapper {
+				.logo {
+					img {
+						filter: invert(100%);
+					}
+				}
+				.main-navigation {
+					.menu {
+						li {
+							.link_ {
+								&:before {
+									background: white;
+								}
+							}
+						}
+					}
+				}
+				.bttn-primary {
+					&:hover {
+						border: 1px solid white;
+						&:before {
+							background: white !important;
+						}
+					}
+				}
+			}
+		}
+		&.white {
+			background: white !important;
+			color: rgb(13, 13, 13) !important;
+			.container-wrapper {
+				.logo {
+					img {
+						filter: !important
+					}
+				}
+				.main-navigation {
+					.menu {
+						li {
+							.link_ {
+								color: rgb(13, 13, 13) !important
+							}
+						}
+					}
+				}
+				.header-contact {
+					.bttn-primary {
+						&:before {
+							background: white;
+						}
+					}
+				}
+			}
+		}
 	}
 }
+
+
+
+
+
+
 
 
 
