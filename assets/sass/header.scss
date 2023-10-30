@@ -1,5 +1,23 @@
 header {
-	&.header {}
+	&.header {
+		padding: 24px 0;
+		border-bottom: 1px solid $ods-deep-grey;
+		.container-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.logo {
+				.logo-link {
+					figure {
+						width: 140px;
+						img {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 

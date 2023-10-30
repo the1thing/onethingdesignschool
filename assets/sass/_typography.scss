@@ -1,31 +1,15 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
-
-h1 {}
-
-h2 {
-  @include phone {}
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0;
 }
 
-h3 {
-  @include phone {}
+.hero-big-text {
+  color: var(--Font, #FEFCE4);
+  font-family: "galano-grotesque-medium", Arial, sans-serif;
+  font-size: 104px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110px;
 }
-
-h4 {
-  @include phone {}
-}
-
-h5 {
-  @include phone {}
-}
-
-h6 {}
-
-p {}
 
 .text-center {
   text-align: center;

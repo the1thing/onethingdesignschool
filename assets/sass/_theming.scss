@@ -4,3 +4,55 @@ body {
 	color: $ods-white;
 	font-family: "galano-grotesque", sans-serif;
 }
+
+.bttn-primary {
+	color: $ods-lime;
+	font-family: "galano-grotesque-medium", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 150%;
+	text-transform: uppercase;
+	padding: 16px 24px;
+	border: 2px solid $ods-white;
+	border-radius: 40px;
+	transition-duration: 0.4s;
+	position: relative;
+	width: fit-content;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	display: block;
+	overflow: hidden;
+	span {
+		color: $ods-white;
+		position: relative;
+		z-index: 9;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		background: rgba($ods-white, 1);
+		left: 0;
+		width: 0;
+		top: 0;
+		height: 100%;
+		transition-duration: 0.4s;
+		z-index: 0;
+	}
+	&:hover {
+		transition-duration: 0.4s;
+		color: $ods-black;
+		&:before {
+			width: 100%;
+			transition-duration: 0.4s;
+		}
+		span {
+			color: $ods-black;
+		}
+	}
+	&:active {
+		border: 1px solid $ods-black;
+		background: transparent;
+		span {
+			color: $ods-black;
+		}
+	}
+}
