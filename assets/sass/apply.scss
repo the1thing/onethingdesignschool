@@ -1,73 +1,107 @@
-// * {
-//   box-sizing: border-box;
-//   margin: 0;
-// }
-// body {
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background: #0E100F;
-// }
-
-.deck {
-  margin: 100px auto;
-  width: 80vw;
-  min-height: 535px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: 
-    "card";
-}
-
-.card {
-  padding: 2.5rem;
-  position: relative;
-  grid-area: card;
-  border-radius: 2.5rem;
-  color: white;
-  h6 {
-    font-family: Poppins, sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
+.who-can-apply-wrapper {
+  background-image: url('../images/backgrounds/ods-writing-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 102px 0 120px 0;
+  .cta-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  p {
-    margin-top: 0.5rem;
-    width: min(336px, 100%);
+  .heading-wrap {
+    .section-title-secondary {
+      color: $ods-lime;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $ods-deep-grey;
+    }
   }
-}
-.yellow {
-  width: 74.5%;
-  height: 424px;
-  
-  margin-right: auto;
-  background-color: #FBB22D;
-}
-.pink {
-  width: 66%;
-  height: 395px;
-  margin-top: 2.5rem;
-  margin-left: auto;
-  background-color: #E571EE;
-}
-.blue {
-  width: 62%;
-  height: 318px;
-  margin-bottom: 2rem;
-  margin-left: 8.5%;
-  margin-right: auto;
-  margin-top: auto;
-  background-color: #628BFF;
-}
-.white {
-  width: 58.25%;
-  height: 302px;
-  margin-left: auto;
-  margin-right: 8.5%;
-  margin-top: auto;
-  background-color: #fff;
-  color: black;
-}
-.front {
-  z-index: 1;
+  .brief-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .brief-para {
+    margin-bottom: 56px;
+    p {
+      color: $ods-white;
+    }
+  }
+  .deck {
+    margin: 0 auto;
+    width: 80vw;
+    min-height: 535px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "card";
+    padding-bottom: 48px;
+  }
+
+  .card {
+    padding: 2.5rem;
+    position: relative;
+    grid-area: card;
+    border-radius: 2.5rem;
+    color: $ods-white;
+    position: relative;
+    h6 {
+      font-family: "galano-grotesque-medium", Arial, sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 0.5rem;
+      color: $ods-white;
+      width: min(336px, 100%);
+    }
+    .svg-icon {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  .yellow {
+    width: 74.5%;
+    height: 424px;
+
+    margin-right: auto;
+    background-color: $yellow;
+  }
+  .pink {
+    width: 66%;
+    height: 395px;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    background-color: $pink;
+  }
+  .blue {
+    width: 62%;
+    height: 318px;
+    margin-bottom: 2rem;
+    margin-left: 8.5%;
+    margin-right: auto;
+    margin-top: auto;
+    background-color: $blue;
+  }
+  .white {
+    width: 58.25%;
+    height: 302px;
+    margin-left: auto;
+    margin-right: 8.5%;
+    margin-top: auto;
+    background-color: $ods-white;
+    color: $ods-black;
+    p {
+      color: $ods-black;
+    }
+  }
+  .front {
+    z-index: 1;
+  }
 }

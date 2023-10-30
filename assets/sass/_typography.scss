@@ -1,13 +1,13 @@
 h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0;
-  font-family: "galano-grotesque-medium", Arial, sans-serif;
+  font-family: "galano-grotesque-semibold", sans-serif;
   font-style: normal;
   font-weight: 600;
 }
 
 .hero-big-text {
-  color: var(--Font, #FEFCE4);
-  font-family: "galano-grotesque-medium", Arial, sans-serif;
+  color: $ods-lime;
+  font-family: "galano-grotesque-semibold", sans-serif;
   font-size: 104px;
   line-height: 110px;
   font-style: normal;
@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-  font-family: "galano-grotesque-altregular", Arial, sans-serif;
+  font-family: "galano-grotesque-regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: $ods-black;

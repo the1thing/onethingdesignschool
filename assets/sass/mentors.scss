@@ -2,6 +2,20 @@
 	border-radius: 96px;
 	background: $ods-light-blue;
 	padding: 120px 0 0 0;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		position: absolute;
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='422' viewBox='0 0 160 422' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M241 -231L241 301.337C241 367.977 187.05 422 120.5 422C53.9497 422 4.33545e-06 367.977 7.24839e-06 301.337L3.05176e-05 -231L241 -231ZM162.242 -152.135L78.7582 -152.135L78.7582 301.337C78.7582 324.422 97.4466 343.135 120.5 343.135C143.553 343.135 162.242 324.422 162.242 301.337L162.242 -152.135Z' fill='%235A86FD' fill-opacity='0.1'/%3E%3C/svg%3E");
+		right: 0;
+		top: -20px;
+		height: 478px;
+		width: 180px;
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+	}
 	h2 {
 		color: $ods-black;
 	}
@@ -21,10 +35,12 @@
 				}
 			}
 		}
-		p {
-			font-size: 24px;
-			line-height: 40px;
-			padding-bottom: 40px;
+		.brief-para {
+			p {
+				font-size: 24px;
+				line-height: 40px;
+				padding-bottom: 40px;
+			}
 		}
 		.mentor-contact-help {
 			margin-top: 64px;
@@ -35,14 +51,14 @@
 			.brief_ {
 				p {
 					color: $ods-black;
-					font-family: "galano-grotesque-altregular", Arial, sans-serif;
+					font-family: "galano-grotesque-regular", sans-serif;
 					font-size: 24px;
 					font-weight: 400;
 					line-height: 40px;
 					strong {
 						display: block;
 						margin-bottom: 16px;
-						font-family: "galano-grotesque-bold", Arial, sans-serif;
+						font-family: "galano-grotesque-bold", sans-serif;
 						font-size: 32px;
 					}
 				}

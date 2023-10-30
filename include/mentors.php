@@ -17,7 +17,9 @@
 					for 2 years
 				</h2>
 			</div>
-			<p>Over the years, <strong>Onething Design Studio</strong> has curated expertise from the best minds of the industry to help inquisitive self-starters discover the world of UX. For 10+ classes to introducing creatives into the world of industry through direct experiences with professional teachers in the sector.</p>
+			<div class="brief-para">
+				<p>Over the years, <strong>Onething Design Studio</strong> has curated expertise from the best minds of the industry to help inquisitive self-starters discover the world of UX. For 10+ classes to introducing creatives into the world of industry through direct experiences with professional teachers in the sector.</p>
+			</div>
 		</div>
 		<div class="mentors-slider-autowrapper">
 			<h1>Slider</h1>

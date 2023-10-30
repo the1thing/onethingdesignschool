@@ -1,76 +1,48 @@
 @font-face {
-  font-family: "galano-grotesque", Arial, sans-serif;
+  font-family: "galano-grotesque-heavy";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltBlack.ttf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-heavy.ttf");
   font-weight: 900;
 }
-
 @font-face {
-  font-family: "galano-grotesque-bold", Arial, sans-serif;
+  font-family: "galano-grotesque-extrabold";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueBold.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-extrabold.ttf");
   font-weight: 800;
 }
-
 @font-face {
-  font-family: "galano-grotesque-altheavy", Arial, sans-serif;
+  font-family: "galano-grotesque-bold";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltHeavy.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-bold.ttf");
   font-weight: 700;
 }
-
 @font-face {
-  font-family: "galano-grotesque-medium", Arial, sans-serif;
+  font-family: "galano-grotesque-semibold";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueMedium.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-semibold.ttf");
   font-weight: 600;
 }
-
 @font-face {
-  font-family: "galano-grotesque-altsemibold", Arial, sans-serif;
+  font-family: "galano-grotesque-medium";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltSemiBold.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-medium.ttf");
   font-weight: 500;
 }
-
 @font-face {
-  font-family: "galano-grotesque-altregular", Arial, sans-serif;
+  font-family: "galano-grotesque-regular";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltRegular.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-regular.ttf");
   font-weight: 400;
 }
-
 @font-face {
-  font-family: "galano-grotesque-black", Arial, sans-serif;
+  font-family: "galano-grotesque-light";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueBlack.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-light.ttf");
   font-weight: 300;
 }
-
 @font-face {
-  font-family: "galano-grotesque-altlight", Arial, sans-serif;
+  font-family: "galano-grotesque-extralight";
   font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltLight.otf") format("opentype");
+  src: url("../fonts/galano-grotesque/ttf/galano-grotesque-extralight.ttf");
   font-weight: 200;
-}
-
-@font-face {
-  font-family: "galano-grotesque-altextralight", Arial, sans-serif;
-  font-style: normal;
-  src: url("../fonts/galano-grotesque/GalanoGrotesqueAltExtraLight.otf") format("opentype");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "pp-mori-regular", Arial, sans-serif;
-  font-style: normal;
-  src: url("../fonts/pp-mori/PPMori-Regular.otf") format("opentype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "pp-mori-semibold", Arial, sans-serif;
-  font-style: normal;
-  src: url("../fonts/pp-mori/PPMori-SemiBold.otf") format("opentype");
-  font-weight: 600;
 }
