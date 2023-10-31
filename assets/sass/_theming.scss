@@ -72,11 +72,18 @@ body {
 }
 
 .section-title-main {
-	ffont-family: "galano-grotesque-bold", sans-serif;
+	font-family: "galano-grotesque-bold", sans-serif;
 	font-size: 80px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 96px;
+	span {
+		border-radius: 80px;
+		color: $ods-white;
+		padding: 24px 40px;
+		margin-top: 8px;
+		display: inline-block;
+	}
 }
 
 .section-title-secondary {
@@ -87,6 +94,17 @@ body {
 	line-height: 96px;
 }
 
+.heading-div {
+	display: flex;
+	gap: 24px; 
+	align-items: center;
+	margin-bottom: 24px;
+	h2 {
+		color: $ods-black;
+		font-size: 80px;
+		line-height: 96px; 
+	}
+}
 
 
 

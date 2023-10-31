@@ -18,6 +18,22 @@ require_once './header.php';
       <div class="template-import template-who-can-apply">
          <?php include './include/apply.php'; ?>
       </div>
+
+      <div class="template-import template-learning">
+         <?php include './include/start-learning-now.php'; ?>
+      </div>
+
+      <div class="template-import template-testimonials">
+         <?php include './include/testimonials.php'; ?>
+      </div>
+
+      <div class="template-import template-faq">
+         <?php include './include/faq.php'; ?>
+      </div>
+
+      <div class="template-import template-contact">
+         <?php include './include/contact-us-strip.php'; ?>
+      </div>
    </div>
 </div>
 

@@ -1,0 +1,61 @@
+section {
+	&.contact-us-strip-wrapper {
+		background-image: url('../images/elements/footer/footer-bg.png');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-bottom: 150px; //this is temp, we'll add matter js
+		.strip-divider {
+			border-top: 1px solid $ods-deep-grey;
+			padding: 120px 0;
+		}
+		.contact-main {
+			padding: 120px 0;
+			.div-wrap {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.contact-content {
+					p {
+						color: $ods-white;
+						margin-bottom: 32px;
+					}
+				}
+				.heading-wrap {
+					.section-title-main {
+						.svg-icon {
+							display: inline-block;
+						}
+						span {
+							background: $blue;
+						}
+					}
+				}
+			}
+		}
+		.svg-riddled {
+			position: relative;
+			display: none;
+			.svg-icon {
+				height: 80px;
+				width: 80px;
+				position: absolute;
+				object-fit: cover;
+				object-position: center center;
+				&#vector-1 {}
+				&#vector-2 {}
+				&#vector-3 {}
+				&#vector-4 {}
+				&#vector-5 {}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
