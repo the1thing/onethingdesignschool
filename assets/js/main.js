@@ -15,37 +15,42 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
-  	// Who can Apply Section Js
-	const deck = document.querySelector(".deck");
-	deck.addEventListener("click", (e) => {
-		const clickedCard = e.target.closest(".card");
-		if (!clickedCard) return;
-		const cards = Array.from(deck.querySelectorAll(".card"));
-		cards.forEach((card) => {
-			card.classList.remove("front");
-		});
-		e.target.closest(".card").classList.add("front");
-	});
-});
+  var stackCards = document.getElementsByClassName("card-deck-js");
+var intersectionObserverSupported =
+"IntersectionObserver" in window && "IntersectionObserverEntry" in window;
 
-  // Testimonial Decking Card Animation Js
-var StackCards = function(element) {
-	this.element = element;
-	this.items = this.element.getElementsByClassName("card");
-	this.scrollingListener = false;
-	this.scrolling = false;
-	initStackCardsEffect(this);
-};
-
-function initStackCardsEffect(element) {
-  // use Intersection Observer to trigger animation
-	var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-	observer.observe(element.element);
+if (stackCards.length > 0 && intersectionObserverSupported) {
+	for (var i = 0; i < stackCards.length; i++) {
+		new StackCards(stackCards[i]);
+	}
 }
 
-function stackCardsCallback(entries) {
+const contentSection = document.querySelector(".client-content");
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		entry.target.classList.toggle("active", entry.isIntersecting);
+	});
+});
+observer.observe(contentSection);
+
+  // Testimonial Decking Card Animation Js
+	var StackCards = function(element) {
+		this.element = element;
+		this.items = this.element.getElementsByClassName("card");
+		this.scrollingListener = false;
+		this.scrolling = false;
+		initStackCardsEffect(this);
+	};
+
+	function initStackCardsEffect(element) {
+  // use Intersection Observer to trigger animation
+		var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+		observer.observe(element.element);
+	}
+
+	function stackCardsCallback(entries) {
   // Intersection Observer callback
-	if (entries[0].isIntersecting) {
+		if (entries[0].isIntersecting) {
     // cards inside viewport - add scroll listener
     if (this.scrollingListener) return; // listener for scroll event already added
     stackCardsInitEvent(this);
@@ -92,24 +97,6 @@ function animateStackCards() {
 
 	this.scrolling = false;
 }
-
-var stackCards = document.getElementsByClassName("card-deck-js");
-var intersectionObserverSupported =
-"IntersectionObserver" in window && "IntersectionObserverEntry" in window;
-
-if (stackCards.length > 0 && intersectionObserverSupported) {
-	for (var i = 0; i < stackCards.length; i++) {
-		new StackCards(stackCards[i]);
-	}
-}
-
-const contentSection = document.querySelector(".client-content");
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		entry.target.classList.toggle("active", entry.isIntersecting);
-	});
-});
-observer.observe(contentSection);
 
 
 
@@ -205,6 +192,22 @@ function closeOpenedDetails() {
 		}
 	});
 }
+
+
+
+
+	// Who can Apply Section Js
+const deck = document.querySelector(".deck");
+deck.addEventListener("click", (e) => {
+	const clickedCard = e.target.closest(".card");
+	if (!clickedCard) return;
+	const cards = Array.from(deck.querySelectorAll(".card"));
+	cards.forEach((card) => {
+		card.classList.remove("front");
+	});
+	e.target.closest(".card").classList.add("front");
+});
+});
 
 $(window).on("scroll", function() {
 	if($(window).scrollTop() > 150) {
