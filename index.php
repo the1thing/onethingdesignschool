@@ -35,7 +35,11 @@ require_once './header.php';
 		</div>
 </div> -->
       <div class="template-import template-curriculum">
-         <?php include './include/curriculum.php'; ?>
+         <?php //include './include/curriculum.php'; ?>
+      </div>
+
+      <div class="template-import template-client">
+         <?php include './include/client-grid.php'; ?>
       </div>
 
       <div class="template-import template-learning">
@@ -47,7 +51,7 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-faq">
-         <?php include './include/faq.php'; ?>
+         <?php //include './include/faq.php'; ?>
       </div>
 
       <div class="template-import template-contact">

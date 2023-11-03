@@ -23,7 +23,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/divanshu.png">
 						<div class="content">
 							<h4>
 								Divanshu thakral
@@ -42,7 +42,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/ravina.png">
 						<div class="content">
 							<h4>
 								Ravina malik
@@ -61,10 +61,10 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/shubhanjay.png">
 						<div class="content">
 							<h4>
-								Antara Bhargava
+								Shubhanjay Sathe
 								<small>
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="16" cy="16.0002" r="16" fill="black"/>
@@ -72,7 +72,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Visual Designer at Swiggy</p>
+							<p>Sr. UI UX Designer,  OrangePeople</p>
 						</div>
 					</div>
 				</div>
@@ -99,7 +99,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/divanshu.png">
 						<div class="content">
 							<h4>
 								Divanshu thakral
@@ -118,7 +118,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/ravina.png">
 						<div class="content">
 							<h4>
 								Ravina malik
@@ -137,10 +137,10 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/shubhanjay.png">
 						<div class="content">
 							<h4>
-								Antara Bhargava
+								Shubhanjay Sathe
 								<small>
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="16" cy="16.0002" r="16" fill="black"/>
@@ -148,7 +148,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Visual Designer at Swiggy</p>
+							<p>Sr. UI UX Designer,  OrangePeople</p>
 						</div>
 					</div>
 				</div>

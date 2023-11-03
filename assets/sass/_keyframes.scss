@@ -1,8 +1,50 @@
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @keyframes marquee {
 	0% {
 		transform: translateX(0);
 	}
 	100% {
 		transform: translateX(-100%);
+	}
+}
+
+@keyframes toRight {
+	50% {
+		transform: translatex(100%);
+	}
+	to {
+		transform: translatex(0)
+	}
+}
+@keyframes toLeft {
+	50% {
+		transform: translatex(-100%);
+	}
+	to {
+		transform: translatex(0)
+	}
+}
+@keyframes toTop {
+	50% {
+		transform: translatey(-100%);
+	}
+	to {
+		transform: translatey(0)
+	}
+}
+@keyframes toBottom {
+	50% {
+		transform: translatey(0%);
+	}
+	to {
+		transform: translatey(-100%)
 	}
 }

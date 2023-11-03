@@ -5,7 +5,7 @@
 				<div class="heading-wrap">
 					<h2 class="section-title-main">
 						<div class="svg-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+							<svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
 								<mask id="path-1-outside-1_168_5455" maskUnits="userSpaceOnUse" x="0" y="0" width="66" height="66" fill="black">
 									<rect fill="white" width="66" height="66"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M36.1111 5H29.8889V25.4891L15.4009 11.0011L11.0011 15.4009L25.4891 29.8889H5V36.1111H25.4891L11.0011 50.5991L15.4009 54.9989L29.8889 40.5109V61H36.1111V40.5109L50.5991 54.9989L54.9989 50.5991L40.5109 36.1111H61V29.8889H40.5109L54.9988 15.4009L50.5991 11.0012L36.1111 25.4891V5Z"/>

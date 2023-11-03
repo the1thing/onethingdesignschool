@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
   }
   .heading-wrap {
     .section-title-secondary {
@@ -22,11 +23,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    .star-svg {
+      animation: 5s rotate infinite;
+      animation-timing-function: linear;
+    }
   }
   .brief-para {
-    margin-bottom: 56px;
+    // margin-bottom: 64px;
+    margin-bottom: 80px;
     p {
       color: $ods-white;
+      width: 60%;
+      margin-left: auto;
     }
   }
   .deck {
@@ -55,6 +63,7 @@
       margin-top: 0.5rem;
       color: $ods-white;
       width: min(336px, 100%);
+      width: 33%;
     }
     .svg-icon {
       position: absolute;
@@ -66,24 +75,27 @@
       }
     }
   }
+
   .yellow {
     width: 74.5%;
     height: 424px;
-
     margin-right: auto;
     background-color: $yellow;
+    margin-top: 10px;
   }
   .pink {
     width: 66%;
     height: 395px;
-    margin-top: 2.5rem;
+    // margin-top: 2.5rem;
+    margin-top: -20px;
     margin-left: auto;
     background-color: $pink;
   }
   .blue {
     width: 62%;
     height: 318px;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
+    margin-bottom: 0;
     margin-left: 8.5%;
     margin-right: auto;
     margin-top: auto;
@@ -95,6 +107,7 @@
     margin-left: auto;
     margin-right: 8.5%;
     margin-top: auto;
+    margin-bottom: -30px;
     background-color: $ods-white;
     color: $ods-black;
     p {

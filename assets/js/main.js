@@ -15,138 +15,37 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
-	// document.addEventListener("DOMContentLoaded", function() {
-	// 	const cards = document.querySelectorAll(".card");
-	// 	const container = document.querySelector(".who-can-apply-wrapper");
-	// 	console.log(container,"ddd")
-	// 	const leftAnimation = gsap.timeline();
-	// 	leftAnimation.to(container, {
-	// 		x: -200,
-	// 		duration: 2,
-	// 	});
-	// 	ScrollTrigger.create({
-	// 		animation: leftAnimation,
-	// 		trigger: container,
-	// 		start: "-600px top",
-	// 		end: "center center",
-	// 		scrub: 1,
-	// 	});
-
-	// });
-	function isInViewport(element) {
-		const rect = element.getBoundingClientRect();
-		return (
-			rect.top >= 0 &&
-			rect.left >= 0 &&
-			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-		);
-	}
-	// const staticElement=document.querySelectorAll('.static-curriculum-main-container')
-	// const animatedElement=document.querySelectorAll('.curriculum-main-container')
-	// document.addEventListener('scroll', function () {
-	// 	if (isInViewport(animatedElement)) {
-	// 		staticElement.style.display = 'none'; 
-	// 	} else {
-	// 		staticElement.style.display = 'flex'; 
-	// 	}
-	// });
-    // console.log("static")
-
-
-	// gsap.registerPlugin(ScrollTrigger);
-	// let sections = gsap.utils.toArray(".card");
-	// gsap.to(sections, {
-	// 	xPercent: -100 * (sections.length - 1),
-	// 	ease: "none",
-	// 	scrollTrigger: {
-	// 		trigger: ".curriculum-main-container",
-	// 		pin: true,
-	// 		scrub: 1,
-	// 		snap: 1 / (sections.length-1),
-	// 		// start: "center center",
-	// 		end: () => "+=4000",
-			
-	// 	}
-	// });
-
-	const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
-	scrollContainers.forEach((container) => {
-		const scrollWidth = container.scrollWidth;
-		let isScrollingPaused = false;
-		window.addEventListener("load", () => {
-			self.setInterval(() => {
-				if (isScrollingPaused) {
-					return;
-				}
-				const first = container.querySelector("article");
-
-				if (!isElementInViewport(first)) {
-					container.appendChild(first);
-					container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
-				}
-				if (container.scrollLeft !== scrollWidth) {
-					container.scrollTo(container.scrollLeft + 1, 0);
-				}
-			}, 15);
+  	// Who can Apply Section Js
+	const deck = document.querySelector(".deck");
+	deck.addEventListener("click", (e) => {
+		const clickedCard = e.target.closest(".card");
+		if (!clickedCard) return;
+		const cards = Array.from(deck.querySelectorAll(".card"));
+		cards.forEach((card) => {
+			card.classList.remove("front");
 		});
-
-		function isElementInViewport(el) {
-			var rect = el.getBoundingClientRect();
-			return rect.right > 0;
-		}
-
-		function pauseScrolling() {
-			isScrollingPaused = true;
-		}
-
-		function resumeScrolling() {
-			isScrollingPaused = false;
-		}
-		const allArticles = container.querySelectorAll("article");
-		for (let article of allArticles) {
-			article.addEventListener("mouseenter", pauseScrolling);
-			article.addEventListener("mouseleave", resumeScrolling);
-		}
+		e.target.closest(".card").classList.add("front");
 	});
+});
 
+  // Testimonial Decking Card Animation Js
+var StackCards = function(element) {
+	this.element = element;
+	this.items = this.element.getElementsByClassName("card");
+	this.scrollingListener = false;
+	this.scrolling = false;
+	initStackCardsEffect(this);
+};
 
-
-
-	// Faq Js
-	const summaries = document.querySelectorAll("summary");
-	summaries.forEach((summary) => {
-		summary.addEventListener("click", closeOpenedDetails);
-	});
-	function closeOpenedDetails() {
-		summaries.forEach((summary) => {
-			let detail = summary.parentNode;
-			if (detail != this.parentNode) {
-				detail.removeAttribute("open");
-			}
-		});
-	}
-
-
-
-	// Testimonial Decking Card Animation Js
-	var StackCards = function(element) {
-		this.element = element;
-		this.items = this.element.getElementsByClassName("card");
-		this.scrollingListener = false;
-		this.scrolling = false;
-		initStackCardsEffect(this);
-	};
-
-	function initStackCardsEffect(element) {
+function initStackCardsEffect(element) {
   // use Intersection Observer to trigger animation
-		var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-		observer.observe(element.element);
-	}
+	var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+	observer.observe(element.element);
+}
 
-	function stackCardsCallback(entries) {
+function stackCardsCallback(entries) {
   // Intersection Observer callback
-		if (entries[0].isIntersecting) {
+	if (entries[0].isIntersecting) {
     // cards inside viewport - add scroll listener
     if (this.scrollingListener) return; // listener for scroll event already added
     stackCardsInitEvent(this);
@@ -204,19 +103,108 @@ if (stackCards.length > 0 && intersectionObserverSupported) {
 	}
 }
 
-
-	// Who can Apply Section Js
-const deck = document.querySelector(".deck");
-deck.addEventListener("click", (e) => {
-	const clickedCard = e.target.closest(".card");
-	if (!clickedCard) return;
-	const cards = Array.from(deck.querySelectorAll(".card"));
-	cards.forEach((card) => {
-		card.classList.remove("front");
+const contentSection = document.querySelector(".client-content");
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		entry.target.classList.toggle("active", entry.isIntersecting);
 	});
-	e.target.closest(".card").classList.add("front");
 });
+observer.observe(contentSection);
+
+
+
+	document.addEventListener("DOMContentLoaded", function() {
+		const cards = document.querySelectorAll(".card");
+		const container = document.querySelector(".curriculum-main-container");
+		const leftAnimation = gsap.timeline();
+		leftAnimation.to(container, {
+			x: -200,
+			duration: 2,
+		});
+		ScrollTrigger.create({
+			animation: leftAnimation,
+			trigger: container,
+			start: "700px top", 
+			end: "center center",
+			scrub: 1,
+		});
+
+	});
+	
+
+
+
+	gsap.registerPlugin(ScrollTrigger);
+	console.log(document.querySelector(".card").offsetWidth,"sss")
+	let sections = gsap.utils.toArray(".card");
+	gsap.to(sections, {
+		xPercent: -100 * (sections.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".curriculum-main-container",
+			pin: true,
+			scrub: 1,
+			snap: 1 / (sections.length-1),
+			end: () => "+=4000"
+		}
+	});
+
+const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+scrollContainers.forEach((container) => {
+	const scrollWidth = container.scrollWidth;
+	let isScrollingPaused = false;
+	window.addEventListener("load", () => {
+		self.setInterval(() => {
+			if (isScrollingPaused) {
+				return;
+			}
+			const first = container.querySelector("article");
+
+			if (!isElementInViewport(first)) {
+				container.appendChild(first);
+				container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+			}
+			if (container.scrollLeft !== scrollWidth) {
+				container.scrollTo(container.scrollLeft + 1, 0);
+			}
+		}, 15);
+	});
+
+	function isElementInViewport(el) {
+		var rect = el.getBoundingClientRect();
+		return rect.right > 0;
+	}
+
+	function pauseScrolling() {
+		isScrollingPaused = true;
+	}
+
+	function resumeScrolling() {
+		isScrollingPaused = false;
+	}
+	const allArticles = container.querySelectorAll("article");
+	for (let article of allArticles) {
+		article.addEventListener("mouseenter", pauseScrolling);
+		article.addEventListener("mouseleave", resumeScrolling);
+	}
 });
+
+
+
+
+	// Faq Js
+const summaries = document.querySelectorAll("summary");
+summaries.forEach((summary) => {
+	summary.addEventListener("click", closeOpenedDetails);
+});
+function closeOpenedDetails() {
+	summaries.forEach((summary) => {
+		let detail = summary.parentNode;
+		if (detail != this.parentNode) {
+			detail.removeAttribute("open");
+		}
+	});
+}
 
 $(window).on("scroll", function() {
 	if($(window).scrollTop() > 150) {
