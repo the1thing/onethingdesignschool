@@ -7,7 +7,7 @@
         </h2>
       </div>
       <div class="brief-div">
-        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+        <svg class="star-svg" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
           <path d="M25.04 1.35742H30.9606V54.6423H25.04V1.35742Z" fill="#E571EE"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6816 0H32.3173V56H23.6816V0ZM25.0392 1.35758V54.6424H30.9598V1.35758H25.0392Z" fill="#E571EE"/>
           <path d="M44.7461 7.06738L48.9325 11.2538L11.2545 48.9319L7.06802 44.7455L44.7461 7.06738Z" fill="#E571EE"/>

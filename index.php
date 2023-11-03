@@ -20,7 +20,7 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-curriculum">
-         <?php include './include/curriculum.php'; ?>
+         <?php //include './include/curriculum.php'; ?>
       </div>
 
       <div class="template-import template-client">
@@ -32,11 +32,11 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-testimonials">
-         <?php //include './include/testimonials.php'; ?>
+         <?php include './include/testimonials.php'; ?>
       </div>
 
       <div class="template-import template-faq">
-         <?php include './include/faq.php'; ?>
+         <?php //include './include/faq.php'; ?>
       </div>
 
       <div class="template-import template-contact">

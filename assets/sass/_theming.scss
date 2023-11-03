@@ -83,7 +83,16 @@ body {
 		padding: 24px 40px;
 		margin-top: 8px;
 		display: inline-block;
+		img {
+			animation: 5s rotate infinite;
+			animation-timing-function: linear;
+		}
 	}
+}
+
+.star-svg {
+	animation: 5s rotate infinite;
+	animation-timing-function: linear;
 }
 
 .section-title-secondary {
