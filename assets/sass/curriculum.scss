@@ -1,13 +1,19 @@
 .curriculum-wrapper {
+	overflow: hidden;
 	.curriculum-main-container {
 		display: flex;
 		height: 100vh;
 		width: unset !important;
 		max-width: unset!important;
+		overflow: hidden;
 	}
 	.card{ 
 		width: 100vw;  
 		height: 100vh;  
+		display: flex;
+		flex-direction: row;
+		border: none;
+		background-clip: none;
 	}
 	.card1{
 		padding: 0px 121px;
@@ -75,6 +81,8 @@ transform: rotate(-5deg);
 	align-items: center;
 	width: 100%;
 	padding: 32px 0;
+	background: #fff;
+	border-top: none;
 
 }
 .card-footer p{
@@ -123,7 +131,8 @@ width: 712px;
 }
 .cards{
 	display: flex;
-	width: 100%;
+	// width: 100%;
+	// width: 100vw;
 	position: relative;
 	height: 100vh;
 }
@@ -254,13 +263,13 @@ width: 712px;
 	z-index: 1;
 }
 .card-second{
-	right: 7.5%;
+	right: 8.5%;
 }
 .card-third{   
-	right: 7.5%;
+	right: 9%;
 }
 .card-fourth{  
-	left: 6.5%;
+	left: 7.5%;
 }
 .card-bottom-pattern2{
 	position: absolute;

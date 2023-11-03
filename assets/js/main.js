@@ -15,39 +15,41 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
-	// document.addEventListener("DOMContentLoaded", function() {
-	// 	const cards = document.querySelectorAll(".card");
-	// 	const container = document.querySelector(".main-container");
-	// 	const leftAnimation = gsap.timeline();
-	// 	leftAnimation.to(container, {
-	// 		x: -200,
-	// 		duration: 2,
-	// 	});
-	// 	ScrollTrigger.create({
-	// 		animation: leftAnimation,
-	// 		trigger: container,
-	// 		start: "top center",
-	// 		end: "center center",
-	// 		scrub: 1,
-	// 	});
+	document.addEventListener("DOMContentLoaded", function() {
+		const cards = document.querySelectorAll(".card");
+		const container = document.querySelector(".curriculum-main-container");
+		const leftAnimation = gsap.timeline();
+		leftAnimation.to(container, {
+			x: -200,
+			duration: 2,
+		});
+		ScrollTrigger.create({
+			animation: leftAnimation,
+			trigger: container,
+			start: "700px top", 
+			end: "center center",
+			scrub: 1,
+		});
 
-	// });
+	});
+	
 
 
-	// gsap.registerPlugin(ScrollTrigger);
-	// console.log(document.querySelector(".card").offsetWidth,"sss")
-	// let sections = gsap.utils.toArray(".card");
-	// gsap.to(sections, {
-	// 	xPercent: -100 * (sections.length - 1),
-	// 	ease: "none",
-	// 	scrollTrigger: {
-	// 		trigger: ".main-container",
-	// 		pin: true,
-	// 		scrub: 1,
-	// 		snap: 1 / (sections.length-1),
-	// 		end: () => "+=4000"
-	// 	}
-	// });
+
+	gsap.registerPlugin(ScrollTrigger);
+	console.log(document.querySelector(".card").offsetWidth,"sss")
+	let sections = gsap.utils.toArray(".card");
+	gsap.to(sections, {
+		xPercent: -100 * (sections.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".curriculum-main-container",
+			pin: true,
+			scrub: 1,
+			snap: 1 / (sections.length-1),
+			end: () => "+=4000"
+		}
+	});
 
 	const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
 	scrollContainers.forEach((container) => {
@@ -237,6 +239,7 @@ var header = document.getElementById("header");
 var sxn2 = document.getElementById("two");
 var sxn3 = document.getElementById("three");
 var hh = header.offsetHeight;
+
 var color = [
 	[230, 237, 237],
 	[255, 255, 255],
