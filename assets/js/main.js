@@ -26,12 +26,14 @@ $(document).ready(function() {
 		ScrollTrigger.create({
 			animation: leftAnimation,
 			trigger: container,
-			start: "top center",
+			start: "700px top", 
 			end: "center center",
 			scrub: 1,
 		});
 
 	});
+	
+
 
 
 	gsap.registerPlugin(ScrollTrigger);
