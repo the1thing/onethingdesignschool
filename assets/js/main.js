@@ -15,6 +15,16 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
+	const contentSection = document.querySelector(".client-content");
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			entry.target.classList.toggle("active", entry.isIntersecting);
+		});
+	});
+	observer.observe(contentSection);
+
+	
+
 	document.addEventListener("DOMContentLoaded", function() {
 		const cards = document.querySelectorAll(".card");
 		const container = document.querySelector(".curriculum-main-container");

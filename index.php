@@ -23,6 +23,10 @@ require_once './header.php';
          <?php include './include/curriculum.php'; ?>
       </div>
 
+      <div class="template-import template-client">
+         <?php include './include/client-grid.php'; ?>
+      </div>
+
       <div class="template-import template-learning">
          <?php include './include/start-learning-now.php'; ?>
       </div>

@@ -6,3 +6,36 @@
 		transform: translateX(-100%);
 	}
 }
+
+@keyframes toRight {
+	50% {
+		transform: translatex(100%);
+	}
+	to {
+		transform: translatex(0)
+	}
+}
+@keyframes toLeft {
+	50% {
+		transform: translatex(-100%);
+	}
+	to {
+		transform: translatex(0)
+	}
+}
+@keyframes toTop {
+	50% {
+		transform: translatey(-100%);
+	}
+	to {
+		transform: translatey(0)
+	}
+}
+@keyframes toBottom {
+	50% {
+		transform: translatey(0%);
+	}
+	to {
+		transform: translatey(-100%)
+	}
+}
