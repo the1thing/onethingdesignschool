@@ -19,6 +19,10 @@ require_once './header.php';
          <?php include './include/apply.php'; ?>
       </div>
 
+      <div class="template-import template-curriculum">
+         <?php include './include/curriculum.php'; ?>
+      </div>
+
       <div class="template-import template-learning">
          <?php include './include/start-learning-now.php'; ?>
       </div>
