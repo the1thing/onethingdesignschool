@@ -24,9 +24,11 @@
     align-items: flex-start;
   }
   .brief-para {
-    margin-bottom: 56px;
+    margin-bottom: 64px;
     p {
       color: $ods-white;
+      width: 60%;
+      margin-left: auto;
     }
   }
   .deck {

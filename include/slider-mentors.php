@@ -23,7 +23,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/divanshu.png">
 						<div class="content">
 							<h4>
 								Divanshu thakral
@@ -42,7 +42,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/manik.png">
+						<img src="assets/images/people/mentors/ravina.png">
 						<div class="content">
 							<h4>
 								Ravina malik

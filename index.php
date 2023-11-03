@@ -32,7 +32,7 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-testimonials">
-         <?php include './include/testimonials.php'; ?>
+         <?php //include './include/testimonials.php'; ?>
       </div>
 
       <div class="template-import template-faq">
