@@ -22,7 +22,9 @@
 			</div>
 		</div>
 		<div class="mentors-slider-autowrapper">
-			<h1>Slider</h1>
+			<div class="nested-template mentors-template">
+				<?php include './include/slider-mentors.php'; ?>
+			</div>
 		</div>
 		<div class="container">
 			<div class="mentor-contact-help">

@@ -1,38 +1,131 @@
 $(document).ready(function() {
+	// $('#infiniteScroll--left').slick({
+	// 	slidesToShow: 3.6,
+	// 	slidesToScroll: 2,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 0,
+	// 	speed: 8000,
+	// 	pauseOnHover: true,
+	// 	cssEase: 'linear'
+	// });
+
+	// $('#infiniteScroll--left').hover(function() {
+  //   $(this).slick('slickPause');
+	// }, function() {
+  //   $(this).slick('slickPlay');
+  // });
+
+	document.addEventListener("DOMContentLoaded", function() {
+		const cards = document.querySelectorAll(".card");
+		const container = document.querySelector(".curriculum-main-container");
+		const leftAnimation = gsap.timeline();
+		leftAnimation.to(container, {
+			x: -200,
+			duration: 2,
+		});
+		ScrollTrigger.create({
+			animation: leftAnimation,
+			trigger: container,
+			start: "top center",
+			end: "center center",
+			scrub: 1,
+		});
+
+	});
+
+
+	gsap.registerPlugin(ScrollTrigger);
+	console.log(document.querySelector(".card").offsetWidth,"sss")
+	let sections = gsap.utils.toArray(".card");
+	gsap.to(sections, {
+		xPercent: -100 * (sections.length - 1),
+		ease: "none",
+		scrollTrigger: {
+			trigger: ".curriculum-main-container",
+			pin: true,
+			scrub: 1,
+			snap: 1 / (sections.length-1),
+			end: () => "+=4000"
+		}
+	});
+
+	const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+	scrollContainers.forEach((container) => {
+		const scrollWidth = container.scrollWidth;
+		let isScrollingPaused = false;
+		window.addEventListener("load", () => {
+			self.setInterval(() => {
+				if (isScrollingPaused) {
+					return;
+				}
+				const first = container.querySelector("article");
+
+				if (!isElementInViewport(first)) {
+					container.appendChild(first);
+					container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+				}
+				if (container.scrollLeft !== scrollWidth) {
+					container.scrollTo(container.scrollLeft + 1, 0);
+				}
+			}, 15);
+		});
+
+		function isElementInViewport(el) {
+			var rect = el.getBoundingClientRect();
+			return rect.right > 0;
+		}
+
+		function pauseScrolling() {
+			isScrollingPaused = true;
+		}
+
+		function resumeScrolling() {
+			isScrollingPaused = false;
+		}
+		const allArticles = container.querySelectorAll("article");
+		for (let article of allArticles) {
+			article.addEventListener("mouseenter", pauseScrolling);
+			article.addEventListener("mouseleave", resumeScrolling);
+		}
+	});
+
+
+
+
 	// Faq Js
 	const summaries = document.querySelectorAll("summary");
 	summaries.forEach((summary) => {
-	summary.addEventListener("click", closeOpenedDetails);
+		summary.addEventListener("click", closeOpenedDetails);
 	});
 	function closeOpenedDetails() {
-	summaries.forEach((summary) => {
-	  let detail = summary.parentNode;
-	  if (detail != this.parentNode) {
-	    detail.removeAttribute("open");
-	  }
-	});
+		summaries.forEach((summary) => {
+			let detail = summary.parentNode;
+			if (detail != this.parentNode) {
+				detail.removeAttribute("open");
+			}
+		});
 	}
 
 
 
 	// Testimonial Decking Card Animation Js
 	var StackCards = function(element) {
-  this.element = element;
-  this.items = this.element.getElementsByClassName("card");
-  this.scrollingListener = false;
-  this.scrolling = false;
-  initStackCardsEffect(this);
-};
+		this.element = element;
+		this.items = this.element.getElementsByClassName("card");
+		this.scrollingListener = false;
+		this.scrolling = false;
+		initStackCardsEffect(this);
+	};
 
-function initStackCardsEffect(element) {
+	function initStackCardsEffect(element) {
   // use Intersection Observer to trigger animation
-  var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-  observer.observe(element.element);
-}
+		var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+		observer.observe(element.element);
+	}
 
-function stackCardsCallback(entries) {
+	function stackCardsCallback(entries) {
   // Intersection Observer callback
-  if (entries[0].isIntersecting) {
+		if (entries[0].isIntersecting) {
     // cards inside viewport - add scroll listener
     if (this.scrollingListener) return; // listener for scroll event already added
     stackCardsInitEvent(this);
@@ -45,63 +138,63 @@ function stackCardsCallback(entries) {
 }
 
 function stackCardsInitEvent(element) {
-  element.scrollingListener = stackCardsScrolling.bind(element);
-  window.addEventListener("scroll", element.scrollingListener);
+	element.scrollingListener = stackCardsScrolling.bind(element);
+	window.addEventListener("scroll", element.scrollingListener);
 }
 
 function stackCardsScrolling() {
-  if (this.scrolling) return;
-  this.scrolling = true;
-  window.requestAnimationFrame(animateStackCards.bind(this));
+	if (this.scrolling) return;
+	this.scrolling = true;
+	window.requestAnimationFrame(animateStackCards.bind(this));
 }
 
 function animateStackCards() {
-  var top = this.element.getBoundingClientRect().top;
-  var offsetTop = 100,
-    cardHeight = 472,
-    marginY = 15;
-  for (var i = 0; i < this.items.length; i++) {
+	var top = this.element.getBoundingClientRect().top;
+	var offsetTop = 100,
+	cardHeight = 472,
+	marginY = 15;
+	for (var i = 0; i < this.items.length; i++) {
     // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
-    var scrolling = offsetTop - top - i * (cardHeight + marginY);
+		var scrolling = offsetTop - top - i * (cardHeight + marginY);
     // debugger;
-    if (scrolling > 0) {
+		if (scrolling > 0) {
       // card is fixed - we can scale it down
-      this.items[i].setAttribute(
-        "style",
-        "transform: translateY(" +
-          marginY * i +
-          "px) scale(" +
-          (cardHeight - scrolling * 0.02) / cardHeight +
-          ");"
-      );
-    }
-  }
+			this.items[i].setAttribute(
+				"style",
+				"transform: translateY(" +
+				marginY * i +
+				"px) scale(" +
+				(cardHeight - scrolling * 0.02) / cardHeight +
+				");"
+				);
+		}
+	}
 
-  this.scrolling = false;
+	this.scrolling = false;
 }
 
 var stackCards = document.getElementsByClassName("card-deck-js");
 var intersectionObserverSupported =
-  "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
+"IntersectionObserver" in window && "IntersectionObserverEntry" in window;
 
 if (stackCards.length > 0 && intersectionObserverSupported) {
-  for (var i = 0; i < stackCards.length; i++) {
-    new StackCards(stackCards[i]);
-  }
+	for (var i = 0; i < stackCards.length; i++) {
+		new StackCards(stackCards[i]);
+	}
 }
 
 
 	// Who can Apply Section Js
-	const deck = document.querySelector(".deck");
-	deck.addEventListener("click", (e) => {
-		const clickedCard = e.target.closest(".card");
-		if (!clickedCard) return;
-		const cards = Array.from(deck.querySelectorAll(".card"));
-		cards.forEach((card) => {
-			card.classList.remove("front");
-		});
-		e.target.closest(".card").classList.add("front");
+const deck = document.querySelector(".deck");
+deck.addEventListener("click", (e) => {
+	const clickedCard = e.target.closest(".card");
+	if (!clickedCard) return;
+	const cards = Array.from(deck.querySelectorAll(".card"));
+	cards.forEach((card) => {
+		card.classList.remove("front");
 	});
+	e.target.closest(".card").classList.add("front");
+});
 });
 
 $(window).on("scroll", function() {
@@ -144,6 +237,7 @@ var header = document.getElementById("header");
 var sxn2 = document.getElementById("two");
 var sxn3 = document.getElementById("three");
 var hh = header.offsetHeight;
+
 var color = [
 	[230, 237, 237],
 	[255, 255, 255],
