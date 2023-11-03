@@ -15,24 +15,37 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
+  	// Who can Apply Section Js
+	const deck = document.querySelector(".deck");
+	deck.addEventListener("click", (e) => {
+		const clickedCard = e.target.closest(".card");
+		if (!clickedCard) return;
+		const cards = Array.from(deck.querySelectorAll(".card"));
+		cards.forEach((card) => {
+			card.classList.remove("front");
+		});
+		e.target.closest(".card").classList.add("front");
+	});
+});
+
   // Testimonial Decking Card Animation Js
-	var StackCards = function(element) {
-		this.element = element;
-		this.items = this.element.getElementsByClassName("card");
-		this.scrollingListener = false;
-		this.scrolling = false;
-		initStackCardsEffect(this);
-	};
+var StackCards = function(element) {
+	this.element = element;
+	this.items = this.element.getElementsByClassName("card");
+	this.scrollingListener = false;
+	this.scrolling = false;
+	initStackCardsEffect(this);
+};
 
-	function initStackCardsEffect(element) {
+function initStackCardsEffect(element) {
   // use Intersection Observer to trigger animation
-		var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-		observer.observe(element.element);
-	}
+	var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+	observer.observe(element.element);
+}
 
-	function stackCardsCallback(entries) {
+function stackCardsCallback(entries) {
   // Intersection Observer callback
-		if (entries[0].isIntersecting) {
+	if (entries[0].isIntersecting) {
     // cards inside viewport - add scroll listener
     if (this.scrollingListener) return; // listener for scroll event already added
     stackCardsInitEvent(this);
@@ -192,20 +205,6 @@ function closeOpenedDetails() {
 		}
 	});
 }
-
-
-	// Who can Apply Section Js
-const deck = document.querySelector(".deck");
-deck.addEventListener("click", (e) => {
-	const clickedCard = e.target.closest(".card");
-	if (!clickedCard) return;
-	const cards = Array.from(deck.querySelectorAll(".card"));
-	cards.forEach((card) => {
-		card.classList.remove("front");
-	});
-	e.target.closest(".card").classList.add("front");
-});
-});
 
 $(window).on("scroll", function() {
 	if($(window).scrollTop() > 150) {
