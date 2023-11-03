@@ -7,6 +7,13 @@
 		max-width: unset!important;
 		overflow: hidden;
 	}
+	.static-curriculum-main-container {
+		display: flex;
+		height: 100vh;
+		width: unset !important;
+		max-width: unset!important;
+		overflow: hidden;
+	}
 	.card{ 
 		width: 100vw;  
 		height: 100vh;  
@@ -14,7 +21,19 @@
 		flex-direction: row;
 		border: none;
 		background-clip: none;
+		animation: sectionSlide 3s linear infinite;
+    animation-delay: 1s;
 	}
+	// @keyframes sectionSlide {
+	// 	0% {
+	// 		transform: translateX(-100%);
+	// 	}
+	// 	100% {
+	// 		transform: translateX(100%);
+	// 	}
+	// }
+	
+	
 	.card1{
 		padding: 0px 121px;
 		display: flex;

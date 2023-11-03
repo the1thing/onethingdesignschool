@@ -19,6 +19,21 @@ require_once './header.php';
          <?php include './include/apply.php'; ?>
       </div>
 
+      <!-- <div class="static-curriculum-main-container">
+		<div id="card" class="card card1">
+			<p class="card-head">Six months to</p>
+			<p class="angle1">Industry</p>
+			<p class="angle2">Readiness</p>
+			<div class="line"></div>
+			<div class="card-footer">
+				<p>Lay the foundation for a confident start. From a masterclass to a complete training and everything in between.</p>
+				<button>Contact US</button>
+			</div>
+			<img class="card-pattern1" src="assets/images/curriculum/card-pattern1.png">
+			<img class="card-pattern2" src="assets/images/curriculum/card-pattern2.png">
+			<img class="card-pattern3" src="assets/images/curriculum/card-pattern3.png">
+		</div>
+</div> -->
       <div class="template-import template-curriculum">
          <?php include './include/curriculum.php'; ?>
       </div>

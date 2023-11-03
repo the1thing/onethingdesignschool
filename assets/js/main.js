@@ -15,41 +15,60 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
 
-	document.addEventListener("DOMContentLoaded", function() {
-		const cards = document.querySelectorAll(".card");
-		const container = document.querySelector(".curriculum-main-container");
-		const leftAnimation = gsap.timeline();
-		leftAnimation.to(container, {
-			x: -200,
-			duration: 2,
-		});
-		ScrollTrigger.create({
-			animation: leftAnimation,
-			trigger: container,
-			start: "700px top", 
-			end: "center center",
-			scrub: 1,
-		});
+	// document.addEventListener("DOMContentLoaded", function() {
+	// 	const cards = document.querySelectorAll(".card");
+	// 	const container = document.querySelector(".who-can-apply-wrapper");
+	// 	console.log(container,"ddd")
+	// 	const leftAnimation = gsap.timeline();
+	// 	leftAnimation.to(container, {
+	// 		x: -200,
+	// 		duration: 2,
+	// 	});
+	// 	ScrollTrigger.create({
+	// 		animation: leftAnimation,
+	// 		trigger: container,
+	// 		start: "-600px top",
+	// 		end: "center center",
+	// 		scrub: 1,
+	// 	});
 
-	});
-	
+	// });
+	function isInViewport(element) {
+		const rect = element.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+	// const staticElement=document.querySelectorAll('.static-curriculum-main-container')
+	// const animatedElement=document.querySelectorAll('.curriculum-main-container')
+	// document.addEventListener('scroll', function () {
+	// 	if (isInViewport(animatedElement)) {
+	// 		staticElement.style.display = 'none'; 
+	// 	} else {
+	// 		staticElement.style.display = 'flex'; 
+	// 	}
+	// });
+    // console.log("static")
 
 
-
-	gsap.registerPlugin(ScrollTrigger);
-	console.log(document.querySelector(".card").offsetWidth,"sss")
-	let sections = gsap.utils.toArray(".card");
-	gsap.to(sections, {
-		xPercent: -100 * (sections.length - 1),
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".curriculum-main-container",
-			pin: true,
-			scrub: 1,
-			snap: 1 / (sections.length-1),
-			end: () => "+=4000"
-		}
-	});
+	// gsap.registerPlugin(ScrollTrigger);
+	// let sections = gsap.utils.toArray(".card");
+	// gsap.to(sections, {
+	// 	xPercent: -100 * (sections.length - 1),
+	// 	ease: "none",
+	// 	scrollTrigger: {
+	// 		trigger: ".curriculum-main-container",
+	// 		pin: true,
+	// 		scrub: 1,
+	// 		snap: 1 / (sections.length-1),
+	// 		// start: "center center",
+	// 		end: () => "+=4000",
+			
+	// 	}
+	// });
 
 	const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
 	scrollContainers.forEach((container) => {
