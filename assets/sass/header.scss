@@ -10,6 +10,10 @@ header {
 		transition: background .5s ease,padding ease,transform 1s ease;
 		background: transparent;
 		height: 108px;
+		@include for-tablet-only {}
+		@include phone {
+			padding: 16px 0;
+		}
 		.container-wrapper {
 			display: flex;
 			justify-content: space-between;

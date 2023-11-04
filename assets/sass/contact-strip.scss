@@ -5,15 +5,26 @@ section {
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 150px; //this is temp, we'll add matter js
+		@include for-tablet-only {}
+		@include phone {
+			background-size: contain;
+			background-position: bottom center;
+			padding-bottom: 0; //this is temp, we'll add matter js
+		}
 		.strip-divider {
 			border-top: 1px solid $ods-deep-grey;
 			padding: 120px 0;
+			@include for-tablet-only {}
+			@include phone {
+				padding: 72px 0;
+				width: 90%;
+			}
 		}
 		.contact-main {
 			padding: 120px 0;
 			@include for-tablet-only {}
 			@include phone {
-				padding: 64px 0;
+				padding: 40px 0;
 			}
 			.div-wrap {
 				display: flex;
