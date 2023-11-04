@@ -37,6 +37,7 @@ header {
 					padding: 10px 0;
 					@include phone {
 						padding: 0;
+						display: flex;
 					}
 				}
 			}
@@ -58,8 +59,8 @@ header {
 			justify-content: space-between;
 			align-items: center;
 			@include phone {
-				padding: 0;
-				display: block;
+				padding: 0 16px 16px 16px;
+				display: flex;
 			}
 			.logo {
 				margin-right: 100px;
@@ -95,7 +96,7 @@ header {
 			}
 			.header-contact {
 				@include phone {
-					display: none;
+					align-self: flex-end;
 				}
 			}
 		}
