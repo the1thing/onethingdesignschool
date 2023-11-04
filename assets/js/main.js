@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	// $('#infiniteScroll--left').slick({
 	// 	slidesToShow: 3.6,
 	// 	slidesToScroll: 2,
@@ -14,6 +15,8 @@ $(document).ready(function() {
 	// }, function() {
   //   $(this).slick('slickPlay');
   // });
+ 
+
  
   gsap.registerPlugin(ScrollTrigger);
   let sections = gsap.utils.toArray(".curriculum-card");
@@ -33,6 +36,7 @@ $(document).ready(function() {
   
   
 	const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+	console.log(scrollContainers,"scroll")
 	scrollContainers.forEach((container) => {
 		const scrollWidth = container.scrollWidth;
 		let isScrollingPaused = false;

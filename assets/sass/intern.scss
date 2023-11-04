@@ -152,7 +152,7 @@ width: 267px;
           transform: translateY(0);
         }
         100% {
-          transform: translateY(-100%); /* Adjust this value to control the scrolling speed */
+          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
         }
       }
       @keyframes phoneScrollImage {
@@ -160,12 +160,13 @@ width: 267px;
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-100%); /* Adjust this value to control the scrolling speed */
+          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
         }
       }
      
       .upscroll-image {
         animation: upscrollImage 10s linear infinite;
+        animation-direction: reverse;
       }
       
       @keyframes upscrollImage {
@@ -173,7 +174,7 @@ width: 267px;
           transform: translateY(0);
         }
         100% {
-          transform: translateY(100%); /* Adjust this value to control the scrolling speed */
+          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
         }
       }
       @keyframes phoneUpscrollImage {
@@ -181,7 +182,7 @@ width: 267px;
           transform: translateX(0);
         }
         100% {
-          transform: translateX(100%); /* Adjust this value to control the scrolling speed */
+          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
         }
       }
     .image-section2{
@@ -192,13 +193,16 @@ width: 267px;
         display: flex;
     flex-direction: column;
     gap: 20px;
+    
     @include phone{
         display: none;
     }
     }
+
     
     
 }
+
 .phone-image-section1{
     display: none;
     @include phone {
@@ -219,6 +223,7 @@ width: 267px;
     width: 240px;
 height: 120px;
 animation: phoneUpscrollImage 10s linear infinite;
+animation-direction: reverse;
     }
 }
 .phone-image-section2{
