@@ -37,7 +37,7 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-faq">
-         <?php //include './include/faq.php'; ?>
+         <?php include './include/faq.php'; ?>
       </div>
 
       <div class="template-import template-contact">

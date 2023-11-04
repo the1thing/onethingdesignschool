@@ -1,6 +1,10 @@
 .homepage-container {
 	.hero-big-text {
 		padding-top: 180px;
+		@include for-tablet-only {}
+		@include phone {
+			padding-top: 80px;
+		}
 		.text-span {
 			display: block;
 			position: relative;
@@ -17,10 +21,20 @@
 					height: 80px;
 					width: 80px;
 					top: -70px;
+					@include for-tablet-only {}
+					@include phone {
+						height: 40px;
+						width: 40px;
+						top: -40px;
+					}
 				}
 			}
 			&.type-span-2 {
 				padding-left: 120px;
+				@include for-tablet-only {}
+				@include phone {
+					padding-left: 40px;
+				}
 				&:before {
 					background: url('../images/elements/half-circle.svg');
 					right: 200px;
@@ -29,6 +43,13 @@
 					bottom: -30px;
 					z-index: -1;
 					rotate: 5deg;
+					@include for-tablet-only {}
+					@include phone {
+						right: 120px;
+						height: 40px;
+						width: 40px;
+						bottom: -10px;
+					}
 				}
 			}
 			&.type-span-3 {
@@ -40,6 +61,13 @@
 					bottom: -22px;
 					z-index: -1;
 					rotate: 5deg;
+					@include for-tablet-only {}
+					@include phone {
+						height: 40px;
+						width: 40px;
+						bottom: -8px;
+						left: 44px;
+					}
 				}
 			}
 		}
@@ -52,11 +80,23 @@
 			background-repeat: no-repeat;
 			padding-top: 108px;
 			padding-bottom: 120px;
+			@include for-tablet-only {}
+			@include phone {
+				padding-bottom: 64px;
+			}
 			.hero-video-wrapper {
 				margin-top: -40px;
 				margin-bottom: 64px;
+				@include for-tablet-only {}
+				@include phone {
+					margin-top: 24px;
+				}
 				>.container {
 					padding: 0;
+					@include for-tablet-only {}
+					@include phone {
+						padding-right: 16px;
+					}
 				}
 				figure {
 					text-align: right;
@@ -64,11 +104,20 @@
 						border-radius: 100%;
 						width: 450px;
 						height: 450px;
+						@include for-tablet-only {}
+						@include phone {
+							width: 160px;
+							height: 160px;
+						}
 					}
 				}
 			}
 			.hero-stats-wrapper {
 				margin-bottom: 48px;
+				@include for-tablet-only {}
+				@include phone {
+					margin-bottom: 0;
+				}
 				.grid-content {
 					border-radius: 500px;
 					border: 1px solid rgba($ods-lime, 0.3);
@@ -79,20 +128,61 @@
 					margin: 0 auto;
 					padding: 40px 64px;
 					gap: 100px;
+					@include for-tablet-only {
+						width: 100%;
+						grid-template-columns: repeat(1,1fr);
+					}
+					@include phone {
+						padding: 64px 0;
+						width: 90%;
+						grid-template-columns: repeat(1,1fr);
+						gap: 0;
+						border-radius: 160px;
+					}
 					.ods-col {
+						@include for-tablet-only {}
+						@include phone {
+							border-bottom: 1px solid rgba($ods-light-grey, 0.1);
+							margin-bottom: 32px;
+							padding-bottom: 32px;
+						}
 						.svg-icon {
 							margin-bottom: 20px;
+							@include for-tablet-only {}
+							@include phone {
+								margin-bottom: 16px;
+								text-align: center;
+							}
 						}
 						p {
 							color: $ods-lime;
 							font-family: "galano-grotesque-regular", sans-serif;
 							font-size: 18px;
 							line-height: 130%;
+							@include for-tablet-only {}
+							@include phone {
+								font-size: 14px;
+								text-align: center;
+							}
+						}
+						&:last-of-type {
+							@include for-tablet-only {}
+							@include phone {
+								border-bottom: 0;
+								margin-bottom: 0;
+								padding-bottom: 0;
+							}
 						}
 					}
 				}
 			}
 			.hero-note-wrapper {
+				@include for-tablet-only {
+					display: none;
+				}
+				@include phone {
+					display: none;
+				}
 				.note-p {
 					border-radius: 50px;
 					background: $ods-black;
@@ -103,9 +193,20 @@
 					width: 50%;
 					margin: 0 auto;
 					gap: 16px;
+					@include for-tablet-only {
+						width: 100%;
+					}
+					@include phone {
+						width: 100%;
+					}
 					p {
 						margin-bottom: 0;
 						color: $ods-white;
+						@include for-tablet-only {}
+						@include phone {
+							font-size: 12px;
+							text-align: center;
+						}
 					}
 				}
 			}

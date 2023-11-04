@@ -3,22 +3,22 @@
 		<div class="container">
 			<div class="heading-wrap">
 				<h2 class="section-title-main">
-					Ispiring y<svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
+					Learn fr<svg class="ripple-circle" xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
 						<rect width="43" height="43" rx="21.5" fill="black"/>
 						<circle cx="21.646" cy="21.6472" r="6.54357" stroke="white" stroke-width="0.422166"/>
 						<circle cx="21.8956" cy="21.8958" r="11.6096" stroke="white" stroke-width="0.422166"/>
 						<circle cx="21.6607" cy="21.6599" r="15.0924" stroke="white" stroke-width="0.211083"/>
 						<circle opacity="0.5" cx="21.4247" cy="21.4249" r="18.4698" stroke="white" stroke-width="0.211083"/>
-					</svg>ung <br/>
+					</svg>m <br/>
 					<span>
-						minds
+						industry
 						<img src="assets/images/elements/star-white.svg">
 					</span>
-					for 2 years
+					leaders
 				</h2>
 			</div>
 			<div class="brief-para">
-				<p>Over the years, <strong>Onething Design Studio</strong> has curated expertise from the best minds of the industry to help inquisitive self-starters discover the world of UX. For 10+ classes to introducing creatives into the world of industry through direct experiences with professional teachers in the sector.</p>
+				<p>Introducing design enthusiasts to the industry through direct experiences with renowned professionals in the sector.</p>
 			</div>
 		</div>
 		<div class="mentors-slider-autowrapper">
