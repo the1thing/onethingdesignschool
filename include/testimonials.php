@@ -22,9 +22,9 @@
 									</figure>
 								</div>
 								<div class="content-glance">
-									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid beatae sint, velit omnis provident quisquam quibusdam totam exercitationem illum. Inventore sunt quia corrupti, ex, magnam qui magni alias natus.</p>
+									<p class="card-text">My experience with the UX MasterCamp has been amazing, providing a strong foundation through a comprehensive curriculum and hands-on learning. I'm thrilled to have secured a position at Onething Design Studio, excited for this new chapter!</p>
 									<div class="details__">
-										<h6 class="name">Sriram singh</h6>
+										<h6 class="name">Rupal Yagyaseni</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
