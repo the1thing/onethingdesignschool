@@ -8,6 +8,10 @@
 		.text-span {
 			display: block;
 			position: relative;
+			@include for-tablet-only {}
+			@include phone {
+				margin: 16px 0;
+			}
 			&:before {
 				position: absolute;
 				content: "";
@@ -133,7 +137,7 @@
 						grid-template-columns: repeat(1,1fr);
 					}
 					@include phone {
-						padding: 64px 0;
+						padding: 64px;
 						width: 90%;
 						grid-template-columns: repeat(1,1fr);
 						gap: 0;
