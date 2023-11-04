@@ -15,13 +15,8 @@ $(document).ready(function() {
   //   $(this).slick('slickPlay');
   // });
  
-
-
-
   gsap.registerPlugin(ScrollTrigger);
-
   let sections = gsap.utils.toArray(".curriculum-card");
-  
   gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     duration: 1, // Increase the duration to make the animation slower (in seconds)
