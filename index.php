@@ -21,7 +21,7 @@ require_once './header.php';
 
     
       <div class="template-import template-curriculum">
-         <?php //include './include/curriculum.php'; ?>
+         <?php include './include/curriculum.php'; ?>
       </div>
 
       <div class="template-import template-client">
@@ -29,7 +29,7 @@ require_once './header.php';
       </div>
 
       <div class="template-import template-learning">
-         <?php //include './include/start-learning-now.php'; ?>
+         <?php include './include/start-learning-now.php'; ?>
       </div>
 
       <div class="template-import template-testimonials">
