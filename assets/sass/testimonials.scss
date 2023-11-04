@@ -2,6 +2,10 @@
 	margin-bottom: 120px;
 	padding-top: 120px;
 	position: relative;
+	@include for-tablet-only {}
+	@include phone {
+		padding-top: 64px;
+	}
 	&:before {
 		position: absolute;
 		content: "";
@@ -11,10 +15,21 @@
 		right: 0;
 		top: 0;
 		background-repeat: no-repeat;
+		background-size: cover;
+		@include for-tablet-only {}
+		@include phone {
+			width: 180px;
+			height: 188px;
+			rotate: -16deg;
+		}
 	}
 	.div-wrap {
 		.heading-wrap {
 			padding-bottom: 80px;
+			@include for-tablet-only {}
+			@include phone {
+				padding-bottom: 40px;
+			}
 			.section-title-main {
 				span {
 					background: $yellow;
@@ -36,6 +51,11 @@
 				height: 472px;
 				border-radius: 40px;
 				@include translateY;
+				@include for-tablet-only {}
+				@include phone {
+					height: auto;
+					border-radius: 24px;
+				}
 				&.yellow {
 					background: $yellow;
 				}
@@ -55,9 +75,19 @@
 				align-items: center;
 				justify-content: flex-start;
 				padding: 32px 72px 56px 56px;
+				@include for-tablet-only {}
+				@include phone {
+					flex-direction: column;
+					gap: 16px;
+					padding: 16px 16px 24px 16px;
+				}
 				.visual-glance {
 					figure {
 						width: 489px;
+						@include for-tablet-only {}
+						@include phone {
+							width: 100%;
+						}
 						img {
 							width: 100%;
 							object-fit: cover;
@@ -67,11 +97,19 @@
 				}
 				.content-glance {
 					padding-top: 40px;
+					@include for-tablet-only {}
+					@include phone {
+						padding-top: 0;
+					}
 					.card-text {
 						margin-bottom: 48px;
 						color: $ods-white;
 						font-size: 16px;
 						line-height: 28px;
+						@include for-tablet-only {}
+						@include phone {
+							margin-bottom: 16px;
+						}
 					}
 					.details__ {
 						display: flex;
@@ -82,6 +120,11 @@
 							font-size: 28px;
 							line-height: 40px;
 							text-transform: uppercase;
+							@include for-tablet-only {}
+							@include phone {
+								font-size: 16px;
+								line-height: 24px;
+							}
 						}
 					}
 				}
