@@ -11,10 +11,19 @@ section {
 		}
 		.contact-main {
 			padding: 120px 0;
+			@include for-tablet-only {}
+			@include phone {
+				padding: 64px 0;
+			}
 			.div-wrap {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				@include for-tablet-only {}
+				@include phone {
+					flex-direction: column;
+					align-items: flex-start;
+				}
 				.contact-content {
 					p {
 						color: $ods-white;
@@ -25,6 +34,10 @@ section {
 					.section-title-main {
 						.svg-icon {
 							display: inline-block;
+							@include for-tablet-only {}
+							@include phone {
+								display: block;
+							}
 						}
 						span {
 							background: $blue;

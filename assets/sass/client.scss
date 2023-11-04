@@ -2,6 +2,10 @@
   .client-content {
     padding-block: 120px;
     background-color: $ods-black;
+    @include for-tablet-only {}
+    @include phone {
+      padding-block: 0;
+    }
     .section-container {
       width: min(1200px, 100%);
       margin-inline: auto;

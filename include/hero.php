@@ -5,13 +5,6 @@
          <span class="text-span type-span-2">Future with Onething</span>
          <span class="text-span type-span-3">Design School.</span>
       </h1>
-      <h1 class="hero-small-text">
-         <span class="text-span type-span-1">Design Your</span>
-         <span class="text-span type-span-2">Future with</span>
-         <span class="text-span type-span-3">Onething</span>
-         <span class="text-span type-span-3">Design School.</span>
-      </h1>
-     
    </div>
    <div class="hero-video-wrapper">
       <div class="container">
@@ -34,7 +27,6 @@
                </div>
                <p>Beginner friendly UX Design course</p>
             </div>
-            <div class="line-div"></div>
             <div class="ods-col">
                <div class="svg-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
@@ -43,8 +35,6 @@
                </div>
                <p>Interactive project discussions and Q&A</p>
             </div>
-            <div class="line-div"></div>
-
             <div class="ods-col">
                <div class="svg-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
