@@ -1,4 +1,8 @@
 .client-logos-wrapper {
+  @include for-tablet-only {}
+  @include phone {
+    display: none;
+  }
   .client-content {
     padding-block: 120px;
     background-color: $ods-black;
