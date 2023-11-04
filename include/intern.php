@@ -8,7 +8,10 @@
      
         </section>
         <section class="animation-section">
-            <div class="image-section1"> 
+            <div id="image-section1" class="image-section1"> 
+             <img src="assets/images/intern/img1.png" class="scrolling-image">
+             <img src="assets/images/intern/img1.png" class="scrolling-image">
+             <img src="assets/images/intern/img1.png" class="scrolling-image">
              <img src="assets/images/intern/img1.png" class="scrolling-image">
              <img src="assets/images/intern/img1.png" class="scrolling-image">
              <img src="assets/images/intern/img1.png" class="scrolling-image">
@@ -17,9 +20,15 @@
              <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
              <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
              <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
             </div>
-            <div class="image-section2">
-                <img src="assets/images/intern/img2.png" class="upscroll-image">
+            <div id="image-section2" class="image-section2">
+             <img src="assets/images/intern/img2.png" class="upscroll-image">
+             <img src="assets/images/intern/img2.png" class="upscroll-image">
+             <img src="assets/images/intern/img2.png" class="upscroll-image">
+             <img src="assets/images/intern/img2.png" class="upscroll-image">
              <img src="assets/images/intern/img2.png" class="upscroll-image">
              <img src="assets/images/intern/img2.png" class="upscroll-image">
             </div>
@@ -27,6 +36,10 @@
                 <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
              <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
              <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
+
             </div>
         </section>
        
