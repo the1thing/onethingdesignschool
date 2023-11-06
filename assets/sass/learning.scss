@@ -2,9 +2,35 @@ section {
 	&.learning-wrapper {
 		overflow: hidden;
 		.div-wrap {
+			.heading-wrap {
+				.heading-div {
+					@include for-tablet-only {}
+					@include phone {
+						gap: 16px;
+						margin-bottom: 16px;
+					}
+					h2 {
+						font-size: 40px;
+						line-height: 48px;
+					}
+					svg {
+						@include for-tablet-only {}
+						@include phone {
+							width: 40px;
+							height: 40px;
+						}
+					}
+				}
+			}
+
 			.main-container{
 				border-radius: 96px;
 				background: $ods-light-blue;
+				@include for-tablet-only {}
+				@include phone {
+					border-radius: 48px;
+					padding-bottom: 64px;
+				}
 				p {
 					color: $ods-black;
 					font-family: "galano-grotesque-regular";
@@ -15,6 +41,10 @@ section {
 
 			.container{
 				padding: 120px 0;
+				@include for-tablet-only {}
+				@include phone {
+					padding: 48px 16px;
+				}
 			}
 
 			.image-div {
@@ -22,6 +52,12 @@ section {
 				align-items: center;
 				padding: 0 120px;
 				overflow: hidden;
+				@include for-tablet-only {}
+				@include phone {
+					padding: 0 16px;
+					flex-direction: column;
+					gap: 16px;
+				}
 			}
 
 			.learning-cards {
@@ -36,6 +72,11 @@ section {
 				height: 472px;
 				width: 472px;
 				cursor: pointer;
+				@include for-tablet-only {}
+				@include phone {
+					height: auto;
+					width: 100%;
+				}
 				.card-head {
 					color: $ods-white;
 					font-family: "galano-grotesque-semibold";
@@ -52,25 +93,48 @@ section {
 					transform: translate(10px,30px) rotate(-7deg);
 					background: $pink;
 					transition: transform 0.3s ease;
+					@include for-tablet-only {}
+					@include phone {
+						transform: unset;
+					}
 					&:hover{
 						transform: translate(10px, 50px) rotate(-2deg);
+						@include for-tablet-only {}
+						@include phone {
+							transform: unset;
+						}
 					}
 				}
 				&.card2{
 					transform: translate(-30px,80px) rotate(10deg);
 					transition: transform 0.3s ease;
 					background: $yellow;
+					@include for-tablet-only {}
+					@include phone {
+						transform: unset;
+					}
 					&:hover{
-						transform: translateY(20px) rotate(4.326deg); 
+						transform: translateY(20px) rotate(4.326deg);
+						@include for-tablet-only {}
+						@include phone {
+							transform: unset;
+						}
 					}
 				}
 				&.card3 {
 					transform: translateY(30px) rotate(-9deg);
 					transition: transform 0.3s ease;
-
 					background: $blue;
+					@include for-tablet-only {}
+					@include phone {
+						transform: unset;
+					}
 					&:hover{
 						transform: translateY(10px) rotate(-2.334deg); 
+						@include for-tablet-only {}
+						@include phone {
+							transform: unset;
+						}
 					}   
 				}
 			}

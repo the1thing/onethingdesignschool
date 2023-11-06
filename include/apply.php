@@ -3,7 +3,7 @@
     <div class="container">
       <div class="heading-wrap">
         <h2 class="section-title-secondary">
-          Who can apply?
+          Who can<br/> apply?
         </h2>
       </div>
       <div class="brief-div">

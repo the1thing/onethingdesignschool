@@ -1,3 +1,11 @@
+.template-curriculum {
+	overflow: hidden;
+	@include for-tablet-only {}
+	@include phone {
+		display: none;
+	}
+}
+
 .curriculum-wrapper {
 	overflow: hidden;
 	background-color: #fff;
@@ -61,9 +69,9 @@
 		line-height: 96px;
 		@include phone {
 			font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 48px;
 		}
 	}
 	.angle1{
@@ -81,14 +89,14 @@
 		text-transform: uppercase;
 		transform: rotate(7deg);
 		@include phone {
-    width: 280px;
-    height: 60px;
-    padding: 10px 20px;
-    gap: 6px;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 39.119px;
+			width: 280px;
+			height: 60px;
+			padding: 10px 20px;
+			gap: 6px;
+			font-size: 48px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 39.119px;
 		}
 	}
 	.angle2{
@@ -106,15 +114,15 @@
 		background: var(--Pink, #E571EE);
 		transform: rotate(-5deg);
 		@include phone {
-    width: 312px;
-    height: 60px;
-    padding: 10px 20px;
-    gap: 6px;
-    color: #FFF;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
+			width: 312px;
+			height: 60px;
+			padding: 10px 20px;
+			gap: 6px;
+			color: #FFF;
+			font-size: 48px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 40px;
 		}
 
 	}
@@ -153,10 +161,10 @@
 		width: 712px;
 		@include phone {
 			font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-width: unset;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 24px;
+			width: unset;
 		}
 	}
 	.card-footer button{

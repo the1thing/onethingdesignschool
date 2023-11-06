@@ -21,6 +21,10 @@ body {
 	width: -webkit-fit-content;
 	display: block;
 	overflow: hidden;
+	@include for-tablet-only {}
+	@include phone {
+		padding: 12px 16px;
+	}
 	span {
 		color: $ods-white;
 		position: relative;
@@ -128,6 +132,11 @@ body {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 96px;
+	@include for-tablet-only {}
+	@include phone {
+		font-size: 40px;
+		line-height: 48px;
+	}
 }
 
 .heading-div {

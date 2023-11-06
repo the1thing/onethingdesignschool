@@ -4,6 +4,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 102px 0 120px 0;
+  @include for-tablet-only {}
+  @include phone {
+    padding: 56px 0 64px 0;
+  }
   .cta-wrapper {
     text-align: center;
     display: flex;
@@ -17,6 +21,18 @@
       margin-bottom: 40px;
       padding-bottom: 40px;
       border-bottom: 1px solid $ods-deep-grey;
+      br {
+        display: none;
+        @include for-tablet-only {}
+        @include phone {
+          display: block;
+        }
+      }
+      @include for-tablet-only {}
+      @include phone {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+      }
     }
   }
   .brief-div {
@@ -26,15 +42,28 @@
     .star-svg {
       animation: 5s rotate infinite;
       animation-timing-function: linear;
+      @include for-tablet-only {}
+      @include phone {
+        width: 180px;
+        height: 80px;
+      }
     }
   }
   .brief-para {
     // margin-bottom: 64px;
     margin-bottom: 80px;
+    @include for-tablet-only {}
+    @include phone {
+      margin-bottom: 40px;
+    }
     p {
       color: $ods-white;
       width: 60%;
       margin-left: auto;
+      @include for-tablet-only {}
+      @include phone {
+        width: 90%;
+      }
     }
   }
   .deck {
@@ -45,6 +74,15 @@
     grid-template-columns: 1fr;
     grid-template-areas: "card";
     padding-bottom: 48px;
+    @include for-tablet-only {}
+    @include phone {
+      width: 100%;
+      min-height: unset;
+    }
+    @include for-tablet-only {}
+    @include phone {
+      display: block;
+    }
   }
 
   .card {
@@ -54,6 +92,11 @@
     border-radius: 2.5rem;
     color: $ods-white;
     position: relative;
+    @include for-tablet-only {}
+    @include phone {
+      border-radius: 20px;
+      padding: 16px;
+    }
     h6 {
       font-family: "galano-grotesque-medium", Arial, sans-serif;
       font-size: 2rem;
@@ -64,6 +107,10 @@
       color: $ods-white;
       width: min(336px, 100%);
       width: 33%;
+      @include for-tablet-only {}
+      @include phone {
+        width: 100%;
+      }
     }
     .svg-icon {
       position: absolute;
@@ -82,6 +129,11 @@
     margin-right: auto;
     background-color: $yellow;
     margin-top: 10px;
+    @include for-tablet-only {}
+    @include phone {
+      width: 90%;
+      margin-top: 0;
+    }
   }
   .pink {
     width: 66%;
@@ -90,6 +142,11 @@
     margin-top: -20px;
     margin-left: auto;
     background-color: $pink;
+    @include for-tablet-only {}
+    @include phone {
+      width: 90%;
+      margin-top: -64%;
+    }
   }
   .blue {
     width: 62%;
@@ -100,6 +157,13 @@
     margin-right: auto;
     margin-top: auto;
     background-color: $blue;
+    @include for-tablet-only {}
+    @include phone {
+      width: 84%;
+      margin: 0 auto;
+      margin-top: -70%;
+      margin-left: 10px;
+    }
   }
   .white {
     width: 58.25%;
@@ -110,8 +174,22 @@
     margin-bottom: -30px;
     background-color: $ods-white;
     color: $ods-black;
+    @include for-tablet-only {}
+    @include phone {
+      width: 80%;
+      margin-bottom: 0;
+      margin-top: -40%;
+      margin-right: 32px;
+      height: 250px;
+    }
     p {
       color: $ods-black;
+    }
+    .svg-icon {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   .front {
