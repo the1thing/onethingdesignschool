@@ -181,12 +181,7 @@
 				}
 			}
 			.hero-note-wrapper {
-				@include for-tablet-only {
-					display: none;
-				}
-				@include phone {
-					display: none;
-				}
+				display: none;
 				.note-p {
 					border-radius: 50px;
 					background: $ods-black;
