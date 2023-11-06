@@ -1,4 +1,5 @@
 .client-logos-wrapper {
+  display: none;
   @include for-tablet-only {}
   @include phone {
     display: none;

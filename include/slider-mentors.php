@@ -34,7 +34,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Co-founder at Onething Design Studio</p>
+							<p>Co-founder, <br/>Onething Design Studio</p>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Sr. UI UX Designer,  OrangePeople</p>
+							<p>Sr. UI UX Designer,<br/>OrangePeople</p>
 						</div>
 					</div>
 				</div>
@@ -110,7 +110,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Co-founder at Onething Design Studio</p>
+							<p>Co-founder, <br/>Onething Design Studio</p>
 						</div>
 					</div>
 				</div>
@@ -129,7 +129,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Visual Design Lead at Onething<br/> Design Studio</p>
+							<p>Visual Design Lead,<br/> Onething Design Studio</p>
 						</div>
 					</div>
 				</div>
@@ -148,7 +148,7 @@
 									</svg>
 								</small>
 							</h4>
-							<p>Sr. UI UX Designer,  OrangePeople</p>
+							<p>Sr. UI UX Designer,<br/>OrangePeople</p>
 						</div>
 					</div>
 				</div>
