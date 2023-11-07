@@ -23,9 +23,9 @@
 									</figure>
 								</div>
 								<div class="content-glance">
-									<p class="card-text">My experience with the UX MasterCamp has been amazing, providing a strong foundation through a comprehensive curriculum and hands-on learning. I'm thrilled to have secured a position at Onething Design Studio, excited for this new chapter!</p>
+									<p class="card-text">Enrolling in the UX Design MasterCamp by Onething Design School transformed my career. The comprehensive curriculum, expert instructors, and practical projects equipped me with the skills and confidence I needed to excel in this field.</p>
 									<div class="details__">
-										<h6 class="name">Rupal Yagyaseni</h6>
+										<h6 class="name">Sanjana Thakare</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
@@ -42,13 +42,13 @@
 							<div class="group-content">
 								<div class="visual-glance">
 									<figure>
-										<img src="assets/images/people/student1.png">
+										<img src="assets/images/people/student2.png">
 									</figure>
 								</div>
 								<div class="content-glance">
 									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid beatae sint, velit omnis provident quisquam quibusdam totam exercitationem illum. Inventore sunt quia corrupti, ex, magnam qui magni alias natus.</p>
 									<div class="details__">
-										<h6 class="name">Sriram singh</h6>
+										<h6 class="name">Rupal Yagyaseni</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
@@ -65,13 +65,13 @@
 							<div class="group-content">
 								<div class="visual-glance">
 									<figure>
-										<img src="assets/images/people/student1.png">
+										<img src="assets/images/people/student4.png">
 									</figure>
 								</div>
 								<div class="content-glance">
-									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid beatae sint, velit omnis provident quisquam quibusdam totam exercitationem illum. Inventore sunt quia corrupti, ex, magnam qui magni alias natus.</p>
+									<p class="card-text">Deciding to learn from the Masters at Onething was one the best decisions I’ve ever made! They inculcated the design thinking mindset in us and made sure that we’re designing user experiences using the core concepts of design. I will recommend this course to anyone who wants to dive deep into the world of user experience design.</p>
 									<div class="details__">
-										<h6 class="name">Sriram singh</h6>
+										<h6 class="name">SIMRAN SINGH</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>

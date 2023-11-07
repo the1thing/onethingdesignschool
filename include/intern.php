@@ -9,36 +9,36 @@
         </section>
         <section class="animation-section">
             <div id="image-section1" class="image-section1"> 
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
-             <img src="assets/images/intern/img1.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding1.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding2.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding3.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding1.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding2.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding3.png" class="scrolling-image">
             </div>
             <div class="phone-image-section1"> 
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding2.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding3.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding1.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding2.png" class="phone-scrolling-image">
+             <img src="assets/images/intern/sliding3.png" class="phone-scrolling-image">
             </div>
             <div id="image-section2" class="image-section2">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
-             <img src="assets/images/intern/img2.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding4.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding5.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding6.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding4.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding5.png" class="upscroll-image">
+             <img src="assets/images/intern/sliding6.png" class="upscroll-image">
             </div>
             <div class="phone-image-section2">
-                <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
-             <img src="assets/images/intern/phone-img1.png" class="phone-upscroll-image">
+                <img src="assets/images/intern/sliding4.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/sliding5.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/sliding6.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/sliding4.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/sliding5.png" class="phone-upscroll-image">
+             <img src="assets/images/intern/sliding6.png" class="phone-upscroll-image">
 
             </div>
         </section>

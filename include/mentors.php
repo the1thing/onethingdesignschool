@@ -36,7 +36,7 @@
 				</div>
 				<div class="cta-wrapper">
 					<a href="#" class="bttn bttn-primary bttn-primary-dark">
-						<span>Contact us</span>
+						<span>Enrol Now</span>
 					</a>
 				</div>
 			</div>
