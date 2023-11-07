@@ -30,7 +30,7 @@
 			<div class="mentor-contact-help">
 				<div class="brief_">
 					<p>
-						Here’s your chance to shape better User Experiences.
+					Empower your career as an experience designer
 						<strong>Get Started!</strong>
 					</p>
 				</div>
