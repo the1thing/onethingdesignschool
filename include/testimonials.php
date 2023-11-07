@@ -13,6 +13,7 @@
 			</div>
 			<div class="testimonial-decking-card-container">
 				<div class="container card-deck-js">
+					
 					<div class="testimonialcard pink" style="transform: translateY(0px);">
 						<div class="card-body">
 							<div class="group-content">
@@ -22,9 +23,9 @@
 									</figure>
 								</div>
 								<div class="content-glance">
-									<p class="card-text">My experience with the UX MasterCamp has been amazing, providing a strong foundation through a comprehensive curriculum and hands-on learning. I'm thrilled to have secured a position at Onething Design Studio, excited for this new chapter!</p>
+									<p class="card-text">Enrolling in the UX Design MasterCamp by Onething Design School transformed my career. The comprehensive curriculum, expert instructors, and practical projects equipped me with the skills and confidence I needed to excel in this field.</p>
 									<div class="details__">
-										<h6 class="name">Rupal Yagyaseni</h6>
+										<h6 class="name">Sanjana Thakare</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
@@ -41,13 +42,13 @@
 							<div class="group-content">
 								<div class="visual-glance">
 									<figure>
-										<img src="assets/images/people/student1.png">
+										<img src="assets/images/people/student2.png">
 									</figure>
 								</div>
 								<div class="content-glance">
 									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid beatae sint, velit omnis provident quisquam quibusdam totam exercitationem illum. Inventore sunt quia corrupti, ex, magnam qui magni alias natus.</p>
 									<div class="details__">
-										<h6 class="name">Sriram singh</h6>
+										<h6 class="name">Rupal Yagyaseni</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
@@ -64,13 +65,13 @@
 							<div class="group-content">
 								<div class="visual-glance">
 									<figure>
-										<img src="assets/images/people/student1.png">
+										<img src="assets/images/people/student4.png">
 									</figure>
 								</div>
 								<div class="content-glance">
-									<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aliquid beatae sint, velit omnis provident quisquam quibusdam totam exercitationem illum. Inventore sunt quia corrupti, ex, magnam qui magni alias natus.</p>
+									<p class="card-text">Deciding to learn from the Masters at Onething was one the best decisions I’ve ever made! They inculcated the design thinking mindset in us and made sure that we’re designing user experiences using the core concepts of design. I will recommend this course to anyone who wants to dive deep into the world of user experience design.</p>
 									<div class="details__">
-										<h6 class="name">Sriram singh</h6>
+										<h6 class="name">SIMRAN SINGH</h6>
 										<a href="#" target="_blank" class="external-link bttn-link">
 											<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="16" cy="16.0002" r="16" fill="white"/>
@@ -87,3 +88,97 @@
 		</div>
 	</div>
 </section>
+<script>
+	
+// 	// $(document).ready(function() {
+// 	// Testimonial Decking Card Animation Js Starts
+// 	var StackCards = function(element) {
+// 		this.element = element;
+// 		this.items = this.element.getElementsByClassName("testimonialcard");
+
+// 		this.scrollingListener = false;
+// 		this.scrolling = false;
+// 		initStackCardsEffect(this);
+		
+
+// 	};
+
+// 	// Testimonial Decking Card Animation Js Ends
+// 	function initStackCardsEffect(element) {
+//   // use Intersection Observer to trigger animation
+// 		var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+		
+
+// 		observer.observe(element.element);
+		
+// 	}
+// 	//start
+// 	function stackCardsCallback(entries) {
+		
+//   // Intersection Observer callback
+// 		if (entries[0].isIntersecting) {
+//     // cards inside viewport - add scroll listener
+//     if (this.scrollingListener) return; // listener for scroll event already added
+//     stackCardsInitEvent(this);
+// } else {
+// 	console.log(entries[0].scrollingListener,"entries")
+//     // cards not inside viewport - remove scroll listener
+//     if (!this.scrollingListener) 
+// 	console.log(this.scrollingListener,"no")
+// 	return; // listener for scroll event already removed
+// 	console.log(this.scrollingListener,"yesss")
+
+//     window.removeEventListener("scroll", this.scrollingListener);
+//     this.scrollingListener = false;
+// }
+// }
+
+// function stackCardsInitEvent(element) {
+// 	element.scrollingListener = stackCardsScrolling.bind(element);
+// 	window.addEventListener("scroll", element.scrollingListener);
+// }
+
+// function stackCardsScrolling() {
+// 	if (this.scrolling) return;
+// 	this.scrolling = true;
+// 	window.requestAnimationFrame(animateStackCards.bind(this));
+// }
+
+// function animateStackCards() {
+// 	var top = this.element.getBoundingClientRect().top;
+// 	var offsetTop = 100,
+// 	cardHeight = 472,
+// 	marginY = 15;
+// 	for (var i = 0; i < this.items.length; i++) {
+//     // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
+// 		var scrolling = offsetTop - top - i * (cardHeight + marginY);
+//     // debugger;
+// 		if (scrolling > 0) {
+//       // card is fixed - we can scale it down
+// 			this.items[i].setAttribute(
+// 				"style",
+// 				"transform: translateY(" +
+// 				marginY * i +
+// 				"px) scale(" +
+// 				(cardHeight - scrolling * 0.02) / cardHeight +
+// 				");"
+// 				);
+// 		}
+// 	}
+
+// 	this.scrolling = false;
+// }
+// //end
+// var stackCards = document.getElementsByClassName("card-deck-js");
+// var intersectionObserverSupported =
+// "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
+
+// if (stackCards.length > 0 && intersectionObserverSupported) {
+
+// 	for (var i = 0; i < stackCards.length; i++) {
+// 		new StackCards(stackCards[i]);
+
+// 	}
+// }
+// // })
+</script>

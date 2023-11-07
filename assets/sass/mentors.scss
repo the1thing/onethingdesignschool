@@ -76,6 +76,14 @@
 				align-items: flex-start;
 			}
 			.brief_ {
+				.cta-wrapper{
+					a{
+						span{
+							font-family: "galano-grotesque-semibold";
+							color: #000;
+						}
+					}
+				}
 				p {
 					color: $ods-black;
 					font-family: "galano-grotesque-regular", sans-serif;

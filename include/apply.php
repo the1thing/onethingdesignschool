@@ -24,20 +24,20 @@
 
       <div class="deck">
         <div class="card yellow">
-          <h6>Diverse Backgrounds</h6>
-          <p>Individuals looking to switch to a more creative and user-focused field.</p>
+          <h6>Design Enthusiasts</h6>
+          <p>Folks already captivated by experience design, wanting to learn industry-aligned skills</p>
         </div>
         <div class="card pink">
-          <h6>Professionals</h6>
-          <p>Individuals looking to switch to a more creative and user-focused field.</p>
+          <h6>Fresh Graduates</h6>
+          <p>College graduates seeking professional guidance they need to enter the industry</p>
         </div>
         <div class="card blue">
           <h6>Students</h6>
-          <p>Individuals looking to switch to a more creative and user-focused field.</p>
+          <p>College-goers looking for a career defining path in experience design</p>
         </div>
         <div class="card white">
-          <h6>Design Enthusiasts</h6>
-          <p>Individuals looking to switch to a more creative and user-focused field.</p>
+          <h6>Working professionals</h6>
+          <p>People from diverse backgrounds wanting to translate their expertise into a design context</p>
           <div class="svg-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
               <rect width="80" height="80" rx="40" fill="#FCBA30"/>
@@ -57,3 +57,16 @@
    </div>
  </div>
 </section>
+<script>
+//   const deck = document.querySelector(".deck");
+// deck.addEventListener("click", (e) => {
+// 	const clickedCard = e.target.closest(".card");
+// 	if (!clickedCard) return;
+// 	const cards = Array.from(deck.querySelectorAll(".card"));
+// 	cards.forEach((card) => {
+// 		card.classList.remove("front");
+// 	});
+// 	e.target.closest(".card").classList.add("front");
+// });
+
+  </script>

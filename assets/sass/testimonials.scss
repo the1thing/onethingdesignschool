@@ -37,20 +37,28 @@
 			}
 		}
 		.testimonial-decking-card-container {
+			display: flex;
 			@mixin translateY {
-				@for $i from 0 through 5 {
-					&:nth-child(#{$i}) {
-						transform: translateY(#{$i * 16}px);
-					}
+				@for $i from 0 through 15 {
+				  &:nth-child(#{$i}) {
+					transform: translateY(#{$i * 16}px);
+				  }
 				}
-			}
+			  }
+			  .card-deck-js{
+				// z-index: -1;
+
+			  }
+		
 			.testimonialcard {
-				position: sticky;
-				top: 20%;
-				transform-origin: center top;
+				// position: sticky;
+				// top: 20%;
+				// transform-origin: center top;
+				
 				height: 472px;
 				border-radius: 40px;
-				@include translateY;
+				// margin-bottom: 50px;
+				// @include translateY;
 				@include for-tablet-only {}
 				@include phone {
 					height: auto;
@@ -58,9 +66,12 @@
 				}
 				&.yellow {
 					background: $yellow;
+					margin-top: 20px !important;
 				}
 				&.blue {
 					background: $blue;
+					margin-top: 40px !important;
+				
 				}
 				&.pink {
 					background: $pink;

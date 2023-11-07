@@ -4,8 +4,7 @@
 			<div class="container">
 				<div class="heading-wrap">
 					<div class="heading-div">
-						<h2>Start learning Now</h2>
-						<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+						<h2>Programme<br/> launching soon <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
 							<rect width="80" height="80" rx="40" fill="#5A86FD"/>
 							<g filter="url(#filter0_d_168_5537)">
 								<path d="M53.4264 40.4148L26.5732 24.8955L32.4109 54.8256L39.416 43.7404L53.4264 40.4148Z" fill="#FF7583"/>
@@ -22,10 +21,11 @@
 									<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_168_5537" result="shape"/>
 								</filter>
 							</defs>
-						</svg>
+						</svg></h2>
+						
 					</div>
 				</div>
-				<p>Here’s your chance to shape better User Experiences.</p>
+				<p>Here’s your chance to shape better <span>User Experiences.</span></p>
 			</div>
 			<div class="image-div">
 				<div class="learning-cards card1">
