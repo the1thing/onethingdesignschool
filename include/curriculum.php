@@ -71,3 +71,21 @@
         <h2>First Container</h2>
       </div> -->
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+<script>
+	gsap.registerPlugin(ScrollTrigger);
+let sections = gsap.utils.toArray(".curriculum-card");
+gsap.to(sections, {
+	xPercent: -100 * (sections.length - 1),
+    duration: 1, // Increase the duration to make the animation slower (in seconds)
+    ease: "none", 
+    scrollTrigger: {
+    	trigger: ".curriculum-container",
+    	pin: true,
+    	scrub: 1,
+    	snap: 1 / (sections.length - 1),
+    	end: () => "+=" + document.querySelector(".curriculum-container").offsetWidth
+    }
+  });
+	</script>

@@ -57,3 +57,16 @@
    </div>
  </div>
 </section>
+<script>
+//   const deck = document.querySelector(".deck");
+// deck.addEventListener("click", (e) => {
+// 	const clickedCard = e.target.closest(".card");
+// 	if (!clickedCard) return;
+// 	const cards = Array.from(deck.querySelectorAll(".card"));
+// 	cards.forEach((card) => {
+// 		card.classList.remove("front");
+// 	});
+// 	e.target.closest(".card").classList.add("front");
+// });
+
+  </script>

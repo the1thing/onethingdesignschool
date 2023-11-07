@@ -21,12 +21,24 @@
 					</h2>
 				</div>
 				<div class="contact-content">
-					<p>Applications close on November 30.<br/>
+					<p>Applications close on November 30.<br>
 					Please feel free to connect with us.</p>
 					<a href="#" class="bttn bttn-primary">
 						<span>Contact us</span>
 					</a>
 				</div>
+				<!-- <form id="submitForm" class="contact-content">
+					<input type="text" id="name" name="name" placeholder="Enter your name" required class="inputfield">
+					<input type="email" id="email" name="email" placeholder="Enter your Email ID" required class="inputfield">
+                   <button type="submit">Register Now</button>
+</form> -->
+<?php
+ //Include WordPress core files
+// require_once('dashboard.onething.design/wp-load.php');
+
+ //Use do_shortcode to render the Contact Form 7 shortcode
+//  echo do_shortcode('[contact-form-7 id="1b0beba" title="Become a part of ods"]');
+?>
 			</div>
 		</div>
 	</div>
@@ -41,6 +53,67 @@
 		</div>
 	</div>
 </section>
+<script>
+	
+// const CF7_FORM_HEADERS = {
+//     headers: {
+//         "Content-Type": "multipart/form-data"
+//     }
+// }
+const config={
+	FORM_API_URL:"https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/",
+   ODS_FORM_ENDPOINT: "7754/feedback",
+}
+	function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get form data
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Access form fields by name
+    const name = formData.get('name');
+    const email = formData.get('email');
+	const data={
+		name:name,
+		email:email
+	}
+	const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  // Use the test method to check if the email matches the pattern
+//   return pattern.test(email);
+    // Perform form validation or other actions
+    if (name && email && pattern.test(email)) {
+	console.log(data,"data")
+
+		// console.log(config.FORM_API_URL + config.ODS_FORM_ENDPOINT, data, CF7_FORM_HEADERS,"formm")
+		fetch('https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/7754/feedback', {
+        method: 'POST',
+        body: data, // The form data
+        headers: {
+        "Content-Type": "multipart/form-data"
+        }
+    })
+  .then(response => response.json())
+  .then(data => {
+    // Handle the API response here
+    console.log(data);
+  })
+  .catch(error => {
+	alert("Invalid email")
+    console.error('Error:', error);
+  });
+    } else {
+        alert('Please fill in all required fields.');
+    }
+}
+const form = document.getElementById('submitForm');
+form.addEventListener('submit', handleSubmit);
+
+
+    
+	</script>
+
 
 
 
