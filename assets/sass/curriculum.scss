@@ -1,5 +1,6 @@
 .template-curriculum {
 	overflow: hidden;
+	display: none;
 	@include for-tablet-only {}
 	@include phone {
 		display: none;

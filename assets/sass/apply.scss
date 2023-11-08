@@ -147,6 +147,13 @@
       width: 90%;
       margin-top: -64%;
     }
+    p {
+      width: 75%;
+      @include for-tablet-only {}
+      @include phone {
+        width: 100%;
+      }
+    }
   }
   .blue {
     width: 62%;
@@ -163,6 +170,13 @@
       margin: 0 auto;
       margin-top: -70%;
       margin-left: 10px;
+    }
+    p {
+      width: 40%;
+      @include for-tablet-only {}
+      @include phone {
+        width: 100%;
+      }
     }
   }
   .white {

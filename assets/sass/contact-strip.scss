@@ -32,7 +32,6 @@ section {
 			.div-wrap {
 				display: flex;
 				justify-content: space-between;
-				// align-items: center;
 				@include for-tablet-only {}
 				@include phone {
 					flex-direction: column;
@@ -43,51 +42,39 @@ section {
 					display: flex;
 					flex-direction: column;
 					gap: 24px;
+					width: 100%;
 					.inputfield {
 						background: none;
-						color: var(--Stroke-light, #C8C8C8);
-font-family: Galano Grotesque;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-display: flex;
-// width: 486px;
-padding: 16px 331px 16px 24px;
-align-items: center;
-border-radius: 40px;
-border: 0.5px solid var(--Stroke-light, #C8C8C8);
-@include phone {
-// width: 286px;
-padding: 16px 172px 16px 24px;
-}
+						color: $ods-light-grey;
+						font-family: "galano-grotesque-regular";
+						font-size: 16px;
+						line-height: 150%;
+						display: flex;
+						padding: 16px 24px 16px 24px;
+						align-items: center;
+						border-radius: 40px;
+						border: 0.5px solid $ods-light-grey;
+						width: 100%;
+						@include phone {
+							padding: 16px 24px 16px 24px;
+						}
 					}
 					button{
 						background: none;
-                  width: 180px;
-				  margin:24px 0;
+						width: 180px;
+						margin:24px 0;
 						display: flex;
-padding: 16px 24px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 40px;
-border: 2px solid var(--White, #FFF);
-color: var(--White, #FFF);
-font-family: Galano Grotesque;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 150%; /* 24px */
-text-transform: uppercase;
-					}
-					button:hover{
-						background-color: #fff;
-						color: #000;
+						font-size: 16px;
+						line-height: 150%;
+						text-transform: uppercase;
+						&:hover{
+							background-color: #fff;
+							color: #000;
+						}
 					}
 					p{
 						color: #fff;
-    margin-bottom: 32px;
+						margin-bottom: 32px;
 					}
 				}
 				.heading-wrap {
