@@ -38,6 +38,12 @@
            
             padding: 40px 20px;
         }
+        a{
+            margin-top: 32px;
+            @include phone {
+                margin-top: 24px;
+            }
+        }
     }
     .content-section button{
         margin: 32px 0 0 0;

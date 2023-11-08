@@ -27,7 +27,7 @@
 				</div>
 				<p>Here’s your chance to shape better <span>User Experiences.</span></p>
 			</div>
-			<div class="image-div">
+			<div id="card-container" class="image-div">
 				<div class="learning-cards card1">
 					<h3 class="card-head">Submit<br/> Application</h3>
 					<p class="card-body">Have a conversation with our student counselor to check if this course is the right fit for you.</p>
@@ -45,3 +45,57 @@
 		</div>
 	</div>
 </section>
+<script>
+	// const cardContainer = document.getElementById('card-container');
+	// const card1 = cardContainer.querySelector('.card1');
+	// const card2 = cardContainer.querySelector('.card2');
+	// const card3 = cardContainer.querySelector('.card3');
+
+	// card1.addEventListener('mouseenter', () => {
+    //     card1.style.transform = 'translate(10px, 50px) rotate(-2deg)';
+    // });
+
+    // card1.addEventListener('mouseleave', () => {
+    //     card1.style.transform = 'translate(10px,30px) rotate(-7deg)';
+    // });
+	// card2.addEventListener('mouseenter', () => {
+    //     card2.style.transform = 'translateY(20px) rotate(4.326deg)';
+    // });
+
+    // card2.addEventListener('mouseleave', () => {
+    //     card2.style.transform = 'translate(-30px,80px) rotate(10deg)';
+    // });
+	// card3.addEventListener('mouseenter', () => {
+    //     card3.style.transform = 'translateY(10px) rotate(-2.334deg)';
+    // });
+
+    // card3.addEventListener('mouseleave', () => {
+    //     card3.style.transform = 'translateY(30px) rotate(-9deg)';
+    // });
+
+// cardContainer.addEventListener('mouseover', function (event) {
+// 	console.log(event.target.classList,"target")
+//   if (event.target.classList.contains('card1') && event.target.classList.contains('card2') ) {
+// 	console.log("both cards")
+//     event.target.style.transform = 'translate(10px, 50px) rotate(-2deg)';
+//   } else if (event.target.classList.contains('card2')) {
+//     event.target.style.transform = 'translateY(20px) rotate(4.326deg)';
+//   }
+//   else if (event.target.classList.contains('card3')) {
+//     event.target.style.transform = 'translateY(10px) rotate(-2.334deg)';
+//   }
+// });
+
+// cardContainer.addEventListener('mouseout', function (event) {
+//   if (event.target.classList.contains('card1')) {
+//     event.target.style.transform = 'none'; // Reset the transform property
+//   } else if (event.target.classList.contains('card2')) {
+//     event.target.style.transform = 'none'; // Reset the transform property
+//   }
+//   else if (event.target.classList.contains('card3')) {
+//     event.target.style.transform = 'none'; // Reset the transform property
+//   }
+// });
+
+
+	</script>

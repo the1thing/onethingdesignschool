@@ -28,10 +28,15 @@
 					</a>
 				</div> -->
 				<form id="submitForm" class="contact-content">
-					<input type="text" id="studentname" name="name" placeholder="Enter your name" class="inputfield">
-					<input type="email" id="studentemail" name="email" placeholder="Enter your Email ID" class="inputfield">
-					<button id="mentorsubmit" class="bttn bttn-primary" type="submit">Register Now</button>
+					<input type="text" id="studentname" name="name"  placeholder="Enter your name" class="inputfield">
+					<p class="error-text-name">Please enter your name</p>
+					<input type="text" id="studentemail" name="email"  placeholder="Enter your Email ID" class="inputfield">
+					<p class="error-text-email">Please enter your email address</p>
+					<p class="error-invalid-text-email">Please enter valid email address</p>
+
+					<button id="mentorsubmit" class="bttn bttn-primary" type="submit"><span>Register Now</span></button>
 				</form>
+				<p class="success-text">Form successfully submitted!</p>
 
 
 			</div>
@@ -50,62 +55,64 @@
 </section>
 <script>
 	
-// const CF7_FORM_HEADERS = {
-//     headers: {
-//         "Content-Type": "multipart/form-data"
-//     }
-// }
 	const config={
 		FORM_API_URL:"https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/",
 		ODS_FORM_ENDPOINT: "7754/feedback",
 	}
 	function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Get form data
+    event.preventDefault(); 
     const form = event.target;
-
-    console.log(form.name.value,"form")
     const formData = new FormData();
     formData.append("text-166",form.name.value)
     formData.append("email-935",form.email.value)
 
-    // Access form fields by name
-
-	// const data={
-	// 	name:[text-166],
-	// 	email:email
-	// }
-	// console.log(data,"data")
     const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-  // Use the test method to check if the email matches the pattern
-//   return pattern.test(email);
-    // Perform form validation or other actions
-    // if (name && email && pattern.test(email)) {
-	// console.log(data,"data")
-
-		// console.log(config.FORM_API_URL + config.ODS_FORM_ENDPOINT, data, CF7_FORM_HEADERS,"formm")
+    if (form.name.value && form.email.value && pattern.test(form.email.value)) {
+		document.querySelector('.error-text-name').style.display="none"
+		document.querySelector('.error-text-email').style.display="none"
+		document.querySelector('.error-invalid-text-email').style.display="none"
     fetch('https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/7754/feedback', {
     	method: 'POST',
-        body: formData, // The form data
-        // headers: {
-        // "Content-Type": "multipart/form-data"
-        // }
+        body: formData
       })
     .then(response => response.json())
     .then(data => {
-    // Handle the API response here
+	     successFun()
     	console.log(data);
     })
     .catch(error => {
-    	alert("Invalid email")
     	console.error('Error:', error);
     });
-    // } else {
-    //     alert('Please fill in all required fields.');
-    // }
+   
   }
+  else{
+	if(form.name.value==='' && form.email.value!==''){
+		document.querySelector('.error-text-name').style.display="flex"
+		document.querySelector('.error-text-email').style.display="none"
+
+	}
+	else if(form.email.value==='' && form.name.value!==''){
+
+		document.querySelector('.error-text-email').style.display="flex"
+		document.querySelector('.error-text-name').style.display="nones"
+
+	}
+	else if(!pattern.test(form.email.value)){
+		document.querySelector('.error-invalid-text-email').style.display="flex"
+
+	}
+  }
+}
+  
+  const successFun=()=>{
+	const formDiv = document.getElementById('submitForm');
+	formDiv.style.display="none"
+	const successText=document.querySelector('.success-text');
+	console.log(successText,"success")
+	successText.style.display="flex"
+  }
+  
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);
 
