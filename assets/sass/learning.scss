@@ -161,6 +161,7 @@ span{
 					}
 					&:hover{
 						transform: translateY(10px) rotate(-2.334deg); 
+						pointer-events: all;
 						@include for-tablet-only {}
 						@include phone {
 							transform: unset;
