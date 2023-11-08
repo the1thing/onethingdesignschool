@@ -27,15 +27,20 @@ section {
 			padding: 120px 0;
 			@include for-tablet-only {}
 			@include phone {
-				padding: 40px 0;
+				padding: 40px 16px;
 			}
 			.div-wrap {
 				display: flex;
 				justify-content: space-between;
-				@include for-tablet-only {}
+				@include for-tablet-only {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 32px;
+				}
 				@include phone {
 					flex-direction: column;
 					align-items: flex-start;
+					gap: 16px;
 				}
 				.success-text{
 					display: none;
@@ -58,12 +63,16 @@ section {
 			color: red !important;
 			font-size: 12px;
 			margin-top: -16px;
+			margin-bottom: 0px !important;
+
 			display: none;
 		  }
 		  .error-invalid-text-email{
 			color: red !important;
 			font-size: 12px;
 			margin-top: -16px;
+			margin-bottom: 0px !important;
+
 			display: none;
 		  }
 				.contact-content {
@@ -72,6 +81,9 @@ section {
 					flex-direction: column;
 					gap: 24px;
 					width: 100%;
+					@include for-tablet-only {
+						width: 80%;
+					}
 					.bttn-primary:hover{
                    color: #000 !important;
 					}
@@ -88,6 +100,9 @@ section {
 						border: 0.5px solid $ods-light-grey;
 						width: 100%;
 						@include phone {
+							padding: 16px 24px 16px 24px;
+						}
+						@include for-tablet-only {
 							padding: 16px 24px 16px 24px;
 						}
 					}

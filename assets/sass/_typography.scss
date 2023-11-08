@@ -12,7 +12,9 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 110px;
   font-style: normal;
   font-weight: 600;
-  @include for-tablet-only {}
+  @include for-tablet-only {
+    font-size: 80px;
+  }
   @include phone {
     font-size: 48px;
     line-height: 56px;

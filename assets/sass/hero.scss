@@ -1,9 +1,13 @@
 .homepage-container {
 	.hero-big-text {
 		padding-top: 180px;
-		@include for-tablet-only {}
+		@include for-tablet-only {
+			padding-top: 124px;
+			padding-bottom: 64px;
+		}
 		@include phone {
 			padding-top: 80px;
+			padding-bottom: 0px;
 		}
 		.text-span {
 			display: block;
@@ -84,14 +88,18 @@
 			background-repeat: no-repeat;
 			padding-top: 108px;
 			padding-bottom: 120px;
-			@include for-tablet-only {}
+			@include for-tablet-only {
+				padding-bottom: 72px;
+			}
 			@include phone {
 				padding-bottom: 64px;
 			}
 			.hero-video-wrapper {
 				margin-top: -40px;
 				margin-bottom: 64px;
-				@include for-tablet-only {}
+				@include for-tablet-only {
+					margin-top: 0px;
+				}
 				@include phone {
 					margin-top: 24px;
 				}
@@ -133,6 +141,7 @@
 					padding: 40px 64px;
 					gap: 100px;
 					@include for-tablet-only {
+						gap: 56px;
 						width: 100%;
 						grid-template-columns: repeat(1,1fr);
 					}
@@ -144,7 +153,11 @@
 						border-radius: 160px;
 					}
 					.ods-col {
-						@include for-tablet-only {}
+						@include for-tablet-only {
+							display: flex;
+    flex-direction: column;
+    align-items: center;
+						}
 						@include phone {
 							border-bottom: 1px solid rgba($ods-light-grey, 0.1);
 							margin-bottom: 32px;

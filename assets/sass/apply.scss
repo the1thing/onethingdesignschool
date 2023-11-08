@@ -4,7 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 102px 0 120px 0;
-  @include for-tablet-only {}
+  @include for-tablet-only {
+    padding: 80px 0 96px 0;
+  }
   @include phone {
     padding: 56px 0 64px 0;
   }
@@ -101,6 +103,9 @@
       font-family: "galano-grotesque-medium", Arial, sans-serif;
       font-size: 2rem;
       font-weight: 600;
+      @include for-tablet-only {
+        font-size: 24px;
+      }
     }
     p {
       margin-top: 0.5rem;

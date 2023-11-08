@@ -88,11 +88,14 @@
   }
   else{
 	if(form.name.value==='' && form.email.value!==''){
+		document.querySelector('.error-invalid-text-email').style.display="none"
+
 		document.querySelector('.error-text-name').style.display="flex"
 		document.querySelector('.error-text-email').style.display="none"
 
 	}
 	else if(form.email.value==='' && form.name.value!==''){
+		document.querySelector('.error-invalid-text-email').style.display="none"
 
 		document.querySelector('.error-text-email').style.display="flex"
 		document.querySelector('.error-text-name').style.display="nones"
@@ -100,6 +103,8 @@
 	}
 	else if(!pattern.test(form.email.value)){
 		document.querySelector('.error-invalid-text-email').style.display="flex"
+		document.querySelector('.error-text-name').style.display="none"
+		document.querySelector('.error-text-email').style.display="none"
 
 	}
   }
@@ -112,7 +117,7 @@
 	console.log(successText,"success")
 	successText.style.display="flex"
   }
-  
+
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);
 
