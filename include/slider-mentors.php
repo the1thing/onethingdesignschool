@@ -69,7 +69,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/ravina.png">
+						<img src="assets/images/people/mentors/gagan.png">
 						<div class="content">
 							<h4>
 							Gagan Sahni
@@ -91,7 +91,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/ravina.png">
+						<img src="assets/images/people/mentors/nandini.png">
 						<div class="content">
 							<h4>
 							Nandini Ramakuru
@@ -201,7 +201,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/ravina.png">
+						<img src="assets/images/people/mentors/gagan.png">
 						<div class="content">
 							<h4>
 							Gagan Sahni
@@ -223,7 +223,7 @@
 			<article>
 				<div class="wrapper">
 					<div class="figure-card">
-						<img src="assets/images/people/mentors/ravina.png">
+						<img src="assets/images/people/mentors/nandini.png">
 						<div class="content">
 							<h4>
 							Nandini Ramakuru
