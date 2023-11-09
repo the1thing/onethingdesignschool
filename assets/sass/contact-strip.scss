@@ -4,15 +4,17 @@ section {
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		padding-bottom: 150px; //this is temp, we'll add matter js
+		padding-bottom: 150px; //this is temp, we'll add matter js                        //these two lines will be removed when faq will be added
 		margin-top: 280px !important;
 
-		@include for-tablet-only {}
+		@include for-tablet-only {
+			margin-top: 300px !important;
+		}
 		@include phone {
 			background-size: contain;
 			background-position: bottom center;
 			padding-bottom: 0; //this is temp, we'll add matter js
-			margin-top: 280px !important;
+			margin-top: 480px !important;
 		}
 		.strip-divider {
 			border-top: 1px solid $ods-deep-grey;
