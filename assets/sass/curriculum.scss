@@ -1,6 +1,6 @@
 .template-curriculum {
 	overflow: hidden;
-	// display: none;
+	display: none;
 	@include for-tablet-only {
 		display: none;
 	}
