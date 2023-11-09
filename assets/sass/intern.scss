@@ -90,6 +90,11 @@ width: 157px;
         @include phone{
             display: none;
         }
+        @include for-tablet-only {
+            height: 170px;
+        bottom: 0;
+
+        }
         
         
     }

@@ -34,7 +34,7 @@
 						<strong>Get Started!</strong>
 					</p>
 				</div>
-				<div class="cta-wrapper">
+			<div class="cta-wrapper">
 					<a href="#" class="bttn bttn-primary bttn-primary-dark">
 						<span>Enrol Now</span>
 					</a>

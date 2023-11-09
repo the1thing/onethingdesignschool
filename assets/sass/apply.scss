@@ -3,7 +3,8 @@
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 102px 0 120px 0;
+  // padding: 102px 0 120px 0;          //because of removing curriculum
+  padding: 102px 0 0 0;
   @include for-tablet-only {
     padding: 80px 0 96px 0;
   }
@@ -16,6 +17,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    @include for-tablet-only {
+      margin-top: 80px;
+    }
   }
   .heading-wrap {
     .section-title-secondary {
@@ -134,7 +138,9 @@
     margin-right: auto;
     background-color: $yellow;
     margin-top: 10px;
-    @include for-tablet-only {}
+    @include for-tablet-only {
+      margin-left: -32px;
+    }
     @include phone {
       width: 90%;
       margin-top: 0;
@@ -147,7 +153,9 @@
     margin-top: -20px;
     margin-left: auto;
     background-color: $pink;
-    @include for-tablet-only {}
+    @include for-tablet-only {
+      margin-right: -32px;
+    }
     @include phone {
       width: 90%;
       margin-top: -64%;
@@ -169,7 +177,10 @@
     margin-right: auto;
     margin-top: auto;
     background-color: $blue;
-    @include for-tablet-only {}
+    @include for-tablet-only {
+      margin-bottom: -72px;
+    margin-left: 4.5%;
+    }
     @include phone {
       width: 84%;
       margin: 0 auto;
@@ -193,7 +204,10 @@
     margin-bottom: -30px;
     background-color: $ods-white;
     color: $ods-black;
-    @include for-tablet-only {}
+    @include for-tablet-only {
+      margin-right: 0.5%;
+    margin-bottom: 8px;
+    }
     @include phone {
       width: 80%;
       margin-bottom: 0;
