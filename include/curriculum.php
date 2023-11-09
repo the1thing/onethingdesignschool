@@ -11,7 +11,10 @@
 			<div class="line"></div>
 			<div class="card-footer">
 				<p>Lay the foundation for a confident start. From a masterclass to a complete training and everything in between.</p>
-				<button>Contact US</button>
+				<!-- <button>Contact US</button> -->
+				<a href="#" class="bttn bttn-primary bttn-primary-dark">
+           <span>Contact us</span>
+       </a>
 			</div>
 			<img class="card-pattern1" src="assets/images/curriculum/card-pattern1.png">
 			<img class="card-pattern2" src="assets/images/curriculum/card-pattern2.png">
@@ -20,12 +23,15 @@
       
         <div id="card" class="curriculum-card cards">
 			<div class="card2-main card-main">
-				<button class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+				<span class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.55453 9.42773L9.42798 13.3012L13.3014 9.42773L9.42798 5.55428L5.55453 9.42773ZM9.42798 18.5723L18.5725 9.42773L9.42798 0.283195L0.283444 9.42773L9.42798 18.5723Z" fill="white"/>
-				</svg> Month 1 & 2</button>
+				</svg> Month 1 & 2</span>
 				<p class="card-heading">Design Foundation</p>
 				<p class="card-text">Unlearn and relearn with focused attention on getting the fundamentals right.</p>
-				<button class="card2-contact-btn">Contact US</button>
+				<!-- <button class="card2-contact-btn">Contact US</button> -->
+				<a href="#" class="bttn-yellow bttn-yellow-dark">
+           <span>Contact us</span>
+       </a>
 				<div class="card-bottom-pattern2">
 					<img src="assets/images/curriculum/card-bottom.png">
 				</div>
@@ -35,12 +41,15 @@
 		</div>
 		<div id="card" class="curriculum-card cards">
 			<div class="card3-main card-main">
-				<button class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+				<span class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.55453 9.42773L9.42798 13.3012L13.3014 9.42773L9.42798 5.55428L5.55453 9.42773ZM9.42798 18.5723L18.5725 9.42773L9.42798 0.283195L0.283444 9.42773L9.42798 18.5723Z" fill="white"/>
-				</svg> Month 1 & 2</button>
+				</svg> Month 1 & 2</span>
 				<p class="card-heading">Design Foundation</p>
 				<p class="card-text">Unlearn and relearn with focused attention on getting the fundamentals right.</p>
-				<button class="card3-contact-btn">Contact US</button>
+				<!-- <button class="card3-contact-btn">Contact US</button> -->
+				<a href="#" class="bttn-pink bttn-pink-dark">
+           <span>Contact us</span>
+       </a>
 				<div class="card-bottom-pattern3">
 					<img src="assets/images/curriculum/card-bottom.png">
 				</div>
@@ -52,12 +61,15 @@
 		<div id="card" class="curriculum-card cards">
 			<img class="card-side" src="assets/images/curriculum/card-side.png">
 			<div class="card4-main card-main">
-				<button class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+				<span class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.55453 9.42773L9.42798 13.3012L13.3014 9.42773L9.42798 5.55428L5.55453 9.42773ZM9.42798 18.5723L18.5725 9.42773L9.42798 0.283195L0.283444 9.42773L9.42798 18.5723Z" fill="white"/>
-				</svg> Month 1 & 2</button>
+				</svg> Month 1 & 2</span>
 				<p class="card-heading">Design Foundation</p>
 				<p class="card-text">Unlearn and relearn with focused attention on getting the fundamentals right.</p>
-				<button class="card4-contact-btn">Contact US</button>
+				<!-- <button class="card4-contact-btn">Contact US</button> -->
+				<a href="#" class="bttn-blue bttn-blue-dark">
+           <span>Contact us</span>
+       </a>
 				<div class="card-bottom-pattern3">
 					<img src="assets/images/curriculum/card-bottom.png">
 				</div>
