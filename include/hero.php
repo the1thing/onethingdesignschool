@@ -12,6 +12,11 @@
             <img src="assets/images/home/hero-circle.png">
          </figure>
       </div>
+      <!-- <div class="container">
+        <div id="expand" class="video-container">
+            <iframe allow="autoplay" src="/assets/images/home/video.mp4"></iframe>
+          </div>
+      </div> -->
    </div>
    <div class="hero-stats-wrapper">
       <div class="container">
@@ -56,3 +61,24 @@
       </div>
    </div>
 </section>
+<script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+    <script>
+      var expandDiv = document.getElementById("expand");
+var speed = 5;
+
+function expanding() {
+  var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
+  var scrollAndSpeed = (scrolltop / speed);
+  //Expand using transform
+  //expandDiv.style.transform = "scalex( " + Math.min(Math.max(scrollAndSpeed, 1), 10) + ")";
+  
+  //Or using width
+  expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 20), 95) + "%";
+
+}
+
+window.addEventListener('scroll', function() { // on page scroll
+  requestAnimationFrame(expanding); // call parallaxing()
+}, false);
+      </script>

@@ -46,56 +46,48 @@
 	</div>
 </section>
 <script>
-	// const cardContainer = document.getElementById('card-container');
-	// const card1 = cardContainer.querySelector('.card1');
-	// const card2 = cardContainer.querySelector('.card2');
-	// const card3 = cardContainer.querySelector('.card3');
-
-	// card1.addEventListener('mouseenter', () => {
-    //     card1.style.transform = 'translate(10px, 50px) rotate(-2deg)';
-    // });
-
-    // card1.addEventListener('mouseleave', () => {
-    //     card1.style.transform = 'translate(10px,30px) rotate(-7deg)';
-    // });
-	// card2.addEventListener('mouseenter', () => {
-    //     card2.style.transform = 'translateY(20px) rotate(4.326deg)';
-    // });
-
-    // card2.addEventListener('mouseleave', () => {
-    //     card2.style.transform = 'translate(-30px,80px) rotate(10deg)';
-    // });
-	// card3.addEventListener('mouseenter', () => {
-    //     card3.style.transform = 'translateY(10px) rotate(-2.334deg)';
-    // });
-
-    // card3.addEventListener('mouseleave', () => {
-    //     card3.style.transform = 'translateY(30px) rotate(-9deg)';
-    // });
+// 	const cardContainer = document.getElementById('card-container');
 
 // cardContainer.addEventListener('mouseover', function (event) {
-// 	console.log(event.target.classList,"target")
-//   if (event.target.classList.contains('card1') && event.target.classList.contains('card2') ) {
-// 	console.log("both cards")
-//     event.target.style.transform = 'translate(10px, 50px) rotate(-2deg)';
-//   } else if (event.target.classList.contains('card2')) {
-//     event.target.style.transform = 'translateY(20px) rotate(4.326deg)';
-//   }
-//   else if (event.target.classList.contains('card3')) {
-//     event.target.style.transform = 'translateY(10px) rotate(-2.334deg)';
-//   }
+//     const targetCard = event.target.closest('.learning-cards');
+//     if (targetCard) {
+//         applyTransform(targetCard);
+//     }
 // });
 
 // cardContainer.addEventListener('mouseout', function (event) {
-//   if (event.target.classList.contains('card1')) {
-//     event.target.style.transform = 'none'; // Reset the transform property
-//   } else if (event.target.classList.contains('card2')) {
-//     event.target.style.transform = 'none'; // Reset the transform property
-//   }
-//   else if (event.target.classList.contains('card3')) {
-//     event.target.style.transform = 'none'; // Reset the transform property
-//   }
+//     const targetCard = event.target.closest('.learning-cards');
+//     if (targetCard) {
+//         resetTransform(targetCard);
+//     }
 // });
+
+// function applyTransform(card) {
+// 	const card3=document.querySelector('.card3')
+// 	console.log(card.classList,"classlist")
+// 	console.log(card3,"card3")
+//     if (card.classList.contains('card1')) {
+//         card.style.transform = 'translate(10px, 50px) rotate(-2deg)';
+//     } else if (card.classList.contains('card2')) {
+//         card.style.transform = 'translateY(20px) rotate(4.326deg)';
+//     } else if (card.classList.contains('card3')) {
+//         card.style.transform = 'translateY(10px) rotate(-2.334deg)';
+//     }
+// 	else if (card.classList.contains('card2') && card.classList.contains('card3')){
+//         card3.style.transform = 'translateY(10px) rotate(-2.334deg)';
+// 	}
+
+// }
+
+// function resetTransform(card) {
+// 	if (card.classList.contains('card1')) {
+//         card.style.transform = 'translate(10px,30px) rotate(-7deg)';
+//     } else if (card.classList.contains('card2')) {
+//         card.style.transform = 'translate(-30px,80px) rotate(10deg)';
+//     } else if (card.classList.contains('card3')) {
+//         card.style.transform = 'translateY(30px) rotate(-9deg)';
+//     }
+// }
 
 
 	</script>
