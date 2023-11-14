@@ -2,8 +2,8 @@
   <div class="intern-main-container">
 <div class="intern-container">
         <section class="content-section">
-         <h3 class="section-heading">A chance to intern with us</h3>
-         <p class="section-p">After completion of the course, we provide the opportunity for our students to intern with us at our studios at various locations. </p>
+         <h3 class="section-heading">A chance to work with us</h3>
+         <p class="section-p">An opportunity to get placed at Onething alongside many other top design agencies and product companies.</p>
        <a href="#" class="bttn bttn-primary bttn-primary-dark">
            <span>Contact us</span>
        </a>
