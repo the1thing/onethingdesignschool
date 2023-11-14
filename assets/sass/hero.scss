@@ -111,6 +111,34 @@
 						padding-right: 16px;
 					}
 				}
+				.animate {
+					width:100%;
+					height:100vh;
+				  }
+				  
+				  .scrollimgzoomcontainer {
+					position: relative;
+					width: 100%;
+					height: 450px;
+					overflow: hidden;
+				  }
+				  
+				  .scrollimgzoom {
+					width: 400px;
+					height: 100%;
+					transition: all 1s;
+					border-radius: 48%;
+				  }
+				  
+				  .scrollimgzoomin {
+					/* transform: scaleX(1.2); */
+					width: 900px;
+					height: 100%;
+					transition: all 1s;
+					background-size: cover;
+					border-radius: 30%;
+				
+				  }
 				//animation section
 				// .container {
 				// 	position: relative;

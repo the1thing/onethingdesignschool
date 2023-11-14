@@ -54,7 +54,6 @@
 	</div>
 </section>
 <script>
-	
 	const config={
 		FORM_API_URL:"https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/",
 		ODS_FORM_ENDPOINT: "7754/feedback",
@@ -65,6 +64,10 @@
     const formData = new FormData();
     formData.append("text-166",form.name.value)
     formData.append("email-935",form.email.value)
+	formData.append("number-264",12345)
+	formData.append("hidden-field","ods-footer-form")
+
+	
 
     const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -87,26 +90,25 @@
    
   }
   else{
-	if(form.name.value==='' && form.email.value!==''){
-		document.querySelector('.error-invalid-text-email').style.display="none"
-
-		document.querySelector('.error-text-name').style.display="flex"
-		document.querySelector('.error-text-email').style.display="none"
-
-	}
-	else if(form.email.value==='' && form.name.value!==''){
-		document.querySelector('.error-invalid-text-email').style.display="none"
-
-		document.querySelector('.error-text-email').style.display="flex"
-		document.querySelector('.error-text-name').style.display="nones"
-
-	}
-	else if(!pattern.test(form.email.value)){
-		document.querySelector('.error-invalid-text-email').style.display="flex"
+	if(form.name.value!==''){
 		document.querySelector('.error-text-name').style.display="none"
-		document.querySelector('.error-text-email').style.display="none"
-
 	}
+	if(form.email.value!==''){
+		document.querySelector('.error-text-email').style.display="none"
+	}
+	if(form.name.value===''){
+		document.querySelector('.error-text-name').style.display="flex"
+	}
+	if(form.email.value===''){
+		document.querySelector('.error-text-email').style.display="flex"
+	}
+	if(!pattern.test(form.email.value) && form.email.value!==''){
+		document.querySelector('.error-invalid-text-email').style.display="flex"
+	}
+	if(pattern.test(form.email.value) && form.name.email!==''){
+		document.querySelector('.error-invalid-text-email').style.display="none"
+	}
+	
   }
 }
   

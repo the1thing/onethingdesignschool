@@ -7,16 +7,15 @@
       </h1>
    </div>
    <div class="hero-video-wrapper">
-      <div class="container">
-         <figure>
-            <img src="assets/images/home/hero-circle.png">
-         </figure>
-      </div>
-      <!-- <div class="container">
-        <div id="expand" class="video-container">
-            <iframe allow="autoplay" src="/assets/images/home/video.mp4"></iframe>
-          </div>
-      </div> -->
+   <section class="animate three">
+        <div class="container">
+    
+         
+                    <div class="scrollimgzoomcontainer">
+                        <div class="scrollimgzoom" style="background: url(assets/images/home/hero-circle.png)"></div>   
+                    </div>
+        </div>
+    </section>
    </div>
    <div class="hero-stats-wrapper">
       <div class="container">
@@ -64,21 +63,18 @@
 <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
     <script>
-      var expandDiv = document.getElementById("expand");
-var speed = 5;
-
-function expanding() {
-  var scrolltop = window.pageYOffset; // get number of pixels document has scrolled vertically
-  var scrollAndSpeed = (scrolltop / speed);
-  //Expand using transform
-  //expandDiv.style.transform = "scalex( " + Math.min(Math.max(scrollAndSpeed, 1), 10) + ")";
-  
-  //Or using width
-  expandDiv.style.width = Math.min(Math.max(scrollAndSpeed, 20), 95) + "%";
-
-}
-
-window.addEventListener('scroll', function() { // on page scroll
-  requestAnimationFrame(expanding); // call parallaxing()
-}, false);
+    gsap.to( ".scrollimgzoom", {
+    duration: 7,
+    scrollTrigger: {
+        trigger: ".scrollimgzoom",
+        start: "top 50%",
+        // end: "top 30%",
+    scrub: true,
+        toggleClass: "scrollimgzoomin",
+        // markers: {
+        //     startColor: "red",
+        //     endColor: "red"
+        // }
+    }
+})
       </script>

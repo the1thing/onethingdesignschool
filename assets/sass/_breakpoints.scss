@@ -94,3 +94,8 @@
     @content;
   }
 }
+@mixin for-extra-large-screen {
+  @media (min-width: 1441px) and (max-height: 899px) {
+    @content;
+  }
+}
