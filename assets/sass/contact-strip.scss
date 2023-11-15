@@ -1,11 +1,12 @@
 section {
 	&.contact-us-strip-wrapper {
-		background-image: url('../images/elements/footer/footer-bg.png');
+		// background-image: url('../images/elements/footer/footer-bg.png');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 150px; //this is temp, we'll add matter js                        //these two lines will be removed when faq will be added
 		margin-top: 280px !important;
+		position: relative;
 
 		@include for-tablet-only {
 			margin-top: 300px !important;
@@ -54,29 +55,15 @@ section {
     justify-content: center;
     align-items: center;
 				}
-          .error-text-name{
+          .error-text{
 			color: red !important;
 			font-size: 12px;
 			margin-top: -16px;
 			margin-bottom: 0px !important;
 			display: none;
+			margin-left: 24px;
 		  }
-		  .error-text-email{
-			color: red !important;
-			font-size: 12px;
-			margin-top: -16px;
-			margin-bottom: 0px !important;
-
-			display: none;
-		  }
-		  .error-invalid-text-email{
-			color: red !important;
-			font-size: 12px;
-			margin-top: -16px;
-			margin-bottom: 0px !important;
-
-			display: none;
-		  }
+		
 				.contact-content {
 					padding-top: 24px;
 					display: flex;
@@ -162,9 +149,87 @@ section {
 				&#vector-5 {}
 			}
 		}
+		.falling-elements {
+			// position: absolute;
+			// bottom: 0;
+			// left: 0;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			pointer-events: none; /* Ensure falling elements don't block interactions */
+		  }
+		 
+
+    .element{
+  
+  position: absolute;
+  animation-name: falling;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; 
+	}
+     .element1{
+    // right: 60vw;
+	left:100px;
+	bottom: -60px;
+     animation-duration: 6s;
+     @keyframes falling{
+    0%{
+      top: -10vh;}
+    100%{
+      top: 90vh;}
+      }}
+     .element2{
+		left:330px;
+		bottom: 79px;
+      animation-duration: 8s;
+      @keyframes falling{
+      0%{
+      top: -10vh}
+      100%{
+      top: 90vh}
 	}
 }
+.element3{
+	left:502px;
+	bottom: -179px;
+	animation-duration: 8s;
+	@keyframes falling{
+	0%{
+	top: -10vh}
+	100%{
+	top: 90vh}
+  }
+} 
+.element4{
+	left:922px;
+	bottom: 128px;
+	animation-duration: 8s;
+	@keyframes falling{
+	0%{
+	top: -10vh}
+	100%{
+	top: 90vh}
+  }
+}
+ .element5{
+	left:620px;
+	bottom: -200px;
+	animation-duration: 8s;
+	@keyframes falling{
+	0%{
+	top: -10vh}
+	100%{
+	top: 90vh}
+  }
+}
+}
+}
+canvas {
+// display: none;
 
+  }
+  
 
 
 

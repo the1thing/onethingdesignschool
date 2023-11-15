@@ -9,10 +9,10 @@
    <div class="hero-video-wrapper">
    <section class="animate three">
         <div class="container">
-    
-         
                     <div class="scrollimgzoomcontainer">
-                        <div class="scrollimgzoom" style="background: url(assets/images/home/hero-circle.png)"></div>   
+                        <!-- <div class="scrollimgzoom" style="background: url(assets/images/home/hero-circle.png)"></div>  -->
+                        <div class="scrollimgzoom" style="background: url(assets/images/home/samp-img.png)"></div>   
+
                     </div>
         </div>
     </section>
@@ -63,18 +63,35 @@
 <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
     <script>
-    gsap.to( ".scrollimgzoom", {
-    duration: 7,
-    scrollTrigger: {
-        trigger: ".scrollimgzoom",
-        start: "top 50%",
-        // end: "top 30%",
+  gsap.to(".scrollimgzoom", {
+  width: "100%",
+  left:"0%",
+  borderRadius: "20%", 
+  duration: 10,
+  ease: "power2.inOut", 
+  scrollTrigger: {
+    trigger: ".scrollimgzoom",
+    start: "top 90%",
+    end: "bottom 10%",
     scrub: true,
-        toggleClass: "scrollimgzoomin",
-        // markers: {
-        //     startColor: "red",
-        //     endColor: "red"
-        // }
-    }
-})
+  },
+});
+
+// gsap.to(".scrollimgzoom img", {
+//   scaleX: -10, // Use a negative value to reverse the direction
+//   duration: 10,
+//   width: "100%",
+//   left:"0%",
+//   ease: "power2.inOut", 
+//   borderRadius: "4000px", 
+//   scrollTrigger: {
+//     trigger: ".scrollimgzoom",
+//     start: "top 50%",
+//     end: "bottom 10%",
+//     scrub: true,
+//   },
+// });
+
+
+
       </script>

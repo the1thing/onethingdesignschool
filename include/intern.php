@@ -10,13 +10,18 @@
      
         </section>
         <section class="animation-section">
-            <div id="image-section1" class="image-section1"> 
+
+            <div id="image-section1" class="image-section1">
+               
              <img src="assets/images/intern/sliding1.png" class="scrolling-image">
              <img src="assets/images/intern/sliding2.png" class="scrolling-image">
              <img src="assets/images/intern/sliding3.png" class="scrolling-image">
              <img src="assets/images/intern/sliding1.png" class="scrolling-image">
              <img src="assets/images/intern/sliding2.png" class="scrolling-image">
              <img src="assets/images/intern/sliding3.png" class="scrolling-image">
+             <img src="assets/images/intern/sliding1.png" class="scrolling-image">
+    <img src="assets/images/intern/sliding2.png" class="scrolling-image">
+    <img src="assets/images/intern/sliding3.png" class="scrolling-image">
             </div>
             <div class="phone-image-section1"> 
              <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
@@ -51,3 +56,12 @@
 
 </div>
 </section>
+<script>
+  // gsap.to("#image-section1", {
+  //     y: "-100%", // Move the container upwards by its height
+  //     duration: 20, // Duration of the complete scroll
+  //     ease: "linear", // Linear easing for continuous scroll
+  //     // repeat: -1, // Repeat indefinitely
+  //     repeatDelay: 0,
+  //   });
+  </script>

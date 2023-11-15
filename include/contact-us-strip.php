@@ -29,10 +29,10 @@
 				</div> -->
 				<form id="submitForm" class="contact-content">
 					<input type="text" id="studentname" name="name"  placeholder="Enter your name" class="inputfield">
-					<p class="error-text-name">Please enter your name</p>
+					<p class="error-text error-text-name">Please enter your name</p>
 					<input type="text" id="studentemail" name="email"  placeholder="Enter your Email ID" class="inputfield">
-					<p class="error-text-email">Please enter your email address</p>
-					<p class="error-invalid-text-email">Please enter valid email address</p>
+					<p class="error-text error-text-email">Please enter your email address</p>
+					<p class="error-text error-invalid-text-email">Please enter valid email address</p>
 
 					<button id="mentorsubmit" class="bttn bttn-primary" type="submit"><span>Register Now</span></button>
 				</form>
@@ -51,6 +51,13 @@
 			<img src="assets/images/elements/footer/union.svg" class="icon svg-icon" id="vector-4" />
 			<img src="assets/images/elements/footer/vector.svg" class="icon svg-icon" id="vector-5" />
 		</div>
+	</div>
+	<div class="falling-elements">
+		<img class="element element1" src="assets/images/footer/image1.png">
+		<img class="element element2" src="assets/images/footer/image2.png">
+		<img class="element element3" src="assets/images/footer/image3.svg">
+		<img class="element element4" src="assets/images/footer/image4.png">
+		<img class="element element5" src="assets/images/footer/image5.png">
 	</div>
 </section>
 <script>
@@ -126,6 +133,133 @@
 
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+<!-- <script>
+
+    // Module aliases
+    var Engine = Matter.Engine,
+      Render = Matter.Render,
+      World = Matter.World,
+      Bodies = Matter.Bodies;
+
+    // Create an engine
+    var engine = Engine.create();
+
+    // Create a renderer
+    var render = Render.create({
+      element: document.body,
+      engine: engine,
+      options: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        wireframes: false
+      }
+    });
+
+    // Create falling elements with custom images
+    var elements = [];
+    var imagePaths = [
+      'assets/images/footer/img1.png',
+      'assets/images/footer/img2.svg',
+	  'assets/images/footer/img3.png','assets/images/footer/img4.png',
+      'assets/images/footer/img5.png'
+    ];
+
+    // Load images asynchronously
+    var loadImages = function (paths, callback) {
+      var loadedImages = 0;
+      var totalImages = paths.length;
+      var images = [];
+
+      paths.forEach(function (path, index) {
+        var img = new Image();
+        img.onload = function () {
+          loadedImages++;
+          if (loadedImages === totalImages) {
+            callback(images);
+          }
+        };
+        img.src = path;
+        images[index] = img;
+      });
+    };
+
+    // Use the images after they are loaded
+    loadImages(imagePaths, function (images) {
+      for (var i = 0; i < images.length; i++) {
+        var element = Bodies.rectangle(
+          Math.random() * window.innerWidth,
+          Math.random() * window.innerHeight,
+          50,
+          50,
+          {
+            restitution: 0.8, // Bounciness
+            friction: 0.1,     // Surface friction
+            render: {
+              sprite: {
+                texture: images[i].src,
+                xScale: 0.5,  // Adjust the scale if needed
+                yScale: 0.5
+              }
+            }
+          }
+        );
+        elements.push(element);
+      }
+
+      // Add the elements to the world
+      World.add(engine.world, elements);
+
+      // Add a ground (floor) to the world
+      var ground = Bodies.rectangle(
+        window.innerWidth / 2,
+        window.innerHeight + 25,
+        window.innerWidth,
+        50,
+        { isStatic: true }
+      );
+      World.add(engine.world, ground);
+
+      // Run the engine
+      Engine.run(engine);
+
+      // Run the renderer
+      Render.run(render);
+
+      // Resize the canvas on window resize
+      window.addEventListener('resize', function () {
+        Render.canvas.width = window.innerWidth;
+        Render.canvas.height = window.innerHeight;
+        Render.bounds.max.x = window.innerWidth;
+        Render.bounds.max.y = window.innerHeight;
+        Render.options.width = window.innerWidth;
+        Render.options.height = window.innerHeight;
+        Engine.update(engine, 1000 / 60); // Update the engine on resize
+      });
+    });
+  
+
+</script> -->
+<!-- <script> function addFallingElement(x, y, imageUrl) {
+        const fallingElement = document.createElement('img');
+        fallingElement.src = imageUrl;
+        fallingElement.style.position = 'absolute';
+        fallingElement.style.left = `${x}px`;
+        fallingElement.style.bottom = `${y}px`;
+
+        document.querySelector('.falling-elements').appendChild(fallingElement);
+    }
+
+    // Example: Add falling elements with custom images
+    addFallingElement(100, -60, 'assets/images/footer/image1.png');
+    addFallingElement(330, 79, 'assets/images/footer/image2.png');
+    addFallingElement(502, -179, 'assets/images/footer/image3.svg');
+    addFallingElement(922, 128, 'assets/images/footer/image4.png');
+    addFallingElement(620, -200, 'assets/images/footer/image5.png');
+	</script> -->
+
+
+
 
 
 

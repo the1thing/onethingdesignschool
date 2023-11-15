@@ -55,16 +55,31 @@ require_once './header.php';
 <section class="contact-form-wrapper">
    <h2>Register now <img src="assets/images/contact/form-head.png"></h2>
    <form id="submitForm" class="ods-form">
+      <div class="form-groups">
    <input id="studentname" name="name" type="text" class="input-field" placeholder="Enter your name">
+   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('name')"></div>
    <p class="error-text error-text-name">Please enter your name</p>
+   <div class="form-groups">
+
    <input id="studentphone" name="phone" type="text" class="input-field" placeholder="Enter your phone number">
+   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('phone')"></div>
+
 	<p class="error-text error-text-phone">Please enter your phone number</p>
 	<p class="error-text error-invalid-text-phone">Please enter valid phone number</p>
+   <div class="form-groups">
 
    <input id="studentemail" name="email" type="text" class="input-field" placeholder="Enter your email address">
+   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('email')"></div>
+
    <p class="error-text error-text-email">Please enter your email address</p>
 	<p class="error-text error-invalid-text-email">Please enter valid email address</p>
-   <button>SUBMIT</button>
+   <button><div class="cta-wrapper">
+					<a href="#" class="bttn bttn-primary bttn-primary-dark">
+						<span>SUBMIT</span>
+					</a>
+				</div></button>
+			</div>
+   <!-- <button>SUBMIT</button> -->
 </form>
 
 </section>
@@ -148,6 +163,19 @@ require_once './header.php';
   }
 }
   
+const handleClick=(value)=>{
+console.log(value,"value")
+if(value==='name'){
+   form.name.value=''
+}
+if(value==='email'){
+   form.email.value=''
+}
+if(value==='phone'){
+   form.phone.value=''
+}
+
+}
 //   const successFun=()=>{
 // 	const formDiv = document.getElementById('submitForm');
 // 	formDiv.style.display="none"

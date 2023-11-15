@@ -145,7 +145,7 @@ width: 267px;
     }
     }
     .animation-section{
-        height: 780px;
+        height: auto;
         overflow: hidden;
         width: 50%;
         z-index: 2;
@@ -164,10 +164,11 @@ width: 267px;
         width: 50%;
         overflow: hidden;
         position: relative;
-        height: 780px;
+        height: auto;
         display: flex;
     flex-direction: column;
     gap: 20px;
+    
     @include phone{
         display: none;
     }
@@ -177,16 +178,19 @@ width: 267px;
    
     }
     .scrolling-image {
+        width: 100%;
+        height: auto;
         animation: scrollImage 10s linear infinite;
-       
+        animation-delay: 0ms;
+        // background:url("../images/intern/sliding1.png")
       }
       
-      @keyframes scrollImage {
+      @keyframes scrollImage{
         0% {
-          transform: translateY(0);
+          transform: translateY(0%);
         }
         100% {
-          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
+          transform: translateY(-200%);
         }
       }
       @keyframes phoneScrollImage {
