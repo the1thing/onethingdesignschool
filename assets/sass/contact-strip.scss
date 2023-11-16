@@ -150,10 +150,9 @@ section {
 			}
 		}
 		.falling-elements {
-			// position: absolute;
-			// bottom: 0;
-			// left: 0;
-			position: relative;
+			z-index: 2;
+             top: 0;
+			 position: absolute;
 			width: 100%;
 			height: 100%;
 			pointer-events: none; /* Ensure falling elements don't block interactions */
@@ -163,9 +162,9 @@ section {
     .element{
   
   position: absolute;
-  animation-name: falling;
+//   animation-name: falling;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+//   animation-timing-function: linear;
   animation-fill-mode: forwards; 
 	}
      .element1{
@@ -173,54 +172,62 @@ section {
 	left:100px;
 	bottom: -60px;
      animation-duration: 6s;
+	 animation-name: falling;
+
      @keyframes falling{
     0%{
       top: -10vh;}
     100%{
-      top: 90vh;}
+      top: 80vh;}
       }}
      .element2{
 		left:330px;
 		bottom: 79px;
-      animation-duration: 8s;
-      @keyframes falling{
+      animation-duration: 6s;
+	  animation-name: element2Falling;
+      @keyframes element2Falling{
       0%{
       top: -10vh}
       100%{
-      top: 90vh}
+      top: 70vh}
 	}
 }
 .element3{
 	left:502px;
 	bottom: -179px;
-	animation-duration: 8s;
-	@keyframes falling{
+	animation-duration: 6s;
+	animation-name: element3Falling;
+	@keyframes element3Falling{
 	0%{
 	top: -10vh}
 	100%{
-	top: 90vh}
+	top: 80vh}
   }
 } 
 .element4{
 	left:922px;
 	bottom: 128px;
-	animation-duration: 8s;
-	@keyframes falling{
+	animation-duration: 6s;
+	animation-name: element4Falling;
+
+	@keyframes element4Falling{
 	0%{
 	top: -10vh}
 	100%{
-	top: 90vh}
+	top: 69vh}
   }
 }
  .element5{
 	left:620px;
 	bottom: -200px;
-	animation-duration: 8s;
-	@keyframes falling{
+	animation-duration: 6s;
+	animation-name: element5Falling;
+
+	@keyframes element5Falling{
 	0%{
 	top: -10vh}
 	100%{
-	top: 90vh}
+	top: 80vh}
   }
 }
 }

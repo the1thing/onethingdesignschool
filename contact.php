@@ -23,31 +23,16 @@ require_once './header.php';
    <div class="hero-stats-wrapper">
     
             <div class="ods-col">
-               <div class="svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-                    <path d="M40.6304 20.0002L40.6304 0.000488281L20.6307 0.000487408L40.6304 20.0002Z" fill="#E571EE"/>
-                    <path d="M20.63 19.9997L20.63 0L0.630363 -8.7321e-07L20.63 19.9997Z" fill="#E571EE"/>
-                    <path d="M20.6302 39.9992L20.6302 19.9995L0.630516 19.9995L20.6302 39.9992Z" fill="#E571EE"/>
-                    <path d="M40.6295 39.9992L40.6295 19.9995L20.6299 19.9995L40.6295 39.9992Z" fill="#E571EE"/>
-                  </svg>
-               </div>
-               <p>Beginner friendly UX Design course</p>
+               <p class="stats_num yellow-stats">200+</p>
+               <p>Students</p>
             </div>
             <div class="ods-col">
-               <div class="svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-                    <path d="M20.0155 0L20.0194 19.9803L27.6692 1.5224L20.0267 19.9834L34.1576 5.85787L20.0321 19.9889L38.4931 12.3463L20.0352 19.9961L40.0155 20L20.0352 20.0039L38.4931 27.6537L20.0321 20.0111L34.1576 34.1421L20.0267 20.0166L27.6692 38.4776L20.0194 20.0197L20.0155 40L20.0117 20.0197L12.3618 38.4776L20.0044 20.0166L5.8734 34.1421L19.9989 20.0111L1.53794 27.6537L19.9959 20.0039L0.0155334 20L19.9959 19.9961L1.53794 12.3463L19.9989 19.9889L5.8734 5.85787L20.0044 19.9834L12.3618 1.5224L20.0117 19.9803L20.0155 0Z" stroke="#628BFF" stroke-width="2.78"/>
-                  </svg>
-               </div>
-               <p>Interactive project discussions and Q&A</p>
+            <p class="stats_num blue-stats">10+</p>
+               <p>Mentors</p>
             </div>
             <div class="ods-col">
-               <div class="svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.400848 0H0.542545L40.4008 39.8583V40H25.0182L0.400848 15.3827V0ZM17.7344 0L40.2562 22.5218V0H17.7344Z" fill="#FBB22D"/>
-                  </svg>
-               </div>
-               <p>Weekend Classes</p>
+            <p class="stats_num pink-stats">400+</p>
+               <p>Hours Taught</p>
             </div>
          </div> 
      
@@ -56,20 +41,20 @@ require_once './header.php';
    <h2>Register now <img src="assets/images/contact/form-head.png"></h2>
    <form id="submitForm" class="ods-form">
       <div class="form-groups">
-   <input id="studentname" name="name" type="text" class="input-field" placeholder="Enter your name">
-   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('name')"></div>
+   <input id="studentname" onfocus="handleFocus('name')" onblur="handleBlur('name')" name="name" type="text" class="input-field" placeholder="Enter your name">
+   <img id="nameCross" src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('name')"></div>
    <p class="error-text error-text-name">Please enter your name</p>
    <div class="form-groups">
 
-   <input id="studentphone" name="phone" type="text" class="input-field" placeholder="Enter your phone number">
-   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('phone')"></div>
+   <input id="studentphone" onfocus="handleFocus('phone')" onblur="handleBlur('phone')"  name="phone" type="text" class="input-field" placeholder="Enter your phone number">
+   <img id="phoneCross" src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('phone')"></div>
 
 	<p class="error-text error-text-phone">Please enter your phone number</p>
 	<p class="error-text error-invalid-text-phone">Please enter valid phone number</p>
    <div class="form-groups">
 
-   <input id="studentemail" name="email" type="text" class="input-field" placeholder="Enter your email address">
-   <img src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('email')"></div>
+   <input id="studentemail" onfocus="handleFocus('email')" onblur="handleBlur('email')" name="email" type="text" class="input-field" placeholder="Enter your email address">
+   <img id="emailCross" src='assets/images/contact/cross.svg' class="cross-img" onclick="handleClick('email')"></div>
 
    <p class="error-text error-text-email">Please enter your email address</p>
 	<p class="error-text error-invalid-text-email">Please enter valid email address</p>
@@ -79,7 +64,6 @@ require_once './header.php';
 					</a>
 				</div></button>
 			</div>
-   <!-- <button>SUBMIT</button> -->
 </form>
 
 </section>
@@ -164,7 +148,8 @@ require_once './header.php';
 }
   
 const handleClick=(value)=>{
-console.log(value,"value")
+   document.getElementById(`${value}Cross`).style.display="none"
+console.log(value,"valuesss")
 if(value==='name'){
    form.name.value=''
 }
@@ -186,6 +171,28 @@ if(value==='phone'){
 
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);
+
+  //on focus of input field
+
+
+let blurTimeout;
+const handleFocus=(value)=>{
+   clearTimeout(blurTimeout);
+   document.getElementById(`${value}Cross`).style.display="block"
+}
+function handleBlur(value) {
+  blurTimeout = setTimeout(() => {
+    document.getElementById(`${value}Cross`).style.display = 'none';
+  }, 100);
+}
+document.getElementById('studentname').addEventListener('focus', () => handleFocus('name'));
+document.getElementById('studentname').addEventListener('blur', () => handleBlur('name'));
+
+document.getElementById('studentphone').addEventListener('focus', () => handleFocus('phone'));
+document.getElementById('studentphone').addEventListener('blur', () => handleBlur('phone'));
+
+document.getElementById('studentemail').addEventListener('focus', () => handleFocus('email'));
+document.getElementById('studentemail').addEventListener('blur', () => handleBlur('email'));
 
 
 

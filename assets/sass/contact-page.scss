@@ -1,9 +1,27 @@
+.contact-page-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    z-index: 0; 
+    opacity: 0.5;
+    @include for-tablet-only{
+    background-image: unset; 
+    }
+    @include phone{
+        background-image: unset; 
+        }
+  }
 .contact-page-wrapper {
     display: flex;
     width:100%;
    padding-top: 100px;
     gap: 40px;
     padding-bottom: 24px;
+    background-image: url('../images/contact/bg.png');
     @include for-extra-large-screen{
         padding-bottom: unset;
     }
@@ -86,9 +104,12 @@ font-size: 64px;
     .hero-stats-wrapper{
         display: flex;
         padding: 64px 0;
-       gap: 80px;
+        gap: 140px;
        @include for-extra-large-screen {
         padding: 40px 0;
+       }
+       @include for-tablet-only{
+        gap: 180px;
        }
        @include phone {
         flex-direction: column;
@@ -96,6 +117,7 @@ font-size: 64px;
         align-items: center;
         padding: 64px 0 32px 0;
        }
+      
         .ods-col{
             display: flex;
             flex-direction: column;
@@ -107,6 +129,22 @@ font-size: 64px;
             p{
                 // width: 181px;
                 color: #FEFCE4;
+                font-size: 24px;
+            }
+            .stats_num{
+                font-family: "galano-grotesque-semibold";
+                font-size: 40px;
+                font-style: normal;
+                line-height: 130%;
+            }
+            .yellow-stats{
+                color: #FBB22D;
+            }
+            .blue-stats{
+                color: #628BFF;
+            }
+            .pink-stats{
+                color: #F68;
             }
         }
     }
@@ -149,6 +187,7 @@ font-size: 64px;
        }
     }
     }
+   
     .contact-form-wrapper{
         padding: 96px 56px;
         width: 45%;
@@ -159,7 +198,7 @@ width: 606px;
 height: 768px;
 background-image: url("../images/contact/bg-img.png");
 background-position: top center;
-  background-size: cover;
+  background-size:  cover;
   background-repeat: no-repeat;
   @include for-extra-large-screen{
     padding: 40px 56px;
@@ -225,7 +264,8 @@ line-height: 72px;
     position: absolute;
     top: 16px;
     right: 32px;
-    z-index: 1;
+    z-index: 2;
+    display: none;
     @include for-tablet-only {
         right: 84px;
     }
@@ -257,6 +297,9 @@ line-height: 150%; /* 24px */
 .input-field:focus{
     border: 0.5px solid #FF4B56;
 }}
+#emailCross #nameCross #phoneCross{
+    display: none;
+  }
 .success-text{
     display: none;
     color: #fff;
