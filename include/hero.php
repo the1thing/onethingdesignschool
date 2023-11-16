@@ -16,6 +16,7 @@
                     </div>
         </div>
     </section>
+    <img src="assets/images/home/samp-img.png" class="hero-img">
    </div>
    <div class="hero-stats-wrapper">
       <div class="container">

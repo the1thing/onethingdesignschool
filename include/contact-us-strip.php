@@ -59,6 +59,7 @@
 		<img class="element element4" src="assets/images/footer/image4.png">
 		<img class="element element5" src="assets/images/footer/image5.png">
 	</div>
+	<img src="assets/images/elements/footer/footer-bg.png" class="background-img">
 </section>
 <script>
 	const config={

@@ -10,12 +10,26 @@ section {
 
 		@include for-tablet-only {
 			margin-top: 300px !important;
+		
 		}
 		@include phone {
+
 			background-size: contain;
 			background-position: bottom center;
 			padding-bottom: 0; //this is temp, we'll add matter js
 			margin-top: 480px !important;
+		}
+		.background-img{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			display: none;
+			@include for-tablet-only{
+				display: none;
+				height: 528px;
+    width: 100%;
+			}
 		}
 		.strip-divider {
 			border-top: 1px solid $ods-deep-grey;
@@ -156,6 +170,15 @@ section {
 			width: 100%;
 			height: 100%;
 			pointer-events: none; /* Ensure falling elements don't block interactions */
+			@include for-extra-large-screen{
+				top: 100px;
+			}
+			@include for-tablet-only{
+				display: none;
+			}
+			@include phone {
+				display: none;
+			}
 		  }
 		 
 
@@ -179,7 +202,15 @@ section {
       top: -10vh;}
     100%{
       top: 80vh;}
-      }}
+      }
+	  @include for-extra-large-screen{
+		@keyframes falling{
+			0%{
+			  top: -10vh;}
+			100%{
+			  top: 90vh;}
+			  }}
+	  }
      .element2{
 		left:330px;
 		bottom: 79px;
@@ -191,6 +222,13 @@ section {
       100%{
       top: 70vh}
 	}
+	@include for-extra-large-screen{
+		@keyframes element2Falling{
+			0%{
+			  top: -10vh;}
+			100%{
+			  top:75vh;}
+			  }}
 }
 .element3{
 	left:502px;
@@ -203,6 +241,13 @@ section {
 	100%{
 	top: 80vh}
   }
+  @include for-extra-large-screen{
+	@keyframes element3Falling{
+		0%{
+		  top: -10vh;}
+		100%{
+		  top:90vh;}
+		  }}
 } 
 .element4{
 	left:922px;
@@ -216,6 +261,13 @@ section {
 	100%{
 	top: 69vh}
   }
+  @include for-extra-large-screen{
+	@keyframes element4Falling{
+		0%{
+		  top: -10vh;}
+		100%{
+		  top:75vh;}
+		  }}
 }
  .element5{
 	left:620px;
@@ -229,6 +281,13 @@ section {
 	100%{
 	top: 80vh}
   }
+  @include for-extra-large-screen{
+	@keyframes element5Falling{
+		0%{
+		  top: -10vh;}
+		100%{
+		  top:90vh;}
+		  }}
 }
 }
 }

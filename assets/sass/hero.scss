@@ -100,19 +100,48 @@
 			  
 				@include for-tablet-only {
 				  margin-top: 0;
+				  padding-left: 40%;
+				
 				}
 			  
 				@include phone {
 				  margin-top: 24px;
+				padding: 32px;
+				}
+			  .hero-img{
+				display: none;
+				@include for-tablet-only{
+					display: block;
+					border-radius: 50%;
+					height: 450px;
+					width: 450px;
+				}
+				@include phone{
+					display: block;
+					border-radius: 50%;
+					height: 350px;
+					width: 350px;
+				}
+			}
+				.animate{
+                    @include for-tablet-only{
+						display: none;
+
+					} 
+					@include phone{
+						display: none;
+					} 
 				}
 			  
 				> .container {
 				  padding: 0;
 			  
-				  @include for-tablet-only {}
+				  @include for-tablet-only {
+				  }
 			  
 				  @include phone {
 					padding-right: 16px;
+
 				  }
 				}
 			  
