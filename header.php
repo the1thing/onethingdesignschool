@@ -25,7 +25,7 @@
                   </a>
                </div>
                <div class="header-contact">
-                  <a href="#" class="bttn bttn-primary">
+                  <a href="/contact.php" class="bttn bttn-primary">
                      <span>Contact us</span>
                   </a>
                </div>
@@ -33,6 +33,7 @@
          </div>
       </header>
       <script>
+		
          $(window).on("scroll", function() {
 	if($(window).scrollTop() > 150) {
 		$(".header").addClass("is-fixed");
@@ -58,40 +59,7 @@ setInterval(function() {
 function hasScrolled() {
 	var st = $(this).scrollTop();
 	if(Math.abs(lastScrollTop - st) <= delta) return;
-	if(st > lastScrollTop && st > navbarHeight) {
-		$('header').removeClass('nav-down').addClass('nav-up');
-	} else {
-		if(st + $(window).height() < $(document).height()) {
-			$('header').removeClass('nav-up').addClass('nav-down');
-		}
-	}
-	lastScrollTop = st;
-}
-$(window).on("scroll", function() {
-	if($(window).scrollTop() > 150) {
-		$(".header").addClass("is-fixed");
-	} else {
-		$(".header").removeClass("is-fixed");
-	}
-});
-
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-$(window).scroll(function(event) {
-	didScroll = true;
-});
-setInterval(function() {
-	if(didScroll) {
-		hasScrolled();
-		didScroll = false;
-	}
-}, 250);
-
-function hasScrolled() {
-	var st = $(this).scrollTop();
-	if(Math.abs(lastScrollTop - st) <= delta) return;
+	// var scrollTrigger = 100; 
 	if(st > lastScrollTop && st > navbarHeight) {
 		$('header').removeClass('nav-down').addClass('nav-up');
 	} else {
@@ -102,7 +70,8 @@ function hasScrolled() {
 	lastScrollTop = st;
 }
 
-         var header = document.getElementById("header");
+
+    var header = document.getElementById("header");
 var sxn2 = document.getElementById("two");
 var sxn3 = document.getElementById("three");
 var hh = header.offsetHeight;
@@ -182,6 +151,7 @@ jQuery(function($) {
 		HeaderWhiteMode();
 	});
 });
+		
          </script>
 
 
