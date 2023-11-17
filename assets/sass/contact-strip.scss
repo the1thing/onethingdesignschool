@@ -243,6 +243,9 @@ section {
 		bottom: 79px;
 	animation: element2Falling 5s linear,rotate 5s linear forwards;
 	  animation-fill-mode: forwards;
+	  @include for-extra-large-screen {
+		left: 336px;
+	  }
       @keyframes element2Falling{
 		0% {
 			top: 0vh;
@@ -285,6 +288,10 @@ section {
 	animation-duration: 7s;
 	animation-name: element3Falling;
 	animation-fill-mode: forwards;
+	@include for-extra-large-screen{
+		left:502px;
+
+	}
 	@keyframes element3Falling{
 		0% {
 			top: 0vh;
@@ -324,12 +331,14 @@ section {
 		  }}
 } 
 .element4{
-	left:922px;
+	left:850px;
+	// left: 990px;
 	bottom: 128px;
 	
 	animation: element4Falling 7s linear, rotate 7s linear forwards;
 
 	animation-fill-mode: forwards;
+	
 	@keyframes element4Falling{
 		0% {
 			top: 0vh;
@@ -337,12 +346,15 @@ section {
 		
 		  50% {
 			top: 69vh; /* Fall down */
+	       left: 850px;
+
 		  }
 		  75% {
 			top: 49vh; /* Bounce up */
 		  }
 		  100% {
 			top: 69vh; /* Fall down */
+			left:922px;
 		  }
   }
   @include for-extra-large-screen{
@@ -354,13 +366,15 @@ section {
 			top: 50vh; /* Bounce up */
 		  }
 		  50% {
-			top: 75vh; /* Fall down */
+			top: 76vh; /* Fall down */
+			left: 850px;
 		  }
 		  75% {
 			top: 50vh; /* Bounce up */
 		  }
 		  100% {
-			top: 75vh; /* Fall down */
+			top: 76vh; /* Fall down */
+			left:922px;
 		  }
 		  }}
 }
@@ -370,6 +384,10 @@ section {
 	animation-duration: 7s;
 	animation-name: element5Falling;
 	animation-fill-mode: forwards;
+	@include for-extra-large-screen {
+		left:620px;
+
+	}
 	@keyframes element5Falling{
 		0% {
 			top: 0vh;

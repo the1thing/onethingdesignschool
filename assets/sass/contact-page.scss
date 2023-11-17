@@ -249,6 +249,9 @@ line-height: 72px;
   @include phone {
     padding: 32px 0;
   }
+  button{
+    background: none;
+  }
 
 //   button{
 //     width: 124px;
