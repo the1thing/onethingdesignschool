@@ -164,7 +164,7 @@ section {
 			}
 		}
 		.falling-elements {
-			z-index: 2;
+			z-index: -1;
              top: 0;
 			 position: absolute;
 			width: 100%;
@@ -186,107 +186,228 @@ section {
   
   position: absolute;
 //   animation-name: falling;
-  animation-iteration-count: infinite;
+//   animation-iteration-count: infinite;
 //   animation-timing-function: linear;
   animation-fill-mode: forwards; 
 	}
+	
+	
      .element1{
-    // right: 60vw;
 	left:100px;
 	bottom: -60px;
-     animation-duration: 6s;
-	 animation-name: falling;
-
+	animation: falling 3s linear, rotate 3s linear forwards;
+	 animation-fill-mode: forwards;
+	 animation-play-state: running;
      @keyframes falling{
-    0%{
-      top: -10vh;}
-    100%{
-      top: 80vh;}
+		0% {
+			top: 0vh;
+		  }
+		  25% {
+			top: 40vh; /* Bounce up */
+			
+		  }
+		  50% {
+			top: 80vh; /* Fall down */
+		  }
+		  75% {
+			top: 60vh; /* Bounce up */
+		  }
+		  100% {
+			top: 80vh; /* Fall down */
+			animation-play-state: paused;
+		  }
       }
+	  
+	  
 	  @include for-extra-large-screen{
 		@keyframes falling{
-			0%{
-			  top: -10vh;}
-			100%{
-			  top: 90vh;}
+			0% {
+				top: 0vh;
+			  }
+			  25% {
+				top: 50vh; /* Bounce up */
+			  }
+			  50% {
+				top: 90vh; /* Fall down */
+			  }
+			  75% {
+				top: 50vh; /* Bounce up */
+			  }
+			  100% {
+				top: 90vh; /* Fall down */
+			  }
 			  }}
 	  }
      .element2{
 		left:330px;
 		bottom: 79px;
-      animation-duration: 6s;
-	  animation-name: element2Falling;
+	animation: element2Falling 5s linear,rotate 5s linear forwards;
+	  animation-fill-mode: forwards;
       @keyframes element2Falling{
-      0%{
-      top: -10vh}
-      100%{
-      top: 70vh}
+		0% {
+			top: 0vh;
+		  }
+		  25% {
+			top: 40vh; /* Bounce up */
+		  }
+		  50% {
+			top: 70vh; /* Fall down */
+		  }
+		  75% {
+			top: 50vh; /* Bounce up */
+		  }
+		  100% {
+			top: 70vh; /* Fall down */
+		  }
 	}
 	@include for-extra-large-screen{
 		@keyframes element2Falling{
-			0%{
-			  top: -10vh;}
-			100%{
-			  top:75vh;}
+			0% {
+				top: 0vh;
+			  }
+			  25% {
+				top: 45vh; /* Bounce up */
+			  }
+			  50% {
+				top: 75vh; /* Fall down */
+			  }
+			  75% {
+				top: 45vh; /* Bounce up */
+			  }
+			  100% {
+				top: 75vh; /* Fall down */
+			  }
 			  }}
 }
 .element3{
-	left:502px;
+	left:535px;
 	bottom: -179px;
-	animation-duration: 6s;
+	animation-duration: 7s;
 	animation-name: element3Falling;
+	animation-fill-mode: forwards;
 	@keyframes element3Falling{
-	0%{
-	top: -10vh}
-	100%{
-	top: 80vh}
+		0% {
+			top: 0vh;
+		  }
+		//   25% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		  50% {
+			top: 75vh; /* Fall down */
+			left:535px;
+		  }
+		//   75% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 80vh; /* Fall down */
+			left:502px;
+		  }
   }
   @include for-extra-large-screen{
 	@keyframes element3Falling{
-		0%{
-		  top: -10vh;}
-		100%{
-		  top:90vh;}
+		0% {
+			top: 0vh;
+		  }
+		//   25% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 90vh; /* Fall down */
+		//   }
+		//   75% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 90vh; /* Fall down */
+		  }
 		  }}
 } 
 .element4{
 	left:922px;
 	bottom: 128px;
-	animation-duration: 6s;
-	animation-name: element4Falling;
+	
+	animation: element4Falling 7s linear, rotate 7s linear forwards;
 
+	animation-fill-mode: forwards;
 	@keyframes element4Falling{
-	0%{
-	top: -10vh}
-	100%{
-	top: 69vh}
+		0% {
+			top: 0vh;
+		  }
+		
+		  50% {
+			top: 69vh; /* Fall down */
+		  }
+		  75% {
+			top: 49vh; /* Bounce up */
+		  }
+		  100% {
+			top: 69vh; /* Fall down */
+		  }
   }
   @include for-extra-large-screen{
 	@keyframes element4Falling{
-		0%{
-		  top: -10vh;}
-		100%{
-		  top:75vh;}
+		0% {
+			top: 0vh;
+		  }
+		  25% {
+			top: 50vh; /* Bounce up */
+		  }
+		  50% {
+			top: 75vh; /* Fall down */
+		  }
+		  75% {
+			top: 50vh; /* Bounce up */
+		  }
+		  100% {
+			top: 75vh; /* Fall down */
+		  }
 		  }}
 }
  .element5{
-	left:620px;
+	left:500px;
 	bottom: -200px;
-	animation-duration: 6s;
+	animation-duration: 7s;
 	animation-name: element5Falling;
-
+	animation-fill-mode: forwards;
 	@keyframes element5Falling{
-	0%{
-	top: -10vh}
-	100%{
-	top: 80vh}
+		0% {
+			top: 0vh;
+            //  left:5000px;
+		  }
+		//   25% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 80vh; /* Fall down */
+		//   }
+		  75% {
+			// top: 40vh; /* Bounce up */
+			left:500px;
+		  }
+		  100% {
+			top: 80vh; /* Fall down */
+			left:620px;
+
+		  }
   }
   @include for-extra-large-screen{
 	@keyframes element5Falling{
-		0%{
-		  top: -10vh;}
-		100%{
-		  top:90vh;}
+		0% {
+			top: 0vh;
+		  }
+		//   25% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 90vh; /* Fall down */
+		//   }
+		//   75% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 90vh; /* Fall down */
+		  }
 		  }}
 }
 }

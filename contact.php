@@ -6,16 +6,16 @@ $page_details = [
 require_once './header.php';
 ?>
 <div class="contact-page-wrapper" id="smooth-content">
-<section class="contact-hero-wrapper">
-   <div class="contact-main-container">
+      <section class="contact-hero-wrapper">
+      <div class="contact-main-container">
       <div class="contact-big-text">
          <span class="contact-text-span type-span-1">Next best</span>
          <span class="contact-text-span type-span-2">Industry leaders</span>
          <span class="contact-text-span type-span-3">in making</span>
-</div>
-<img src="assets/images/contact/icon1.png" class="icon1">
-<img src="assets/images/contact/icon2.png" class="icon2">
-<img src="assets/images/contact/icon3.png" class="icon3">
+      </div>
+     <img src="assets/images/contact/icon1.png" class="icon1">
+      <img src="assets/images/contact/icon2.png" class="icon2">
+     <img src="assets/images/contact/icon3.png" class="icon3">
 
    </div>
 
@@ -38,7 +38,7 @@ require_once './header.php';
      
 </section>
 <section class="contact-form-wrapper">
-   <h2>Register now <img src="assets/images/contact/form-head.png"></h2>
+   <h2 class="register">Register now <img src="assets/images/contact/form-head.png"></h2>
    <form id="submitForm" class="ods-form">
       <div class="form-groups">
    <input id="studentname" onfocus="handleFocus('name')" onblur="handleBlur('name')" name="name" type="text" class="input-field" placeholder="Enter your name">
@@ -63,10 +63,21 @@ require_once './header.php';
 						<span>SUBMIT</span>
 					</a>
 				</div></button>
-			</div>
 </form>
+<div class="success-state">
+<p class="success-head">We have received</p>
+<h3 class="yellow-tag">your</h3>
+<h3 class="blue-tag">message</h3>
+<p class="success-para">Sit back and relax. One of our team members will get in touch with you very soon.</p>
+<img src="assets/images/contact/success1.png" class="success-imgs success1">
+<img src="assets/images/contact/success2.png" class="success-imgs success2">
+<img src="assets/images/contact/success3.png" class="success-imgs success3">
+
+</div> 
+
 
 </section>
+</div>
 <?php require_once './footer.php'; ?>
 <script>
 	const config={
@@ -100,7 +111,7 @@ require_once './header.php';
       })
     .then(response => response.json())
     .then(data => {
-	   //   successFun()
+	     successFun()
     	console.log(data);
     })
     .catch(error => {
@@ -161,13 +172,25 @@ if(value==='phone'){
 }
 
 }
-//   const successFun=()=>{
-// 	const formDiv = document.getElementById('submitForm');
-// 	formDiv.style.display="none"
-// 	const successText=document.querySelector('.success-text');
-// 	console.log(successText,"success")
-// 	successText.style.display="flex"                             //to control what happens after form submission
-//   }
+  const successFun=()=>{
+   console.log("success")
+	const formDiv = document.getElementById('submitForm');
+   const register=document.querySelector('.register')
+	formDiv.style.display="none"
+	register.style.display="none"
+
+	const successState=document.querySelector('.success-state');
+	const contactForm=document.querySelector('.contact-form-wrapper');
+   contactForm.classList.add('bg-none')
+	const contactPage=document.querySelector('.contact-page-wrapper');
+   contactPage.classList.add('page-bg-opacity')
+   successState.style.display="flex"                             //to control what happens after form submission
+
+	const successImages=document.querySelectorAll('.success-imgs');
+   successImages.forEach(image => {
+  image.style.display = 'flex';
+});     
+  }
 
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);

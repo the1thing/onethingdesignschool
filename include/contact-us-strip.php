@@ -53,11 +53,11 @@
 		</div>
 	</div>
 	<div class="falling-elements">
-		<img class="element element1" src="assets/images/footer/image1.png">
-		<img class="element element2" src="assets/images/footer/image2.png">
-		<img class="element element3" src="assets/images/footer/image3.svg">
-		<img class="element element4" src="assets/images/footer/image4.png">
-		<img class="element element5" src="assets/images/footer/image5.png">
+		<img class="element" data-class="element1" src="assets/images/footer/image1.png">
+		<img class="element" data-class="element2" src="assets/images/footer/image2.png">
+		<img class="element" data-class="element3" src="assets/images/footer/image3.svg">
+		<img class="element" data-class="element4" src="assets/images/footer/image4.png">
+		<img class="element" data-class="element5"  src="assets/images/footer/image5.png">
 	</div>
 	<img src="assets/images/elements/footer/footer-bg.png" class="background-img">
 </section>
@@ -134,7 +134,61 @@
 
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const elements = document.querySelectorAll('.element');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains(entry.target.dataset.class)) {
+        const className = entry.target.dataset.class;
+
+        entry.target.classList.add(className);
+      }
+      else if (!entry.isIntersecting) {
+        const className = entry.target.dataset.class;
+        // Remove the 'class-added' when the element is out of the viewport
+        entry.target.classList.remove(className);
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
+
+
+
+
+
+  </script>
+<!-- <script>
+// Wait for the DOM to be ready
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all elements with the class "element"
+    let elements = gsap.utils.toArray(".element");
+
+    // Use ScrollTrigger to create a trigger
+    // gsap.registerPlugin(ScrollTrigger);
+
+    elements.forEach(element => {
+        gsap.to(element, {
+            yPercent: 100 * (elements.length - 1),
+            duration: 1,
+            ease: "none",
+            // scrollTrigger: {
+            //     trigger: ".contact-us-strip-wrapper", // Use the parent element as the trigger
+            //     start: "top bottom", // Trigger the animation when the top of the parent element hits the bottom of the viewport
+            //     end: "bottom top", // Trigger the animation when the bottom of the parent element hits the top of the viewport
+            //     scrub: true, // Smoothly animate the elements while scrolling
+            //     once: true // Animation will only be triggered once
+            // }
+        });
+    });
+});
+
+  </script> -->
 <!-- <script>
 
     // Module aliases
