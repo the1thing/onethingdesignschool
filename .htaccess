@@ -1,9 +1,9 @@
-<IfModule mod_rewrite.c>
+# Remove .php extension
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
-</IfModule>
+RewriteRule ^([^\.]+)/$ $1.php [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule \.php$ - [R=404]
-ErrorDocument 404 http://designsbyprateek.com/notfounderror.php
+# Redirect www to non-www (optional)
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
