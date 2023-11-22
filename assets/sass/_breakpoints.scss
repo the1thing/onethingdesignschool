@@ -99,3 +99,8 @@
     @content;
   }
 }
+@mixin for-usual-screen {
+  @media (width: 1440px) and (max-height: 899px) {
+    @content;
+  }
+}

@@ -3,8 +3,8 @@
 		<div class="main-container">
 			<div class="container">
 				<div class="heading-wrap">
-					<div class="heading-div">
-						<h2>Programme<br/> launching soon <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+					<div data-aos="fade-right" class="heading-div">
+						<h2>Programme<br/> launching soon <svg  xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
 							<rect width="80" height="80" rx="40" fill="#5A86FD"/>
 							<g filter="url(#filter0_d_168_5537)">
 								<path d="M53.4264 40.4148L26.5732 24.8955L32.4109 54.8256L39.416 43.7404L53.4264 40.4148Z" fill="#FF7583"/>

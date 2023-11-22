@@ -1,5 +1,6 @@
 .homepage-container {
 	.hero-big-text {
+		position: relative;
 		padding-top: 180px;
 		@include for-tablet-only {
 			padding-top: 124px;
@@ -8,6 +9,36 @@
 		@include phone {
 			padding-top: 80px;
 			padding-bottom: 0px;
+		}
+		.elem1{
+			position: absolute;
+			top: 20%;
+			left: 2%;
+			z-index: 1;
+			@include for-tablet-only{
+				top: 9%;
+			}
+			@include phone{
+				height: 40px;
+				width: 40px;
+				top: 14%;
+			}
+		}
+		.elem2{
+			position: absolute;
+			bottom: -6%;
+    left: 3%;
+    z-index: -1;
+	@include for-tablet-only{
+		bottom: 6%;
+    left: 2%;
+	}
+	@include phone{
+		height: 40px;
+		width: 40px;
+		bottom: -2%;
+    left: 4%;
+	}
 		}
 		.text-span {
 			display: block;
@@ -22,20 +53,22 @@
 				background-size: cover !important;
 				background-repeat: no-repeat !important;
 			}
+			
 			&.type-span-1 {
-				&:before {
-					background: url('../images/elements/star-pink.svg');
-					left: 30px;
-					height: 80px;
-					width: 80px;
-					top: -70px;
-					@include for-tablet-only {}
-					@include phone {
-						height: 40px;
-						width: 40px;
-						top: -40px;
-					}
-				}
+				// &:before {
+				// 	background: url('../images/elements/star-pink.svg');
+				// 	left: 30px;
+				// 	height: 80px;
+				// 	width: 80px;
+				// 	top: -70px;
+
+				// 	@include for-tablet-only {}
+				// 	@include phone {
+				// 		height: 40px;
+				// 		width: 40px;
+				// 		top: -40px;
+				// 	}
+				// }
 			}
 			&.type-span-2 {
 				padding-left: 120px;
@@ -61,22 +94,22 @@
 				}
 			}
 			&.type-span-3 {
-				&:before {
-					background: url('../images/elements/rectangle.svg');
-					left: 54px;
-					height: 80px;
-					width: 80px;
-					bottom: -22px;
-					z-index: -1;
-					rotate: 5deg;
-					@include for-tablet-only {}
-					@include phone {
-						height: 40px;
-						width: 40px;
-						bottom: -8px;
-						left: 44px;
-					}
-				}
+				// &:before {
+				// 	background: url('../images/elements/rectangle.svg');
+				// 	left: 54px;
+				// 	height: 80px;
+				// 	width: 80px;
+				// 	bottom: -22px;
+				// 	z-index: -1;
+				// 	rotate: 5deg;
+				// 	@include for-tablet-only {}
+				// 	@include phone {
+				// 		height: 40px;
+				// 		width: 40px;
+				// 		bottom: -8px;
+				// 		left: 44px;
+				// 	}
+				// }
 			}
 		}
 	}

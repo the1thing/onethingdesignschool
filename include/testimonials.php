@@ -4,7 +4,7 @@
 			<div class="heading-wrap">
 				<h2 class="section-title-main">
 					These Creatives <br/>
-					<span>
+					<span data-aos="flip-left">
 						went
 						<img src="assets/images/elements/star-white.svg">
 					</span>

@@ -1,3 +1,4 @@
+AOS.init();
 $(document).ready(function() {
 	const cards = gsap.utils.toArray(".testimonialcard");
   

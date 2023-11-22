@@ -5,6 +5,9 @@ $page_details = [
 ];
 require_once './header.php';
 ?>
+<link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+<script src="bower_components/aos/dist/aos.js"></script>
+
 <div class="page-wrapper" id="smooth-content">
    <div class="homepage-container">
       <div class="template-import template-hero">

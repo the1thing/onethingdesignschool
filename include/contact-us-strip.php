@@ -1,7 +1,8 @@
+
 <section class="contact-us-strip-wrapper">
 	<div class="contact-main">
 		<div class="container">
-			<div class="div-wrap">
+			<div class="div-wrap visibility-delay">
 				<div class="heading-wrap">
 					<h2 class="section-title-main">
 						<div class="svg-icon">
@@ -61,7 +62,9 @@
 	</div>
 	<img src="assets/images/elements/footer/footer-bg.png" class="background-img">
 </section>
+
 <script>
+
 	const config={
 		FORM_API_URL:"https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/",
 		ODS_FORM_ENDPOINT: "7754/feedback",
@@ -124,7 +127,6 @@
 	const formDiv = document.getElementById('submitForm');
 	formDiv.style.display="none"
 	const successText=document.querySelector('.success-text');
-	console.log(successText,"success")
 	successText.style.display="flex"
   }
 
@@ -135,6 +137,7 @@
 
 </script>
 <script>
+
 document.addEventListener('DOMContentLoaded', function () {
   const elements = document.querySelectorAll('.element');
 
@@ -142,186 +145,30 @@ document.addEventListener('DOMContentLoaded', function () {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains(entry.target.dataset.class)) {
         const className = entry.target.dataset.class;
-
         entry.target.classList.add(className);
+        if (entry.target.dataset.once) {
+          observer.unobserve(entry.target); // Unobserve the element to prevent further animations
+        }
+        setTimeout(() => {
+        document.querySelector('.visibility-delay').style.opacity=1
+          
+        }, 3000);
       }
-      else if (!entry.isIntersecting) {
-        const className = entry.target.dataset.class;
-        // Remove the 'class-added' when the element is out of the viewport
-        entry.target.classList.remove(className);
-      }
+      // else if (!entry.isIntersecting) {
+      //   const className = entry.target.dataset.class;
+      //   // Remove the 'class-added' when the element is out of the viewport
+      //   entry.target.classList.remove(className);
+      // }
     });
   });
 
   elements.forEach(element => {
     observer.observe(element);
   });
-});
-
+},{ once: true })
 
 
 
 
   </script>
-<!-- <script>
-// Wait for the DOM to be ready
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all elements with the class "element"
-    let elements = gsap.utils.toArray(".element");
-
-    // Use ScrollTrigger to create a trigger
-    // gsap.registerPlugin(ScrollTrigger);
-
-    elements.forEach(element => {
-        gsap.to(element, {
-            yPercent: 100 * (elements.length - 1),
-            duration: 1,
-            ease: "none",
-            // scrollTrigger: {
-            //     trigger: ".contact-us-strip-wrapper", // Use the parent element as the trigger
-            //     start: "top bottom", // Trigger the animation when the top of the parent element hits the bottom of the viewport
-            //     end: "bottom top", // Trigger the animation when the bottom of the parent element hits the top of the viewport
-            //     scrub: true, // Smoothly animate the elements while scrolling
-            //     once: true // Animation will only be triggered once
-            // }
-        });
-    });
-});
-
-  </script> -->
-<!-- <script>
-
-    // Module aliases
-    var Engine = Matter.Engine,
-      Render = Matter.Render,
-      World = Matter.World,
-      Bodies = Matter.Bodies;
-
-    // Create an engine
-    var engine = Engine.create();
-
-    // Create a renderer
-    var render = Render.create({
-      element: document.body,
-      engine: engine,
-      options: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-        wireframes: false
-      }
-    });
-
-    // Create falling elements with custom images
-    var elements = [];
-    var imagePaths = [
-      'assets/images/footer/img1.png',
-      'assets/images/footer/img2.svg',
-	  'assets/images/footer/img3.png','assets/images/footer/img4.png',
-      'assets/images/footer/img5.png'
-    ];
-
-    // Load images asynchronously
-    var loadImages = function (paths, callback) {
-      var loadedImages = 0;
-      var totalImages = paths.length;
-      var images = [];
-
-      paths.forEach(function (path, index) {
-        var img = new Image();
-        img.onload = function () {
-          loadedImages++;
-          if (loadedImages === totalImages) {
-            callback(images);
-          }
-        };
-        img.src = path;
-        images[index] = img;
-      });
-    };
-
-    // Use the images after they are loaded
-    loadImages(imagePaths, function (images) {
-      for (var i = 0; i < images.length; i++) {
-        var element = Bodies.rectangle(
-          Math.random() * window.innerWidth,
-          Math.random() * window.innerHeight,
-          50,
-          50,
-          {
-            restitution: 0.8, // Bounciness
-            friction: 0.1,     // Surface friction
-            render: {
-              sprite: {
-                texture: images[i].src,
-                xScale: 0.5,  // Adjust the scale if needed
-                yScale: 0.5
-              }
-            }
-          }
-        );
-        elements.push(element);
-      }
-
-      // Add the elements to the world
-      World.add(engine.world, elements);
-
-      // Add a ground (floor) to the world
-      var ground = Bodies.rectangle(
-        window.innerWidth / 2,
-        window.innerHeight + 25,
-        window.innerWidth,
-        50,
-        { isStatic: true }
-      );
-      World.add(engine.world, ground);
-
-      // Run the engine
-      Engine.run(engine);
-
-      // Run the renderer
-      Render.run(render);
-
-      // Resize the canvas on window resize
-      window.addEventListener('resize', function () {
-        Render.canvas.width = window.innerWidth;
-        Render.canvas.height = window.innerHeight;
-        Render.bounds.max.x = window.innerWidth;
-        Render.bounds.max.y = window.innerHeight;
-        Render.options.width = window.innerWidth;
-        Render.options.height = window.innerHeight;
-        Engine.update(engine, 1000 / 60); // Update the engine on resize
-      });
-    });
-  
-
-</script> -->
-<!-- <script> function addFallingElement(x, y, imageUrl) {
-        const fallingElement = document.createElement('img');
-        fallingElement.src = imageUrl;
-        fallingElement.style.position = 'absolute';
-        fallingElement.style.left = `${x}px`;
-        fallingElement.style.bottom = `${y}px`;
-
-        document.querySelector('.falling-elements').appendChild(fallingElement);
-    }
-
-    // Example: Add falling elements with custom images
-    addFallingElement(100, -60, 'assets/images/footer/image1.png');
-    addFallingElement(330, 79, 'assets/images/footer/image2.png');
-    addFallingElement(502, -179, 'assets/images/footer/image3.svg');
-    addFallingElement(922, 128, 'assets/images/footer/image4.png');
-    addFallingElement(620, -200, 'assets/images/footer/image5.png');
-	</script> -->
-
-
-
-
-
-
-
-
-
-
-
-
 

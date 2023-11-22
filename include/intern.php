@@ -51,7 +51,7 @@
         </section>
        
       </div>
-     <img class="group-pattern" src="assets/images/intern/group-pattern.png">
+     <img class="group-pattern" data-aos="fade-down" src="assets/images/intern/group-pattern.png">
      <img class="phone-group-pattern" src="assets/images/intern/phone-group.png">
 
 </div>

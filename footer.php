@@ -31,7 +31,7 @@
 		<div class="footer-div-main">
 			<div class="container">
 				<div class="footer-flex">
-					<figure>
+					<figure data-aos="fade-right">
 						<img src="assets/images/logo/ods-logo-large.svg">
 					</figure>
 					<ul class="social-box">
