@@ -5,10 +5,15 @@ $page_details = [
 ];
 require_once './header.php';
 ?>
-<link rel="stylesheet" href="bower_components/aos/dist/aos.css">
-<script src="bower_components/aos/dist/aos.js"></script>
+<link rel="stylesheet" href="./assets/vendors/aos/css/aos.css">
+<script src="./assets/vendors/aos/js/aos.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <div class="blob"></div> -->
 
-<div class="page-wrapper" id="smooth-content">
+<div class="page-wrapper " id="smooth-content">
    <div class="homepage-container">
       <div class="template-import template-hero">
          <?php include './include/hero.php'; ?>

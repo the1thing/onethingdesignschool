@@ -1,4 +1,17 @@
-AOS.init();
+// var cursor = document.querySelector('.blob');
+
+// document.addEventListener('mousemove', function(e){
+//   var x = e.clientX;
+//   var y = e.clientY;
+//   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+// });
+$(document).ready(function() {
+
+AOS.init({
+	duration:2000
+});})
+
+
 $(document).ready(function() {
 	const cards = gsap.utils.toArray(".testimonialcard");
   

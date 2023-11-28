@@ -45,14 +45,38 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+   
     .star-svg {
-      animation: 5s rotate infinite;
-      animation-timing-function: linear;
+      animation: rotateAnimation 2s linear infinite;
       @include for-tablet-only {}
       @include phone {
         width: 180px;
         height: 80px;
       }
+      @keyframes rotateAnimation {
+				0% {
+				  }
+				  100% {
+					transform: rotate(360deg); 
+				  }
+			  }
+    }
+    .star-in-viewport{
+			transform: rotate(0deg);
+      animation: rotateAnimation 2s linear infinite,new 1s linear ;
+     
+			  @keyframes new {
+				0% {
+				
+				transform: translateX(-60px); 
+				  }
+				  100% {
+            transform: rotate(360deg); 
+					
+            transform: translateX(24px),rotate(360deg); 
+
+				  }
+			  }
     }
   }
   .brief-para {

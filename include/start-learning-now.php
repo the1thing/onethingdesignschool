@@ -3,7 +3,7 @@
 		<div class="main-container">
 			<div class="container">
 				<div class="heading-wrap">
-					<div data-aos="fade-right" class="heading-div">
+					<div  class="heading-div">
 						<h2>Programme<br/> launching soon <svg  xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
 							<rect width="80" height="80" rx="40" fill="#5A86FD"/>
 							<g filter="url(#filter0_d_168_5537)">

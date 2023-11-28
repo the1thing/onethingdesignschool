@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Onething Design School</title>
+	<link rel="icon" href="./assets/images/logo/logo.svg" type="image/svg">
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
 	<style>
 	@font-face {
   font-family: "galano-grotesque-semibold";
@@ -41,10 +44,42 @@
 			padding: 32px;
 			border-bottom: 1px solid #383838;
 		}
-		.logo-img{
-			width: 669.035px;
-height: 344.282px;
+		.content-div{
+			display: flex;
+    flex-direction: column;
+	align-items: center;
+			
 		}
+		.angle1{
+			color: #FFF;
+font-family: "galano-grotesque-semibold";
+font-size: 120px;
+line-height: 96px; /* 80% */
+display: inline-flex;
+transform: rotate(5.69deg);
+padding: 24px 40px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border-radius: 80px;
+background: #E571EE;
+margin: unset;
+	}
+	.angle2{
+		color: #FFF;
+font-family: "galano-grotesque-semibold";
+font-size: 120px;
+line-height: 96px; /* 80% */
+display: inline-flex;
+transform: rotate(-3.53deg);
+padding: 24px 40px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border-radius: 80px;
+background: #FBB22D;
+margin: unset;	
+	}
 		.center-div{
 			display: flex;
 			justify-content: center;
@@ -71,16 +106,52 @@ line-height: 131%; /* 17.03px */
 			position: absolute;
 			
 		}
+		@keyframes left{
+		0% {
+			left: 0vw;
+		  }
+		
+		
+		  100% {
+			left: 20vw; /* Fall down */
+		  }
+  }
+  @keyframes right{
+		0% {
+			right: 0vw;
+		  }
+		
+		
+		  100% {
+			right: 20vw; /* Fall down */
+		  }
+  }
 		.pattern1{
 			top: 20%;
     left: 24%;
     z-index: -1;
+	/* animation: left 1s linear, rotate 1.2s linear forwards; */
+	
 	
 		}
 		.pattern2{
 			top: 62%;
     right: 30%;
+	/* animation: right 1s linear, rotate 1.2s linear forwards; */
+
 		}
+		@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
+}
+		.star{
+		animation: rotate 1.5s linear;
+		}
+	
 	@media (max-width: 1441px) and (max-height: 710px) {
     .pattern1{
 		top: 12%;
@@ -102,18 +173,37 @@ line-height: 131%; /* 17.03px */
 
   }
 	@media (max-width: 430px) and (min-width: 300px) {
-      .logo-img{
-		width: 350px;
-		height: 350px;
+      .angle1{
+		padding: 0px 24px;
+		font-size: 64px;
+		line-height: 88px;
 	  }
-	  .pattern{
-		display: none;
+	  .angle2{
+		padding: 0px 24px;
+		font-size: 64px;
+		line-height: 88px;
+	  }
+	  .star{
+		height: 40px;
+    width: 40px;
+	  }
+	  .pattern1{
+		top: 25%;
+    left: 12%;
+	
 	  }
 	 
+	.pattern2{
+		top: 57%;
+    right: 9%;
+	
+	}
+	.illustration{
+		height: 56px;
+    width: 56px;
+	}
 	}
 	
-
-		
 	</style>
 	 
 </head>
@@ -123,17 +213,65 @@ line-height: 131%; /* 17.03px */
 			<img src="assets/images/coming-soon/logo.svg">
 		</header>
 <div class="center-div">
-<img class="logo-img" src="assets/images/coming-soon/group.svg">
-<img class="pattern pattern1" src="assets/images/coming-soon/union.svg">
-<img class="pattern pattern2" src="assets/images/coming-soon/arrow.svg">
+<div class="content-div">
+	<p class="angle1">COMING <svg class="star" xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+		<path d="M30.9276 4.33702L36.819 4.92402L31.536 57.9463L25.6447 57.3593L30.9276 4.33702Z" fill="#FEFCE4"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M29.7103 2.85122L38.3034 3.70741L32.7513 59.4315L24.1581 58.5753L29.7103 2.85122ZM30.9266 4.3367L25.6436 57.359L31.535 57.946L36.818 4.9237L30.9266 4.3367Z" fill="#FEFCE4"/>
+		<path d="M49.9707 11.9724L53.7215 16.5533L12.4934 50.3101L8.74267 45.7292L49.9707 11.9724Z" fill="#FEFCE4"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M50.161 10.0627L55.6319 16.7444L12.303 52.2213L6.83215 45.5396L50.161 10.0627ZM49.9707 11.9731L8.74259 45.7299L12.4933 50.3108L53.7214 16.554L49.9707 11.9731Z" fill="#FEFCE4"/>
+		<path d="M58.0357 30.8372L57.4487 36.7286L4.42641 31.4456L5.01341 25.5542L58.0357 30.8372Z" fill="#FEFCE4"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M59.5217 29.621L58.6655 38.2142L2.94139 32.662L3.79759 24.0689L59.5217 29.621ZM58.0362 30.8373L5.01387 25.5544L4.42687 31.4457L57.4492 36.7287L58.0362 30.8373Z" fill="#FEFCE4"/>
+		<path d="M50.4003 49.88L45.8194 53.6308L12.0626 12.4027L16.6435 8.65198L50.4003 49.88Z" fill="#FEFCE4"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M52.3101 50.0703L45.6284 55.5412L10.1515 12.2123L16.8332 6.74146L52.3101 50.0703ZM50.3996 49.88L16.6428 8.6519L12.0619 12.4027L45.8187 53.6307L50.3996 49.88Z" fill="#FEFCE4"/>
+	  </svg></p>
+			<p class="angle2"><svg class="star" xmlns="http://www.w3.org/2000/svg" width="61" height="60" viewBox="0 0 61 60" fill="none">
+				<path d="M25.9864 3.82281L31.8957 3.45827L35.1765 56.642L29.2672 57.0065L25.9864 3.82281Z" fill="#FEFCE4"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M24.5467 2.55125L33.166 2.01954L36.614 57.9133L27.9947 58.445L24.5467 2.55125ZM25.9853 3.82266L29.2661 57.0064L35.1754 56.6419L31.8946 3.45812L25.9853 3.82266Z" fill="#FEFCE4"/>
+				<path d="M46.0069 8.30835L50.4431 12.2291L15.1564 52.1556L10.7202 48.2348L46.0069 8.30835Z" fill="#FEFCE4"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M45.8887 6.3928L52.3594 12.1116L15.2747 54.0725L8.80395 48.3537L45.8887 6.3928ZM46.0069 8.30906L10.7202 48.2355L15.1565 52.1563L50.4432 12.2298L46.0069 8.30906Z" fill="#FEFCE4"/>
+				<path d="M56.9902 25.6372L57.3548 31.5465L4.17104 34.8273L3.80651 28.918L56.9902 25.6372Z" fill="#FEFCE4"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M58.2622 24.1987L58.7939 32.818L2.90014 36.266L2.36843 27.6467L58.2622 24.1987ZM56.9908 25.6373L3.80701 28.9181L4.17155 34.8274L57.3553 31.5466L56.9908 25.6373Z" fill="#FEFCE4"/>
+				<path d="M52.5047 45.6574L48.584 50.0937L8.65749 14.807L12.5782 10.3707L52.5047 45.6574Z" fill="#FEFCE4"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M54.4202 45.5392L48.7014 52.01L6.74051 14.9252L12.4593 8.45447L54.4202 45.5392ZM52.504 45.6574L12.5775 10.3707L8.65677 14.807L48.5832 50.0937L52.504 45.6574Z" fill="#FEFCE4"/>
+			  </svg> SOON</p>
+</div>
+<div data-aos="fade-right" class="pattern pattern1"><svg class="illustration" xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86" fill="none">
+	<mask id="path-1-outside-1_1156_693" maskUnits="userSpaceOnUse" x="0" y="0" width="86" height="86" fill="black">
+	  <rect fill="white" width="86" height="86"/>
+	  <path fill-rule="evenodd" clip-rule="evenodd" d="M47.4445 3H38.5556V32.2704L17.8585 11.5732L11.5731 17.8586L32.27 38.5556H3V47.4445H32.2703L11.5731 68.1417L17.8585 74.4271L38.5556 53.7299V83H47.4445V53.7301L68.1416 74.4271L74.427 68.1418L53.7297 47.4445H83V38.5556H53.73L74.427 17.8585L68.1416 11.5732L47.4445 32.2702V3Z"/>
+	</mask>
+	<path d="M38.5556 3V0.44H35.9956V3H38.5556ZM47.4445 3H50.0045V0.44H47.4445V3ZM38.5556 32.2704L36.7455 34.0806L41.1157 38.4508V32.2704H38.5556ZM17.8585 11.5732L19.6687 9.76301L17.8585 7.95282L16.0483 9.76301L17.8585 11.5732ZM11.5731 17.8586L9.76288 16.0484L7.95268 17.8586L9.76288 19.6688L11.5731 17.8586ZM32.27 38.5556V41.1156H38.4504L34.0802 36.7454L32.27 38.5556ZM3 38.5556V35.9956H0.44V38.5556H3ZM3 47.4445H0.44V50.0045H3V47.4445ZM32.2703 47.4445L34.0805 49.2547L38.4507 44.8845H32.2703V47.4445ZM11.5731 68.1417L9.76287 66.3315L7.95267 68.1417L9.76287 69.9519L11.5731 68.1417ZM17.8585 74.4271L16.0483 76.2373L17.8585 78.0475L19.6686 76.2373L17.8585 74.4271ZM38.5556 53.7299H41.1157V47.5495L36.7455 51.9197L38.5556 53.7299ZM38.5556 83H35.9956V85.56H38.5556V83ZM47.4445 83V85.56H50.0045V83H47.4445ZM47.4445 53.7301L49.2547 51.9199L44.8845 47.5497V53.7301H47.4445ZM68.1416 74.4271L66.3314 76.2373L68.1416 78.0475L69.9518 76.2373L68.1416 74.4271ZM74.427 68.1418L76.2372 69.952L78.0474 68.1418L76.2372 66.3316L74.427 68.1418ZM53.7297 47.4445V44.8845H47.5493L51.9195 49.2547L53.7297 47.4445ZM83 47.4445V50.0045H85.56V47.4445H83ZM83 38.5556H85.56V35.9956H83V38.5556ZM53.73 38.5556L51.9198 36.7454L47.5496 41.1156H53.73V38.5556ZM74.427 17.8585L76.2372 19.6687L78.0474 17.8585L76.2372 16.0484L74.427 17.8585ZM68.1416 11.5732L69.9518 9.76296L68.1416 7.95276L66.3314 9.76296L68.1416 11.5732ZM47.4445 32.2702H44.8845V38.4506L49.2547 34.0804L47.4445 32.2702ZM38.5556 5.56H47.4445V0.44H38.5556V5.56ZM41.1157 32.2704V3H35.9956V32.2704H41.1157ZM16.0483 13.3834L36.7455 34.0806L40.3658 30.4602L19.6687 9.76301L16.0483 13.3834ZM13.3833 19.6688L19.6687 13.3834L16.0483 9.76301L9.76288 16.0484L13.3833 19.6688ZM34.0802 36.7454L13.3833 16.0484L9.76288 19.6688L30.4598 40.3658L34.0802 36.7454ZM3 41.1156H32.27V35.9956H3V41.1156ZM5.56 47.4445V38.5556H0.44V47.4445H5.56ZM32.2703 44.8845H3V50.0045H32.2703V44.8845ZM13.3833 69.9519L34.0805 49.2547L30.4601 45.6343L9.76287 66.3315L13.3833 69.9519ZM19.6686 72.6169L13.3833 66.3315L9.76287 69.9519L16.0483 76.2373L19.6686 72.6169ZM36.7455 51.9197L16.0483 72.6169L19.6686 76.2373L40.3658 55.5401L36.7455 51.9197ZM41.1157 83V53.7299H35.9956V83H41.1157ZM47.4445 80.44H38.5556V85.56H47.4445V80.44ZM44.8845 53.7301V83H50.0045V53.7301H44.8845ZM69.9518 72.617L49.2547 51.9199L45.6343 55.5403L66.3314 76.2373L69.9518 72.617ZM72.6168 66.3316L66.3314 72.617L69.9518 76.2373L76.2372 69.952L72.6168 66.3316ZM51.9195 49.2547L72.6168 69.952L76.2372 66.3316L55.5399 45.6343L51.9195 49.2547ZM83 44.8845H53.7297V50.0045H83V44.8845ZM80.44 38.5556V47.4445H85.56V38.5556H80.44ZM53.73 41.1156H83V35.9956H53.73V41.1156ZM72.6168 16.0484L51.9198 36.7454L55.5402 40.3658L76.2372 19.6687L72.6168 16.0484ZM66.3314 13.3833L72.6168 19.6687L76.2372 16.0484L69.9518 9.76296L66.3314 13.3833ZM49.2547 34.0804L69.9518 13.3833L66.3314 9.76296L45.6343 30.46L49.2547 34.0804ZM44.8845 3V32.2702H50.0045V3H44.8845Z" fill="#FBB22D" mask="url(#path-1-outside-1_1156_693)"/>
+  </svg></div>
+<div data-aos="fade-left" class="pattern pattern2"><svg class="illustration" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+	<rect width="80" height="80" rx="40" fill="#5A86FD"/>
+	<g filter="url(#filter0_d_1156_721)">
+	  <path d="M53.4264 40.4138L26.5732 24.8945L32.4109 54.8246L39.416 43.7394L53.4264 40.4138Z" fill="#FF7583"/>
+	  <path d="M53.7573 41.8079L57.2624 40.9759L54.1433 39.1733L27.2902 23.654L24.5642 22.0786L25.1669 25.1688L31.0046 55.0989L31.6951 58.6394L33.6221 55.59L40.3153 44.9986L53.7573 41.8079Z" stroke="white" stroke-width="2.86561"/>
+	</g>
+	<defs>
+	  <filter id="filter0_d_1156_721" x="13.9583" y="13.5314" width="55.7369" height="60.3852" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+		<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+		<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+		<feOffset dy="2.86561"/>
+		<feGaussianBlur stdDeviation="4.29842"/>
+		<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+		<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1156_721"/>
+		<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1156_721" result="shape"/>
+	  </filter>
+	</defs>
+  </svg></div>
 
 </div>
 <footer>
 	<p>An initiative by <span>Onething Design Studio</span></p>
 </footer>
 </div>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script>
-	console.log(window.innerHeight,window.innerWidth)
+AOS.init({
+    duration: 2000, // Set the global animation duration in milliseconds
+    delay: 0,     // Set the global animation delay in milliseconds
+  });
 </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <section class="contact-us-strip-wrapper">
 	<div class="contact-main">
 		<div class="container">
-			<div class="div-wrap visibility-delay">
+			<div class="div-wrap visibility-delay" >
 				<div class="heading-wrap">
 					<h2 class="section-title-main">
 						<div class="svg-icon">
@@ -151,6 +151,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         setTimeout(() => {
         document.querySelector('.visibility-delay').style.opacity=1
+        document.querySelector('.visibility-delay').style.transform="translateY(0)"
+
           
         }, 3000);
       }

@@ -100,7 +100,15 @@
   }
 }
 @mixin for-usual-screen {
+  @media (max-width: 1441px) and (min-height: 700px) {
+    @content;
+  }
+}
+
+@mixin for-full-screen {
   @media (width: 1440px) and (max-height: 899px) {
     @content;
   }
 }
+
+

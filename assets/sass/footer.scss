@@ -40,6 +40,17 @@ footer {
 				white-space: nowrap;
 				animation: marquee 24s linear infinite;
 			}
+			.rotating-icon{
+				transform: rotate(0deg);
+			animation: rotateAnimation 2s linear infinite;
+			@keyframes rotateAnimation {
+				0% {
+				  }
+				  100% {
+					transform: rotate(360deg); 
+				  }
+			  }
+			}
 		}
 		.main-footer {
 			background: $ods-light-blue;

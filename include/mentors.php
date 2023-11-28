@@ -10,7 +10,7 @@
 						<circle cx="21.6607" cy="21.6599" r="15.0924" stroke="white" stroke-width="0.211083"/>
 						<circle opacity="0.5" cx="21.4247" cy="21.4249" r="18.4698" stroke="white" stroke-width="0.211083"/>
 					</svg>m <br/>
-					<span data-aos="flip-left">
+					<span>
 						industry
 						<img src="assets/images/elements/star-white.svg">
 					</span>

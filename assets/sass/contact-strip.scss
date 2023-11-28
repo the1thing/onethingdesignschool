@@ -8,9 +8,10 @@ section {
 		padding-bottom: 150px; //this is temp, we'll add matter js                        //these two lines will be removed when faq will be added
 		margin-top: 280px !important;
 		position: relative;
-@include for-usual-screen{
+@include for-full-screen{
 	padding-bottom:unset;
 }
+
 		@include for-tablet-only {
 			margin-top: 300px !important;
 		
@@ -46,8 +47,11 @@ section {
 				padding: 40px 16px;
 			}
 			.visibility-delay{
-
+                //  transition: 0.5s all;
+				// opacity: 0;
 				opacity: 0;
+  transform: translateY(20px); /* Adjust the initial position as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 				@include for-tablet-only{
 					opacity: 1;
 				}
@@ -267,7 +271,7 @@ section {
 				top: 90vh; /* Fall down */
 			  }
 			  }}
-			  @include for-usual-screen{
+			  @include for-full-screen{
 				@keyframes falling{
 					0% {
 						top: 0vh;
@@ -332,7 +336,7 @@ section {
 				top: 75vh; /* Fall down */
 			  }
 			  }}
-			  @include for-usual-screen{
+			  @include for-full-screen{
 				@keyframes element2Falling{
 					0% {
 						top: 0vh;
@@ -447,7 +451,7 @@ section {
 			left:922px;
 		  }
 		  }}
-		  @include for-usual-screen{
+		  @include for-full-screen{
 			@keyframes element4Falling{
 				0% {
 					top: 0vh;
