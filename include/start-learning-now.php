@@ -28,9 +28,13 @@
 				<p>Here’s your chance to shape better <span>User Experiences.</span></p>
 			</div>
 			<div id="card-container" class="image-div">
+
 				<div class="learning-cards card1">
+					
+					<div class="card-inner">
 					<h3 class="card-head">Submit<br/> Application</h3>
 					<p class="card-body">Have a conversation with our student counselor to check if this course is the right fit for you.</p>
+</div>
 				</div>
 				<div class="learning-cards card2">
 					<h3 class="card-head">Interview<br/> Round</h3>

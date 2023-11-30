@@ -15,9 +15,10 @@ section {
 						line-height: 96px;
 						white-space: nowrap;
 						@include phone {
-							white-space: unset;
-							font-size: 40px;
-							line-height: 48px; 
+							white-space: nowrap !important;
+							font-size: 40px !important;
+							line-height: 48px !important; 
+
 
 						}
 						@include for-tablet-only{
@@ -140,8 +141,10 @@ span{
 				}
 				&.card1{
 					transform: translate(10px,30px) rotate(-7deg);
+					perspective: 1000px; /* Adjust as needed */
 					background: $pink;
 					transition: transform 0.3s ease;
+					
 					@include for-tablet-only {}
 					@include phone {
 						transform: unset;

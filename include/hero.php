@@ -16,7 +16,7 @@
                         <!-- <div class="scrollimgzoom" style="background: url(assets/images/home/hero-circle.png)"></div>  -->
                         <div class="video-container scrollimgzoomcontainer">
   <!-- <video src="assets/images/home/video3.mp4"  autoplay muted class="scrollimgzoom"></video> -->
-                        <div class="scrollimgzoom" style="background: url(assets/images/home/samp-img.png);background-position: center;"></div> 
+                        <div class="scrollimgzoom" style="background: url(assets/images/home/man-img.png);background-position:35% 0%;"></div> 
 
 </div>                  
                     <!-- </div> -->
@@ -93,9 +93,9 @@
 
 gsap.to(".scrollimgzoom", {
   width: "100%",
-  height:"450px",
+  height:"544px",
   left:"0%",
-//   borderRadius: "80%", 
+  borderRadius: "300px",
   duration: 10,
   ease: "power2.inOut", 
   scrollTrigger: {

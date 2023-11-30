@@ -168,6 +168,7 @@
     @include phone {
       width: 90%;
       margin-top: 0;
+      margin-left: -6px;
     }
   }
   .pink {
@@ -182,7 +183,8 @@
     }
     @include phone {
       width: 90%;
-      margin-top: -64%;
+      margin-top: -74%;
+      margin-right: -6px;
     }
     p {
       width: 75%;
@@ -235,8 +237,8 @@
     @include phone {
       width: 80%;
       margin-bottom: 0;
-      margin-top: -40%;
-      margin-right: 32px;
+      margin-top: -52%;
+      margin-right: 18px;
       height: 250px;
     }
     p {

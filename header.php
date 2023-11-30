@@ -25,7 +25,7 @@
                   </a>
                </div>
                <div class="header-contact">
-                  <a href="/contact.php" class="bttn bttn-primary">
+                  <a href="contact.php" class="bttn bttn-primary">
                      <span>Contact us</span>
                   </a>
                </div>

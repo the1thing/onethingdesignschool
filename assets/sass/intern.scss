@@ -54,6 +54,7 @@
         a{
             margin-top: 32px;
             @include phone {
+                width: 142px;
                 margin-top: 24px;
             }
         }
@@ -104,7 +105,7 @@ width: 157px;
         display: flex;
         position: absolute;
         bottom: 0;
-        left: 56px;
+        width: 100%;
         z-index: 1;
         }
     }
@@ -155,9 +156,12 @@ width: 267px;
     padding:0 40px;
     @include phone {
         flex-direction: column;
+        padding: unset;
     }
     @include for-tablet-only {
         flex-direction: column;
+        padding: unset;
+
     }
     }
     .image-section1{
@@ -175,13 +179,16 @@ width: 267px;
     @include for-tablet-only{
         display: none;
     }
+    .slick-slide{
+   margin:10px 0;
+    }
    
     }
     .scrolling-image {
         width: 100%;
         height: auto;
-        animation: scrollImage 10s linear infinite;
-        animation-delay: 0ms;
+        // animation: scrollImage 10s linear infinite;
+        // animation-delay: 0ms;
         // background:url("../images/intern/sliding1.png")
       }
       
@@ -203,8 +210,8 @@ width: 267px;
       }
      
       .upscroll-image {
-        animation: upscrollImage 10s linear infinite;
-        animation-direction: reverse;
+        // animation: upscrollImage 10s linear infinite;
+        // animation-direction: reverse;
       }
       
       @keyframes upscrollImage {
@@ -238,11 +245,16 @@ width: 267px;
     @include for-tablet-only{
         display: none;
     }
+    .slick-slide{
+        margin:10px 0;
+         }
+        
     }
 
     
     
 }
+
 
 .phone-image-section1{
     display: none;
@@ -254,16 +266,19 @@ width: 267px;
         display: flex;
         gap: 20px;
     }
+    .slick-slide{
+        margin:0 10px;
+         }
 }
 .phone-scrolling-image{
     @include phone {
-        animation: phoneScrollImage 10s linear infinite;
+        // animation: phoneScrollImage 10s linear infinite;
         width: 240px;
-        height: 120px;
+        height: 100px !important;
         
     }
     @include for-tablet-only {
-        animation: phoneScrollImage 10s linear infinite;
+        // animation: phoneScrollImage 10s linear infinite;
         width: 240px;
         height: 120px;
         
@@ -273,14 +288,14 @@ width: 267px;
 .phone-upscroll-image{
     @include phone{
     width: 240px;
-height: 120px;
-animation: phoneUpscrollImage 10s linear infinite;
+height: 100px !important;
+// animation: phoneUpscrollImage 10s linear infinite;
 animation-direction: reverse;
     }
     @include for-tablet-only{
         width: 240px;
     height: 120px;
-    animation: phoneUpscrollImage 10s linear infinite;
+    // animation: phoneUpscrollImage 10s linear infinite;
     animation-direction: reverse;
         }
 }
@@ -294,4 +309,8 @@ animation-direction: reverse;
         display: flex;
         gap: 20px;
     }
+    .slick-slide{
+        margin:0 10px;
+
+         }
 }

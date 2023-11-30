@@ -102,6 +102,10 @@
 					gap: 16px;
 					padding: 16px 16px 24px 16px;
 				}
+				@include iphone{
+					padding: 16px 16px 16px 16px;
+
+				}
 				.visual-glance {
 					figure {
 						width: 489px;

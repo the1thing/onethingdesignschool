@@ -185,6 +185,10 @@
 				  margin-top: 24px;
 				padding: 32px;
 				}
+				@include iphone{
+					padding: 0px 36px;
+				}
+				
 			  .hero-img{
 				display: none;
 				@include for-tablet-only{
@@ -199,6 +203,10 @@
 					height: 350px;
 					width: 350px;
 				}
+				@include iphone{
+					height: 300px;
+					width: 300px;
+				}
 			}
 				.animate{
                     @include for-tablet-only{
@@ -208,11 +216,16 @@
 					@include phone{
 						display: none;
 					} 
+					.container{
+						padding-right: unset;
+						padding-left: unset;
+						max-width: 1198px;
+					}
 				}
 			  
 				> .container {
 				  padding: 0;
-			  
+				 
 				  @include for-tablet-only {
 				  }
 			  
@@ -262,6 +275,8 @@
 				  height:450px;
 				  width: 450px;
 				  position: relative;
+// 				  background-size: contain;
+//   background-position: center;
 				//   overflow: hidden;
 				left:60%;
 				  border-radius: 50%; 
