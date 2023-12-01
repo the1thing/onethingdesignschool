@@ -13,7 +13,7 @@
         <section class="animation-section">
        
             <div id="gallery" class="image-section1">
-               
+              
              <img src="assets/images/intern/sliding1.png" class="scrolling-image">
              <img src="assets/images/intern/sliding2.png" class="scrolling-image">
              <img src="assets/images/intern/sliding3.png" class="scrolling-image">
@@ -23,23 +23,23 @@
              <img src="assets/images/intern/sliding1.png" class="scrolling-image">
     <img src="assets/images/intern/sliding2.png" class="scrolling-image">
     <img src="assets/images/intern/sliding3.png" class="scrolling-image">
-          
+
 </div>
             <div id="gallery-phone" dir="rtl" class="phone-image-section1"> 
              <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
              <img src="assets/images/intern/phone-img2.png" class="phone-scrolling-image">
              <img src="assets/images/intern/phone-img3.png" class="phone-scrolling-image">
              <img src="assets/images/intern/phone-img4.png" class="phone-scrolling-image">
-             <!-- <img src="assets/images/intern/phone-img1.png" class="phone-scrolling-image">
-             <img src="assets/images/intern/phone-img2.png" class="phone-scrolling-image"> -->
             </div>
-            <div id="gallery2"  class="image-section2 ">
+            <div id="gallery2"  class="image-section2 scroller">
+              <div class="scroller-inner">
              <img src="assets/images/intern/sliding4.png" class="upscroll-image">
              <img src="assets/images/intern/sliding5.png" class="upscroll-image">
              <img src="assets/images/intern/sliding6.png" class="upscroll-image">
              <img src="assets/images/intern/sliding4.png" class="upscroll-image">
              <img src="assets/images/intern/sliding5.png" class="upscroll-image">
              <img src="assets/images/intern/sliding6.png" class="upscroll-image">
+              </div>
             </div>
             <div id="gallery-phone2" class="phone-image-section2">
                 <img src="assets/images/intern/phone-img4.png" class="phone-upscroll-image">
@@ -60,8 +60,8 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
-<script src="assets/vendors/slick-code.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!-- <script src="assets/vendors/slick-code.js"></script> -->
 
 <script>
    $('#gallery').slick({
@@ -80,26 +80,24 @@
         swipe:true,
        
 });
-$('#gallery2').slick({
-  vertical:true,
-        verticalSwiping:true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed:4000,
-        cssEase: 'linear',
-        infinite: true,
-        arrows:false,
-        touchMove:true,
-        swipeToSlide:true,
-        swipe:true,
-       
-  verticalReverse: true,
-});
+// $('#gallery2').slick({
+//   vertical:true,
+//         verticalSwiping:true,
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         autoplay: true,
+//         autoplaySpeed: 0,
+//         speed:4000,
+//         cssEase: 'linear',
+//         infinite: true,
+//         arrows:false,
+//         touchMove:true,
+//         swipeToSlide:true,
+//         swipe:true,  
+//       verticalReverse:true  
+// });
 $('#gallery-phone').slick({
-  // vertical:true,
-  //       verticalSwiping:true,
+  
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
@@ -176,3 +174,25 @@ $('#gallery-phone2').slick({
   ],
 });
 </script>
+
+<script>
+  const scrollers=document.querySelectorAll('.scroller')
+  
+  if(!window.matchMedia("(prefers-reduced-motion:reduced)").matches){
+    addAnimation()
+  }
+  function addAnimation(){
+  scrollers.forEach(scroller=>{
+    scroller.setAttribute('data-animated',true)
+
+    const scrollerInner=scroller.querySelector('.scroller-inner')
+    const scrollContent=Array.from(scrollerInner.children)
+    scrollContent.forEach(item=>{
+      const duplicatedItem=item.cloneNode(true)
+      duplicatedItem.setAttribute("aria-hidden",true)
+      scrollerInner.appendChild(duplicatedItem)
+      
+    })
+  })
+  }
+    </script>

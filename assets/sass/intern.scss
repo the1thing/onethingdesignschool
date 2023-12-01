@@ -164,6 +164,7 @@ width: 267px;
 
     }
     }
+   
     .image-section1{
         width: 50%;
         overflow: hidden;
@@ -172,7 +173,7 @@ width: 267px;
         display: flex;
     flex-direction: column;
     gap: 20px;
-    
+    max-height: auto;
     @include phone{
         display: none;
     }
@@ -182,8 +183,29 @@ width: 267px;
     .slick-slide{
    margin:10px 0;
     }
-   
     }
+    .scroller-inner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .scroller[data-animated="true"]{
+        overflow: hidden;
+    }
+    .scroller[data-animated="true"] .scroller-inner{
+        width: max-content;
+       flex-wrap: nowrap;
+       animation: scroll 20s reverse linear infinite;
+
+       @keyframes scroll {
+          to{
+ transform: translateY(calc( -50% - 0.5rem));
+          }
+       }
+    }
+
+   
     .scrolling-image {
         width: 100%;
         height: auto;
@@ -192,44 +214,24 @@ width: 267px;
         // background:url("../images/intern/sliding1.png")
       }
       
-      @keyframes scrollImage{
-        0% {
-          transform: translateY(0%);
-        }
-        100% {
-          transform: translateY(-200%);
-        }
-      }
-      @keyframes phoneScrollImage {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
+    
      
       .upscroll-image {
-        // animation: upscrollImage 10s linear infinite;
+        width: 100%;
+        height: auto;
+        // animation: upscrollImage 4s linear infinite;
         // animation-direction: reverse;
       }
-      
       @keyframes upscrollImage {
-        0% {
-          transform: translateY(0);
-        }
+        // 0% {
+        //   transform: translateY(0);
+        // }
         100% {
-          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
+          transform: translateY(-50%);
         }
       }
-      @keyframes phoneUpscrollImage {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
+      
+     
     .image-section2{
         width: 50%;
         overflow: hidden;
@@ -248,6 +250,7 @@ width: 267px;
     .slick-slide{
         margin:10px 0;
          }
+       
         
     }
 
@@ -272,13 +275,11 @@ width: 267px;
 }
 .phone-scrolling-image{
     @include phone {
-        // animation: phoneScrollImage 10s linear infinite;
         width: 240px;
         height: 100px !important;
         
     }
     @include for-tablet-only {
-        // animation: phoneScrollImage 10s linear infinite;
         width: 240px;
         height: 120px;
         
@@ -289,14 +290,10 @@ width: 267px;
     @include phone{
     width: 240px;
 height: 100px !important;
-// animation: phoneUpscrollImage 10s linear infinite;
-animation-direction: reverse;
     }
     @include for-tablet-only{
         width: 240px;
     height: 120px;
-    // animation: phoneUpscrollImage 10s linear infinite;
-    animation-direction: reverse;
         }
 }
 .phone-image-section2{
