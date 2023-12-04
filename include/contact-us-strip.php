@@ -2,7 +2,7 @@
 <section class="contact-us-strip-wrapper">
 	<div class="contact-main">
 		<div class="container">
-			<div class="div-wrap visibility-delay" >
+			<div class="div-wrap " >
 				<div class="heading-wrap">
 					<h2 class="section-title-main">
 						<div class="svg-icon">
@@ -140,27 +140,30 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const elements = document.querySelectorAll('.element');
-
+  
   const observer = new IntersectionObserver(entries => {
+	console.log(entries,"entries")
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains(entry.target.dataset.class)) {
+		console.log(entry.target.classList.contains('strip-divider'))
+
         const className = entry.target.dataset.class;
+
+        setTimeout(() => {
         entry.target.classList.add(className);
+		const element=document.querySelectorAll('.element')
+		element.forEach(item=>item.style.opacity=1)
+
+	}, 1000);
+
         if (entry.target.dataset.once) {
           observer.unobserve(entry.target); // Unobserve the element to prevent further animations
         }
-        setTimeout(() => {
-        document.querySelector('.visibility-delay').style.opacity=1
-        document.querySelector('.visibility-delay').style.transform="translateY(0)"
 
-          
-        }, 3000);
+       
+       
       }
-      // else if (!entry.isIntersecting) {
-      //   const className = entry.target.dataset.class;
-      //   // Remove the 'class-added' when the element is out of the viewport
-      //   entry.target.classList.remove(className);
-      // }
+     
     });
   });
 

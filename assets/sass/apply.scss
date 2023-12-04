@@ -63,7 +63,7 @@
     }
     .star-in-viewport{
 			transform: rotate(0deg);
-      animation: rotateAnimation 2s linear infinite,new 1s linear ;
+      animation: rotateAnimation 2s linear infinite,new 0.5s linear ;
      
 			  @keyframes new {
 				0% {

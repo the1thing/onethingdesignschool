@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        console.log("entry")
         star.classList.add('star-in-viewport');
         observer.unobserve(star);
       } 

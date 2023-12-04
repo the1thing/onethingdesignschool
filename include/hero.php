@@ -100,7 +100,7 @@ gsap.to(".scrollimgzoom", {
   ease: "power2.inOut", 
   scrollTrigger: {
     trigger: ".scrollimgzoom",
-    start: "top 50%",
+    start: "top 90%",
     end: "bottom 50%",
     scrub: true,
   },
