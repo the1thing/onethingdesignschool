@@ -111,6 +111,8 @@ $('#gallery-phone').slick({
         swipeToSlide:true,
         swipe:true,
         rtl:true,
+        pauseOnHover: false,
+
         responsive: [
     {
       breakpoint: 1200,
@@ -149,6 +151,7 @@ $('#gallery-phone2').slick({
         touchMove:true,
         swipeToSlide:true,
         swipe:true,
+        pauseOnHover: false,
         responsive: [
     {
       breakpoint: 1200,

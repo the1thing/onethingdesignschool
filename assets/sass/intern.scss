@@ -1,5 +1,12 @@
 .intern-wrapper {
     padding: 120px;
+    background-image: url('../images/backgrounds/apply-bg.svg');
+
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+
     @include for-tablet-only {
         padding: 80px;
     }

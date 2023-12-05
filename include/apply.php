@@ -39,14 +39,16 @@
           <h6>Working professionals</h6>
           <p>People from diverse backgrounds wanting to translate their expertise into a design context</p>
           <div  class="svg-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <rect width="80" height="80" rx="40" fill="#FCBA30"/>
-              <rect x="24.5088" y="29.1062" width="14.5066" height="14.5066" transform="rotate(45 24.5088 29.1062)" stroke="white" stroke-width="4.31959"/>
-              <rect x="39.498" y="43.8728" width="14.5066" height="14.5066" transform="rotate(45 39.498 43.8728)" stroke="white" stroke-width="4.31959"/>
-              <rect x="39.498" y="14.3405" width="14.5066" height="14.5066" transform="rotate(45 39.498 14.3405)" stroke="white" stroke-width="4.31959"/>
-              <rect x="54.4883" y="29.1062" width="14.5066" height="14.5066" transform="rotate(45 54.4883 29.1062)" stroke="white" stroke-width="4.31959"/>
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="40" fill="#FCBA30"/>
+  <rect x="24.5088" y="29.1062" width="14.5066" height="14.5066" transform="rotate(45 24.5088 29.1062)" stroke="white" stroke-width="4.31959"/>
+  <rect x="39.498" y="43.8728" width="14.5066" height="14.5066" transform="rotate(45 39.498 43.8728)" stroke="white" stroke-width="4.31959"/>
+  <rect x="39.498" y="14.3405" width="14.5066" height="14.5066" transform="rotate(45 39.498 14.3405)" stroke="white" stroke-width="4.31959"/>
+  <rect x="54.4883" y="29.1062" width="14.5066" height="14.5066" transform="rotate(45 54.4883 29.1062)" stroke="white" stroke-width="4.31959"/>
+</svg>
           </div>
+<img class="card-bg-img" src="assets/images/apply/card-bg.svg">
+
         </div>
       </div>
       <div class="cta-wrapper">

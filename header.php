@@ -20,7 +20,7 @@
          <div class="container">
             <div class="container-wrapper">
                <div class="logo clearfix">
-                  <a href="#" class="logo-link">
+                  <a href="./" class="logo-link">
                      <figure>
                         <img src="assets/images/logo/logo.svg">
                      </figure>

@@ -311,7 +311,7 @@
 					border: 1px solid rgba($ods-lime, 0.3);
 					display: grid;
 					grid-template-columns: repeat(3,1fr);
-					align-items: flex-start;
+					align-items: center;
 					width: 996px;
 					margin: 0 auto;
 					padding: 40px 64px;
@@ -342,12 +342,27 @@
 						}
 						.svg-icon {
 							margin-bottom: 20px;
+							
 							@include for-tablet-only {}
 							@include phone {
 								margin-bottom: 16px;
 								text-align: center;
 							}
+							.triangle-div{
+								display: grid;
+								grid-template-columns: auto auto;
+								width: 40px;
+                           height: 39.999px;
+                          
+								.triangle{
+									color: $pink;
+									
+								}
+							}
+							
+							
 						}
+						
 						p {
 							color: $ods-lime;
 							font-family: "galano-grotesque-regular", sans-serif;
@@ -368,8 +383,46 @@
 							}
 						}
 					}
+					.hover-effect :is(.triangle.one, .triangle.four, .triangle.three){
+						transition: translate 0.3s linear,opacity 0.3s linear;
+					}
+					.hover-effect:hover .triangle.one {
+						opacity: 0;
+						// transition: translate 0.3s linear;
+					  }
+					  .hover-effect:hover .triangle.four{
+						opacity: 0;
+						// transition: translate 0.3s linear;
+
+					  }
+					  .hover-effect:hover .triangle.three{
+						translate: 50% -50%;
+						// transition: translate 0.3s linear;
+					  }
+					.star-hover:hover .star svg{
+						animation: rotate 2s linear ;
+						@keyframes rotate {
+							from {
+							  transform: rotate(0deg);
+							}
+							to {
+							  transform: rotate(360deg);
+							}
+					}
+					  
 				}
-			}
+				.square-hover .svg-icon img{
+					clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 40% 0, 100% 60%, 100% 100%, 100% 100%, 100% 0%);
+					transition:all 0.3s linear;
+				}
+				.square-hover:hover .svg-icon img{
+					clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0 0, 0% 0, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+
+				}
+				.svg-icon img {
+					transition: opacity 0.3s ease; /* Define the transition property */
+				  }
+			}}
 			.hero-note-wrapper {
 				display: none;
 				.note-p {

@@ -1,8 +1,9 @@
 .who-can-apply-wrapper {
-  background-image: url('../images/backgrounds/ods-writing-bg.png');
+  background-image: url('../images/backgrounds/apply-bg.svg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+
   // padding: 102px 0 120px 0;          //because of removing curriculum
   padding: 102px 0 0 0;
   @include for-tablet-only {
@@ -140,15 +141,24 @@
       color: $ods-white;
       width: min(336px, 100%);
       width: 45%;
-      @include for-tablet-only {}
+      @include for-tablet-only {
+      width: 60%;
+
+      }
       @include phone {
         width: 100%;
       }
     }
     .svg-icon {
       position: absolute;
-      bottom: 40px;
+      top: 40px;
       right: 40px;
+      @include for-tablet-only{
+        right: 24px;
+      }
+      @include phone{
+        display: none;
+      }
       svg {
         width: 80px;
         height: 80px;
@@ -215,7 +225,9 @@
     }
     p {
       width: 40%;
-      @include for-tablet-only {}
+      @include for-tablet-only {
+        width: 60%;
+      }
       @include phone {
         width: 100%;
       }
@@ -227,6 +239,7 @@
     margin-left: auto;
     margin-right: 8.5%;
     margin-top: auto;
+    position: relative;
     margin-bottom: -30px;
     background-color: $ods-white;
     color: $ods-black;
@@ -244,10 +257,20 @@
     p {
       color: $ods-black;
     }
+    .card-bg-img{
+      position: absolute;
+      bottom: 0;
+    width: 100%;
+    left: 0;
+    }
     .svg-icon {
       svg {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
+        @include for-tablet-only{
+          width: 40px;
+    height: 40px;
+        }
       }
     }
   }

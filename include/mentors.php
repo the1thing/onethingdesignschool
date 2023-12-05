@@ -36,7 +36,7 @@
 				</div>
 			<div data-aos="flip-down" class="cta-wrapper">
 					<a href="#" class="bttn bttn-primary bttn-primary-dark">
-						<span>Enrol Now</span>
+						<span>Enroll Now</span>
 					</a>
 				</div>
 			</div>
