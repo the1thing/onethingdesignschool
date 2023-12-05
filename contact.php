@@ -87,7 +87,6 @@ require_once './header.php';
 	function handleSubmit(event) {
     event.preventDefault(); 
     const form = event.target;
-    console.log(form.name.value,form.email.value,form.phone.value,"form")
     const formData = new FormData();
     formData.append("text-166",form.name.value)
     formData.append("email-935",form.email.value)
@@ -112,7 +111,6 @@ require_once './header.php';
     .then(response => response.json())
     .then(data => {
 	     successFun()
-    	console.log(data);
     })
     .catch(error => {
     	console.error('Error:', error);
@@ -160,7 +158,6 @@ require_once './header.php';
   
 const handleClick=(value)=>{
    document.getElementById(`${value}Cross`).style.display="none"
-console.log(value,"valuesss")
 if(value==='name'){
    form.name.value=''
 }
@@ -173,7 +170,6 @@ if(value==='phone'){
 
 }
   const successFun=()=>{
-   console.log("success")
 	const formDiv = document.getElementById('submitForm');
    const register=document.querySelector('.register')
 	formDiv.style.display="none"

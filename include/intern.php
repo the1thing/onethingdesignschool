@@ -78,6 +78,7 @@
         touchMove:true,
         swipeToSlide:true,
         swipe:true,
+        pauseOnHover: false
        
 });
 // $('#gallery2').slick({

@@ -237,20 +237,25 @@ section {
 //   animation-iteration-count: infinite;
 //   animation-timing-function: linear;
   animation-fill-mode: forwards; 
-  opacity: 0;
+//   opacity: 0;
 	}
+	.fade-in-element {
+		opacity: 0;
+		transition: opacity 2s ease; /* Adjust the duration and easing function as needed */
+	}
+	
 	
 	
      .element1{
 	left:100px;
 	bottom: -60px;
-	animation: falling 0.5s linear, rotate 0.5s linear forwards;
+	animation: falling 1.5s linear, rotate 1.5s linear forwards;
 	 animation-fill-mode: forwards;
 	 animation-play-state: running;
 	 
      @keyframes falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
 		  }
 		  25% {
 			top: 40vh; /* Bounce up */
@@ -272,7 +277,8 @@ section {
 	  @include for-extra-large-screen{
 		@keyframes falling{
 			0% {
-				top: 0vh;
+				top: -20vh;
+
 			  }
 			  25% {
 				top: 50vh; /* Bounce up */
@@ -290,7 +296,8 @@ section {
 			  @include for-full-screen{
 				@keyframes falling{
 					0% {
-						top: 0vh;
+						top: -20vh;
+
 					  }
 					  25% {
 						top: 40vh; /* Bounce up */
@@ -312,7 +319,7 @@ section {
      .element2{
 		left:330px;
 		bottom: 79px;
-	animation: element2Falling 1.5s linear,rotate 1.5s linear forwards;
+	animation: element2Falling 2.5s linear,rotate 2.5s linear forwards;
 	  animation-fill-mode: forwards;
 	 
 
@@ -321,7 +328,8 @@ section {
 	  }
       @keyframes element2Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		  25% {
 			top: 40vh; /* Bounce up */
@@ -339,7 +347,8 @@ section {
 	@include for-extra-large-screen{
 		@keyframes element2Falling{
 			0% {
-				top: 0vh;
+				top: -20vh;
+
 			  }
 			  25% {
 				top: 45vh; /* Bounce up */
@@ -357,7 +366,8 @@ section {
 			  @include for-full-screen{
 				@keyframes element2Falling{
 					0% {
-						top: 0vh;
+						top: -20vh;
+
 					  }
 					  25% {
 						top: 40vh; /* Bounce up */
@@ -377,7 +387,7 @@ section {
 .element3{
 	left:535px;
 	bottom: -179px;
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-name: element3Falling;
 	animation-fill-mode: forwards;
 	
@@ -388,7 +398,8 @@ section {
 	}
 	@keyframes element3Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		//   25% {
 		// 	top: 40vh; /* Bounce up */
@@ -408,7 +419,8 @@ section {
   @include for-extra-large-screen{
 	@keyframes element3Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		//   25% {
 		// 	top: 50vh; /* Bounce up */
@@ -429,7 +441,7 @@ section {
 	// left: 990px;
 	bottom: 128px;
 	
-	animation: element4Falling 3s linear, rotate 3s linear forwards;
+	animation: element4Falling 4s linear, rotate 4s linear forwards;
 
 	animation-fill-mode: forwards;
 	
@@ -437,7 +449,8 @@ section {
 	
 	@keyframes element4Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		
 		  50% {
@@ -456,7 +469,8 @@ section {
   @include for-extra-large-screen{
 	@keyframes element4Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		  25% {
 			top: 50vh; /* Bounce up */
@@ -476,7 +490,8 @@ section {
 		  @include for-full-screen{
 			@keyframes element4Falling{
 				0% {
-					top: 0vh;
+					top: -20vh;
+
 				  }
 				
 				  50% {
@@ -497,7 +512,7 @@ section {
  .element5{
 	left:500px;
 	bottom: -200px;
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-name: element5Falling;
 	animation-fill-mode: forwards;
 	
@@ -508,7 +523,8 @@ section {
 	}
 	@keyframes element5Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
             //  left:5000px;
 		  }
 		//   25% {
@@ -530,7 +546,8 @@ section {
   @include for-extra-large-screen{
 	@keyframes element5Falling{
 		0% {
-			top: 0vh;
+			top: -20vh;
+
 		  }
 		//   25% {
 		// 	top: 50vh; /* Bounce up */
@@ -548,10 +565,7 @@ section {
 }
 }
 }
-canvas {
-// display: none;
 
-  }
   
 
 

@@ -14,7 +14,7 @@
 			<div class="testimonial-decking-card-container">
 				<div class="container card-deck-js">
 					
-					<div class="testimonialcard pink" style="transform: translateY(0px);">
+					<div class="cardss pink" style="transform: translateY(0px);">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="testimonialcard yellow">
+					<div class="cardss yellow">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="testimonialcard blue">
+					<div class="cardss blue">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
 	  const animationTimeline = gsap.timeline({ paused: true });
 	  animationTimeline.to(card, {
-		duration: 0.3,
+		duration: 0.15,
 		
 	  });
 	  
@@ -137,7 +137,7 @@ $(document).ready(function() {
 		invalidateOnRefresh: true,
 		endTrigger: ".template-faq",
 		onEnter: () => {
-                gsap.set(card, { y: index * 30 });
+                gsap.set(card, { y: index * 40 });
             },
 	  });
 	});

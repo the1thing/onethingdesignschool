@@ -54,11 +54,11 @@
 		</div>
 	</div>
 	<div class="falling-elements">
-		<img class="element" data-class="element1" src="assets/images/footer/image1.png">
-		<img class="element" data-class="element2" src="assets/images/footer/image2.png">
-		<img class="element" data-class="element3" src="assets/images/footer/image3.svg">
-		<img class="element" data-class="element4" src="assets/images/footer/image4.png">
-		<img class="element" data-class="element5"  src="assets/images/footer/image5.png">
+		<img class="element fade-in-element" data-class="element1" src="assets/images/footer/image1.png">
+		<img class="element fade-in-element" data-class="element2" src="assets/images/footer/image2.png">
+		<img class="element fade-in-element" data-class="element3" src="assets/images/footer/image3.svg">
+		<img class="element fade-in-element" data-class="element4" src="assets/images/footer/image4.png">
+		<img class="element fade-in-element" data-class="element5"  src="assets/images/footer/image5.png">
 	</div>
 	<img src="assets/images/elements/footer/footer-bg.png" class="background-img">
 </section>
@@ -93,7 +93,6 @@
     .then(response => response.json())
     .then(data => {
 	     successFun()
-    	console.log(data);
     })
     .catch(error => {
     	console.error('Error:', error);
@@ -133,47 +132,33 @@
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);
 
-
-
 </script>
 <script>
 
 document.addEventListener('DOMContentLoaded', function () {
   const elements = document.querySelectorAll('.element');
-  
+
   const observer = new IntersectionObserver(entries => {
-	console.log(entries,"entries")
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains(entry.target.dataset.class)) {
-		console.log(entry.target.classList.contains('strip-divider'))
-
         const className = entry.target.dataset.class;
-
         setTimeout(() => {
         entry.target.classList.add(className);
 		const element=document.querySelectorAll('.element')
 		element.forEach(item=>item.style.opacity=1)
-
-	}, 1000);
-
+	}, 2000);
         if (entry.target.dataset.once) {
           observer.unobserve(entry.target); // Unobserve the element to prevent further animations
-        }
-
-       
-       
-      }
-     
+        } 
+      }  
     });
-  });
+  })
+  
 
   elements.forEach(element => {
     observer.observe(element);
   });
 },{ once: true })
-
-
-
 
   </script>
 
