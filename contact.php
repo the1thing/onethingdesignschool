@@ -10,7 +10,10 @@ require_once './header.php';
       <div class="contact-main-container">
       <div class="contact-big-text">
          <span class="contact-text-span type-span-1">Next best</span>
-         <span class="contact-text-span type-span-2">Industry leaders</span>
+         <div class="contact-head-div">
+         <span class="contact-text-span type-span-2">Industry</span>
+         <span class="contact-text-span type-span-4">leaders</span>
+</div>
          <span class="contact-text-span type-span-3">in making</span>
       </div>
      <img src="assets/images/contact/icon1.png" class="icon1">
@@ -77,6 +80,8 @@ require_once './header.php';
 
 
 </section>
+<img src="assets/images/backgrounds/footer-mob-bg.svg" class="contact-background-img">
+
 </div>
 <?php require_once './footer.php'; ?>
 <script>

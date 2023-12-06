@@ -1,4 +1,12 @@
 .homepage-container {
+	.left-container{
+		@include for-tablet-only{
+		padding-left: 72px;
+		}
+		@include phone{
+			padding-left: 16px;
+		}
+	}
 	.hero-big-text {
 		position: relative;
 		padding-top: 180px;
@@ -9,6 +17,15 @@
 		@include phone {
 			padding-top: 80px;
 			padding-bottom: 0px;
+			line-height: 42px;
+		}
+		.hero-head-div{
+			display: flex;
+			gap: 24px;
+			@include for-tablet-only{
+				flex-direction: column;
+				gap: unset;
+			}
 		}
 		.elem1{
 			position: absolute;
@@ -57,8 +74,8 @@
 	@include phone{
 		height: 40px;
 		width: 40px;
-		bottom: -2%;
-    left: 4%;
+		bottom: -4%;
+    left: 3%;
 	}
 		}
 		.text-span {
@@ -75,6 +92,7 @@
 		// 	animation-delay: 1.2s
 
 		//   }
+	
 		@keyframes reveal {
 			0% { transform: translateY(7rem);opacity: 0; }
 			100% { opacity: 1; transform: none;opacity: 1; }
@@ -98,6 +116,7 @@
 				background-repeat: no-repeat !important;
 			}
 			
+			
 			&.type-span-1 {
 				// &:before {
 				// 	background: url('../images/elements/star-pink.svg');
@@ -116,24 +135,34 @@
 			}
 			&.type-span-2 {
 				padding-left: 120px;
-				@include for-tablet-only {}
+				@include for-tablet-only {
+					padding-left: 240px;
+				}
 				@include phone {
-					padding-left: 40px;
+					padding-left: 112px;
+				}
+				@include iphone{
+					white-space: nowrap;
+					padding-left: 22%;
 				}
 				&:before {
 					background: url('../images/elements/half-circle.svg');
-					right: 200px;
-					height: 80px;
-					width: 80px;
-					bottom: -30px;
+					right: -55%;
+    height: 80px;
+    width: 80px;
+	bottom: -24px;
 					z-index: -1;
 					rotate: 5deg;
-					@include for-tablet-only {}
+					@include for-tablet-only {
+						right: 112px;
+                     bottom: -16px;
+                      z-index: -1;
+					}
 					@include phone {
-						right: 120px;
+						right: 60px;
 						height: 40px;
 						width: 40px;
-						bottom: -10px;
+						bottom: -16px;
 					}
 				}
 			}
@@ -155,6 +184,7 @@
 				// 	}
 				// }
 			}
+
 		}
 	}
 	section {
@@ -177,7 +207,7 @@
 			  
 				@include for-tablet-only {
 				  margin-top: 0;
-				  padding-left: 40%;
+				  padding-left: 13%;
 				
 				}
 			  
@@ -194,8 +224,8 @@
 				@include for-tablet-only{
 					display: block;
 					border-radius: 50%;
-					height: 450px;
-					width: 450px;
+					height: 600px;
+					width: 600px;
 				}
 				@include phone{
 					display: block;
@@ -323,11 +353,13 @@
 						grid-template-columns: repeat(1,1fr);
 					}
 					@include phone {
-						padding: 64px;
-						width: 100%;
-						grid-template-columns: repeat(1,1fr);
-						gap: 0;
-						border-radius: 160px;
+					
+						display: inline-flex;
+padding: 56px 65px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 32px;
 					}
 					.ods-col {
 						@include for-tablet-only {
@@ -337,7 +369,8 @@
 						}
 						@include phone {
 							border-bottom: 1px solid rgba($ods-light-grey, 0.1);
-							margin-bottom: 32px;
+							// margin-bottom: 32px;
+							gap: 16px;
 							padding-bottom: 32px;
 						}
 						.svg-icon {
@@ -372,6 +405,7 @@
 							@include phone {
 								font-size: 14px;
 								text-align: center;
+								width: 198px;
 							}
 						}
 						&:last-of-type {

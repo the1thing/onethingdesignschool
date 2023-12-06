@@ -1,4 +1,6 @@
 .temp-mentors-slider-container {
+	cursor: url(https://bhaveshrawat.dev/assets/hero/illustrations/cursor.svg), auto !important;
+
 	.scroll-disabler {
 		width: 100vw;
 		height: 450px;
@@ -10,7 +12,13 @@
 		display: none;
 	}
 	.div-wrap {
+
+		#infiniteScroll--left:active {
+
+			// cursor: grabbing; /* Change the cursor to 'grabbing' when the slider is clicked and dragged */
+		  }
 		.main-container {
+          
 			width: 100vw;
 			overflow-x: scroll;
 			white-space: nowrap;
@@ -18,11 +26,19 @@
 			-ms-overflow-style: none;
 			scrollbar-width: none;
 			gap: 24px;
+			position: relative;
+			// .slick-list{
+			// 	.slick-track{
+			// 		display: flex;
+			// 		gap: 24px;
+			// 	}
+			// }
 			article {
 				width: 384px;
 				.wrapper {
 					.figure-card {
 						img {
+							// width: 100%;
 							width: 384px;
 						}
 						.content {
@@ -49,6 +65,28 @@
 			}
 		}
 	}
+}
+.nextButton{
+	width: 50%;
+	position: absolute;
+	right:0;
+	height: 100%;
+background-color: transparent;
+}
+.previousButton{
+	width: 50%;
+	position: absolute;
+	left: 0;
+	height: 100%;
+background-color: transparent;
+
+
+}
+.draggable-cursor{
+	position: absolute;
+	z-index: 8;
+	width: 100%;
+	height: 100%;
 }
 
 

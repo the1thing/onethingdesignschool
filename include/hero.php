@@ -2,7 +2,11 @@
    <div class="left-container">
       <h1 class="hero-big-text">
          <span  class="text-span type-span-1">Design Your</span>
-         <span class="text-span type-span-2">Future with Onething</span>
+         <div class="hero-head-div">
+         <span class="text-span type-span-2">Future with</span>
+         <span class="text-span type-span-4">Onething</span>
+
+</div>
          <span  class="text-span type-span-3">Design School.</span>
          <img   src="assets/images/elements/star-pink.svg" class="elem1">
          <img data-aos="fade-up" data-aos-duration=2000 src="assets/images/elements/rectangle.svg" class="elem2">

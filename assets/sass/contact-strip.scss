@@ -113,6 +113,11 @@ section {
 					@include for-tablet-only {
 						width: 80%;
 					}
+					@include phone{
+						width: 100%;
+					gap: 24px;
+
+					}
 					.bttn-primary:hover{
                    color: #000 !important;
 					}
@@ -129,7 +134,7 @@ section {
 						border: 0.5px solid $ods-light-grey;
 						width: 100%;
 						@include phone {
-							padding: 16px 24px 16px 24px;
+							padding: 18px;
 						}
 						@include for-tablet-only {
 							padding: 16px 24px 16px 24px;
@@ -148,7 +153,8 @@ section {
 							color: #000;
 						}
 						@include phone{
-							width: 159px;
+							width: 100%;
+    justify-content: center;
 						}
 					}
 					p{
@@ -203,13 +209,17 @@ section {
 			
 			@include for-tablet-only{
 				display: flex;
-				height: 24%;
 				width: 100%;
+				bottom: -156px;
+    right: -7px;
 			}
 			@include phone{
 				display: flex;
-				height: 18%;
-				width: 100%;
+				bottom: -56px;
+    right: 14px;
+	width: 90%;
+				// height: 18%;
+				// width: 100%;
 			}
 		}
 		.falling-elements {

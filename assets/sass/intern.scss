@@ -55,14 +55,15 @@
         width: 50%;
         position: relative;
         @include phone {
-           
+           width: 100%;
             padding: 40px 20px;
         }
         a{
             margin-top: 32px;
             @include phone {
-                width: 142px;
+                width: 100%;
                 margin-top: 24px;
+                text-align: center;
             }
         }
     }

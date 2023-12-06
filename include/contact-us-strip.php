@@ -60,7 +60,9 @@
 		<img class="element fade-in-element" data-class="element4" src="assets/images/footer/image4.png">
 		<img class="element fade-in-element" data-class="element5"  src="assets/images/footer/image5.png">
 	</div>
-	<img src="assets/images/elements/footer/footer-bg.png" class="background-img">
+	<img src="assets/images/backgrounds/footer-mob-bg.svg" class="background-img">
+	<!-- <img src="assets/images/backgrounds/footer-mob-bg.png" class="mobile-background-img"> -->
+
 </section>
 
 <script>

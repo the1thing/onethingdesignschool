@@ -40,7 +40,9 @@
     @include phone {
         flex-direction: column;
         align-items: center;
-        padding-bottom: 32px;
+        padding-bottom:200px;
+    position: relative;
+
 
     }
 
@@ -62,9 +64,9 @@
        }
        @include phone {
         width: 100%;
-        padding-left: 48px;
-        padding-top: 48px;
-       padding-right: 32px;
+        padding-left: 24px;
+        padding-top: 32px;
+       padding-right: 24px;
        padding-bottom: 0;
        }
        .contact-main-container{
@@ -80,6 +82,13 @@
         .contact-big-text{
             position: relative;
     z-index: 2;
+    .contact-head-div{
+        display: flex;
+        gap: 18px;
+        @include phone{
+            gap: 12px;
+        }
+    }
             span{
 
             display: flex;
@@ -93,18 +102,34 @@ line-height: 110px; /* 137.5% */
 @include for-tablet-only {
     white-space: nowrap;
 font-size: 64px;
+line-height: 96px; /* 137.5% */
 
 }
+@include phone{
+    line-height: 68px;
+}
+
 @include phone {
+    font-size: 36px;
     white-space: unset;
 }
         }
         .type-span-2{
             padding-left: 64px;
             white-space: nowrap;
+            @include for-tablet-only{
+                padding-left: 183px;
+            
+            }
             @include phone {
                 white-space: unset;
+                padding-left: 76px;
             }
+            @include iphone{
+                padding-left: 42px;
+            }
+
+           
         }
        }
     }
@@ -119,30 +144,36 @@ font-size: 64px;
         gap: 160px;
        }
        @include phone {
-        flex-direction: column;
-        gap: 24px;
-        align-items: center;
-        padding: 64px 0 32px 0;
+        gap: 60px;
+        // align-items: center;
+        padding: 42px 0 32px 0;
        }
       
         .ods-col{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
             @include phone {
-                align-items: center;
+                // align-items: center;
                 gap: 0px;
             }
             p{
                 // width: 181px;
                 color: #FEFCE4;
                 font-size: 24px;
+                @include phone{
+                    font-size: 16px;
+                }
+
             }
             .stats_num{
                 font-family: "galano-grotesque-semibold";
                 font-size: 40px;
                 font-style: normal;
                 line-height: 130%;
+                @include phone{
+                    font-size: 24px;
+                }
             }
             .yellow-stats{
                 color: #FBB22D;
@@ -164,7 +195,13 @@ font-size: 64px;
         top: 4%;
        }
        @include phone{
-        top: 2%;
+        top: 1%;
+        height: 36px;
+    width: 36px;
+    left: 6%;
+       }
+       @include for-tablet-only{
+        left: 12%;
        }
     }
     .icon2{
@@ -176,8 +213,10 @@ font-size: 64px;
       top:34%;
        }
        @include phone {
-        top: 31%;
-        right: 20%;
+        top: 32%;
+    right: 14%;
+        height: 36px;
+    width: 36px;
        }
     }
     .icon3{
@@ -186,11 +225,14 @@ font-size: 64px;
         top: 44%;
         left: 18%;
        @include for-tablet-only{
-        left: 12%;
+        left: 11%;
+        top: 48%;
        }
        @include phone {
-        left: 17%;
-        top: 41%;
+        left: 10.5%;
+    top: 50%;
+        height: 36px;
+    width: 36px;
        }
     }
     }
@@ -221,7 +263,7 @@ background-position: top center;
    }
    @include phone {
     height: unset;
-    width: 95%;
+    width: 100%;
     border-radius: 64px;
     padding: 48px 32px;
    }
@@ -236,8 +278,15 @@ line-height: 72px;
     font-size: 48px;
 }
 @include phone {
-    font-size: 32px;
+    font-size: 28px;
 }
+  }
+  img{
+    @include phone{
+        width: 34px;
+height: 34px;
+margin-left: 6px;
+    }
   }
   .ods-form{
   display: flex;
@@ -249,13 +298,16 @@ line-height: 72px;
     padding: 40px 0;
   }
   @include phone {
-    padding: 32px 0;
+    padding: 24px 0;
+  gap: 16px;
+
   }
   button{
     background: none;
     .cta-wrapper{
         .bttn-primary-dark{
-            border-color: $ods-white;
+
+            border-color: $ods-black;
             span {
                 color: $ods-black;
             }
@@ -266,6 +318,10 @@ line-height: 72px;
                 span {
                     color: $ods-black;
                 }
+            }
+            @include phone{
+                width: 100%;
+                margin: 16px 0;
             }
         }
     }
@@ -317,7 +373,7 @@ font-size: 16px;
 font-style: normal;
 line-height: 150%; /* 24px */
 @include for-tablet-only {
-    width: 90%;
+    width: 100%;
 }
 @include phone {
     width: 100%;
@@ -457,6 +513,19 @@ line-height: 40px; /* 166.667% */
 
 }
 }
+}
+.contact-background-img{
+    display: none;
+    @include for-tablet-only{
+        display: none;
+    }
+    @include phone{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        right: -1%;
+    }
 }
          
 			

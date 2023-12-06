@@ -21,6 +21,15 @@
     @include for-tablet-only {
       margin-top: 80px;
     }
+    @include phone{
+      margin-top: unset;
+      width: 100%;
+    }
+    a{
+      @include phone{
+        width: 100%;
+      }
+    }
   }
   .heading-wrap {
     .section-title-secondary {
@@ -143,10 +152,11 @@
       width: 45%;
       @include for-tablet-only {
       width: 60%;
-
+      font-size: 16px;
       }
       @include phone {
         width: 100%;
+        font-size: 12px;
       }
     }
     .svg-icon {
@@ -156,12 +166,26 @@
       @include for-tablet-only{
         right: 24px;
       }
+     
       @include phone{
-        display: none;
+       top: 20px;
       }
       svg {
         width: 80px;
         height: 80px;
+        @include for-tablet-only{
+          width: 40px;
+    height: 40px;
+        }
+        @include phone{
+          width: 40px;
+          height: 40px;
+        
+        }
+        @include iphone{
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
@@ -179,6 +203,7 @@
       width: 90%;
       margin-top: 0;
       margin-left: -6px;
+      height: 234px;
     }
   }
   .pink {
@@ -193,8 +218,9 @@
     }
     @include phone {
       width: 90%;
-      margin-top: -74%;
+      margin-top: -38%;
       margin-right: -6px;
+      height: 194px;
     }
     p {
       width: 75%;
@@ -220,8 +246,9 @@
     @include phone {
       width: 84%;
       margin: 0 auto;
-      margin-top: -70%;
+      margin-top: -24%;
       margin-left: 10px;
+      height: 164px;
     }
     p {
       width: 40%;
@@ -250,29 +277,27 @@
     @include phone {
       width: 80%;
       margin-bottom: 0;
-      margin-top: -52%;
+      margin-top: -16%;
       margin-right: 18px;
-      height: 250px;
+      height: 164px;
+      overflow: hidden;
     }
     p {
       color: $ods-black;
+      font-size: 12px;
     }
     .card-bg-img{
       position: absolute;
       bottom: 0;
     width: 100%;
     left: 0;
+    @include phone{
+      bottom: -9px;
     }
-    .svg-icon {
-      svg {
-        width: 80px;
-        height: 80px;
-        @include for-tablet-only{
-          width: 40px;
-    height: 40px;
-        }
-      }
+    
+  
     }
+   
   }
   .front {
     z-index: 1;

@@ -76,6 +76,11 @@ footer {
 							display: inline-block;
 							.vector-img{
 								padding: 0 6px;
+								@include phone{
+									height: 60px;
+    width: 60px;
+	padding: unset;
+								}
 							}
 						}
 						svg {

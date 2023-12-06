@@ -1,5 +1,5 @@
 <div class="temp-mentors-slider-container">
-	<div class="div-wrap">
+	<div class="div-wrap" id="slider-container">
 		<div class="main-container" id="infiniteScroll--left">
 			<article>
 				<div class="wrapper">
@@ -265,49 +265,162 @@
 				</div>
 			</article>
 			<!-- section2 completed -->
-
+			
 		</div>
+		
+		
+		
+
 	</div>
 </div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+
+<!-- <script>
+	$('#infiniteScroll--left').slick({
+		slidesToShow: 3,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 0,
+        // speed:4000,
+        cssEase: 'linear',
+        infinite: true,
+        arrows:true,
+        touchMove:true,
+        swipeToSlide:true,
+        swipe:true,
+        pauseOnHover: true,
+	prevArrow:'<button class="previousButton" id="previous-button">previous</button>',
+	nextArrow:'<button class="nextButton" id="next-button">next</button>',
+	
+  });
+	</script> -->
 <script>
 
 const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
+
 scrollContainers.forEach((container) => {
-	const scrollWidth = container.scrollWidth;
-	let isScrollingPaused = false;
-	window.addEventListener("load", () => {
-		self.setInterval(() => {
-			if (isScrollingPaused) {
-				return;
-			}
-			const first = container.querySelector("article");
+    // container.style.overflow = "hidden"; // Ensure the container has overflow hidden
 
-			if (!isElementInViewport(first)) {
-				container.appendChild(first);
-				container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
-			}
-			if (container.scrollLeft !== scrollWidth) {
-				container.scrollTo(container.scrollLeft + 1, 0);
-			}
-		}, 15);
-	});
+    const scrollWidth = container.scrollWidth;
+    let isScrollingPaused = false;
+    const draggableCursor = document.createElement("div");
+    draggableCursor.classList.add("draggable-cursor");
+    container.appendChild(draggableCursor);
 
-	function isElementInViewport(el) {
-		var rect = el.getBoundingClientRect();
-		return rect.right > 0;
-	}
+    const prevButton = document.createElement("button");
+    prevButton.innerText = "";
+    prevButton.classList.add('previousButton');
+    draggableCursor.appendChild(prevButton);
 
-	function pauseScrolling() {
-		isScrollingPaused = true;
-	}
+    const nextButton = document.createElement("button");
+    nextButton.innerText = "";
+    nextButton.classList.add('nextButton');
+    draggableCursor.appendChild(nextButton);
 
-	function resumeScrolling() {
-		isScrollingPaused = false;
+	function cloneLastSlide() {
+        const lastSlide = container.lastElementChild.cloneNode(true);
+        container.insertBefore(lastSlide, container.firstElementChild);
+    }
+ 
+    prevButton.addEventListener("click", () => {
+        console.log("prev");
+        container.scrollBy({
+            left: -container.offsetWidth,
+            behavior: "smooth"
+        });
+		if (container.scrollLeft === 0) {
+            cloneLastSlide();
+            container.scrollLeft = container.scrollWidth - container.offsetWidth;
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        console.log("next");
+        container.scrollBy({
+            left: container.offsetWidth,
+            behavior: "smooth"
+        });
+    });
+	let intervalId; // Move this declaration outside the window load event
+
+// Set up the initial autoplay interval
+intervalId = setInterval(() => {
+	if (!isScrollingPaused) {
+		const first = container.querySelector("article");
+
+		if (!isElementInViewport(first)) {
+			container.appendChild(first);
+			container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+		}
+		if (container.scrollLeft !== scrollWidth) {
+			container.scrollTo(container.scrollLeft + 1, 0);
+		}
 	}
-	const allArticles = container.querySelectorAll("article");
-	for (let article of allArticles) {
-		article.addEventListener("mouseenter", pauseScrolling);
-		article.addEventListener("mouseleave", resumeScrolling);
-	}
+}, 15);
+
+
+    window.addEventListener("load", () => {
+        // const intervalId = setInterval(() => {
+        //     if (!isScrollingPaused) {
+        //         const first = container.querySelector("article");
+
+        //         if (!isElementInViewport(first)) {
+        //             container.appendChild(first);
+        //             container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+        //         }
+        //         if (container.scrollLeft !== scrollWidth) {
+        //             container.scrollTo(container.scrollLeft + 1, 0);
+        //         }
+        //     }
+        // }, 15);
+		container.addEventListener("mouseenter", pauseScrolling);
+    container.addEventListener("mouseleave", resumeScrolling);
+
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.right > 0;
+        }
+
+        function pauseScrolling() {
+            isScrollingPaused = true;
+        }
+
+        function resumeScrolling() {
+            isScrollingPaused = false;
+        }
+
+        const allArticles = container.querySelectorAll("article");
+        for (const article of allArticles) {
+            article.addEventListener("mouseenter", pauseScrolling);
+            article.addEventListener("mouseleave", resumeScrolling);
+        }
+
+        // Optional: Stop autoplay when the user interacts with the next/prev buttons
+        prevButton.addEventListener("mousedown", () => clearInterval(intervalId));
+        nextButton.addEventListener("mousedown", () => clearInterval(intervalId));
+		container.addEventListener("mouseleave", () => {
+        if (!isScrollingPaused) {
+            clearInterval(intervalId);
+            intervalId = setInterval(() => {
+                if (!isScrollingPaused) {
+                const first = container.querySelector("article");
+
+                if (!isElementInViewport(first)) {
+                    container.appendChild(first);
+                    container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
+                }
+                if (container.scrollLeft !== scrollWidth) {
+                    container.scrollTo(container.scrollLeft + 1, 0);
+                }
+            }
+            }, 15);
+        }
+    
+    });
 });
+})
+
 	</script>
+	

@@ -49,20 +49,41 @@
 			}
 		}
 		.brief-para {
+			display: flex;
+			justify-content: space-between;
 			@include for-tablet-only {}
 			@include phone {
-				width: 70%;
+				// width: 70%;
 			}
 			p {
 				font-size: 24px;
 				line-height: 40px;
 				padding-bottom: 40px;
+				width: 726px;
 				@include for-tablet-only {}
 				@include phone {
 					font-size: 16px;
 					line-height: 24px;
+					width: 258px;
+					padding-bottom: 24px;
 				}
+
 			}
+			.star-svg {
+				animation: rotateAnimation 2s linear infinite;
+				@include for-tablet-only {}
+				@include phone {
+				  width: 40px;
+				  height: 40px;
+				}
+				@keyframes rotateAnimation {
+						  0% {
+							}
+							100% {
+							  transform: rotate(360deg); 
+							}
+						}
+			  }
 		}
 		.mentor-contact-help {
 			margin-top: 64px;
@@ -79,17 +100,13 @@
 				margin-top: 24px;
 				padding-bottom: 64px;
 				flex-direction: column;
-				align-items: flex-start;
+				// align-items: flex-start;
 			}
 			.brief_ {
-				.cta-wrapper{
-					a{
-						span{
-							font-family: "galano-grotesque-semibold";
-							color: #000;
-						}
-					}
+				@include phone {
+					width: 100%;
 				}
+				
 				p {
 					color: $ods-black;
 					font-family: "galano-grotesque-regular", sans-serif;
@@ -100,7 +117,7 @@
 					@include phone {
 						font-size: 14px;
 						line-height: 24px;
-						width: 90%;
+						width: 326px;
 					}
 					strong {
 						display: block;
@@ -116,6 +133,20 @@
 						}
 					}
 				}
+			}
+			.cta-wrapper{
+				a{
+					@include phone{
+						width: 100%;
+						display: flex;
+    justify-content: center;
+					}
+					span{
+						font-family: "galano-grotesque-semibold";
+						color: #000;
+					}
+				}
+			
 			}
 		}
 	}
