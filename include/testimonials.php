@@ -97,7 +97,7 @@
 		</div>
 	</div>
 </section>
-<script>
+<!-- <script>
 
 $(document).ready(function() {
 	const cards = gsap.utils.toArray(".cardss");
@@ -109,22 +109,22 @@ $(document).ready(function() {
 
 	  const animationTimeline = gsap.timeline({ paused: true });
 	  animationTimeline.to(card, {
-		duration: 0.15,
+		duration: 0.07,
 		
 	  });
 	  
 	  const tween = gsap.to(card, {
-		y: index * 30,           //changable value
+		// y: 30,           //changable value
 		scrollTrigger: {
 		  trigger: card,
-		 start: () => `top bottom-=100`,
+		 start: () => `top 15%`,
       end: () => `top top+=20`,
 		  scrub: true,
-		  invalidateOnRefresh: true,
+		//   invalidateOnRefresh: true,
 		  animation: animationTimeline,
 		
 		},
-		ease: "none",
+		// ease: "power1.out",
 	  });
 	  
 	  ScrollTrigger.create({
@@ -133,15 +133,55 @@ $(document).ready(function() {
 		pin: true,
 		pinSpacing: false,
 		id: 'pin',
-		end: "top 70%",
-		invalidateOnRefresh: true,
+		end: "top top+=40",
+		scrub:true,
+		// invalidateOnRefresh: true,
 		endTrigger: ".template-faq",
 		onEnter: () => {
-                gsap.set(card, { y: index * 40 });
+			gsap.to(card, { y: index * yOffset,});
             },
+			
 	  });
 	});
   });
 
 	
+</script> -->
+<script>
+	const cards = gsap.utils.toArray(".cardss");
+cards.forEach((card, index) => {
+  const tween = gsap.to(card, {
+    scrollTrigger: {
+		// y:index*20,
+      trigger: card,
+      start: () => window.innerWidth>1000?`top bottom-=100`:`top 10%`,
+      end: () => window.innerWidth>1000?`top top+=40`:'top top+=40',        //scroller-end
+      scrub: true,
+      markers: true,
+	//   pinSpacing: false,
+      invalidateOnRefresh: true,
+	  
+    },
+    ease: "none",
+    // scaleY: () => 1 - (cards.length - index) * 0.025
+  });
+  
+
+  ScrollTrigger.create({
+    trigger: card,
+	// y:()=>window.innerWidth>1000?"":'30px',
+    start: ()=>window.innerWidth>1000?"top 18%":'top 10%',         //scroller-start-pin
+    pin: true,
+	snap: 1 / window.innerWidth,
+    markers: true,
+    id: 'pin',
+    end: () => window.innerWidth > 1000 ? 'top 70%' : 'top top+=40',   //scroller-end-pin
+	endTrigger:'.template-faq',
+    invalidateOnRefresh: true,
+	onUpdate: (self) => {
+    console.log(self.scroll(), self.start, self.end);
+  },
+  });
+ 
+});
 </script>

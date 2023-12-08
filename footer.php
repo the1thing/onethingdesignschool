@@ -79,6 +79,9 @@
 <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
 <script src="assets/vendors/aos/js/aos.js"></script>
+<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>

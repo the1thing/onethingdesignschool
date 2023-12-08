@@ -51,6 +51,10 @@
 				display: flex;
     flex-direction: column;
     gap: 24px;
+	// overflow: hidden;
+	@include phone{
+		// margin-top: 24px;
+	}
 			  }
 			  .container{
 				padding-left: unset;
@@ -94,7 +98,8 @@
 				// position: sticky;
 				// top: 20%;
 				// transform-origin: center top;
-				
+				// margin-bottom: 50px;
+				// position: absolute;
 				height: 500px;
 				border-radius: 40px;
 				// margin-bottom: 50px;
@@ -110,11 +115,14 @@
 				}
 				&.yellow {
 					background: $yellow;
+					top: 20px;
 					// margin-top: 20px !important;
 					
 				}
 				&.blue {
 					background: $blue;
+					top: 40px;
+
 					// margin-top: 40px !important;
 				
 				}
@@ -211,6 +219,14 @@ line-height: 28px; /* 175% */
 		}
 	}
 }
+// .gsap-marker-start{
+// 	top: 6000px !important;
+
+// }
+// .marker-pin{
+// 	top: 6000px !important;
+// }
+
 
 
 
