@@ -10,7 +10,10 @@ require_once './header.php';
       <div class="contact-main-container">
       <div class="contact-big-text">
          <span class="contact-text-span type-span-1">Next best</span>
-         <span class="contact-text-span type-span-2">Industry leaders</span>
+         <div class="contact-head-div">
+         <span class="contact-text-span type-span-2">Industry</span>
+         <span class="contact-text-span type-span-4">leaders</span>
+</div>
          <span class="contact-text-span type-span-3">in making</span>
       </div>
      <img src="assets/images/contact/icon1.png" class="icon1">
@@ -77,6 +80,8 @@ require_once './header.php';
 
 
 </section>
+<img src="assets/images/backgrounds/footer-mob-bg.svg" class="contact-background-img">
+
 </div>
 <?php require_once './footer.php'; ?>
 <script>
@@ -87,7 +92,6 @@ require_once './header.php';
 	function handleSubmit(event) {
     event.preventDefault(); 
     const form = event.target;
-    console.log(form.name.value,form.email.value,form.phone.value,"form")
     const formData = new FormData();
     formData.append("text-166",form.name.value)
     formData.append("email-935",form.email.value)
@@ -112,7 +116,6 @@ require_once './header.php';
     .then(response => response.json())
     .then(data => {
 	     successFun()
-    	console.log(data);
     })
     .catch(error => {
     	console.error('Error:', error);
@@ -160,7 +163,6 @@ require_once './header.php';
   
 const handleClick=(value)=>{
    document.getElementById(`${value}Cross`).style.display="none"
-console.log(value,"valuesss")
 if(value==='name'){
    form.name.value=''
 }
@@ -173,7 +175,6 @@ if(value==='phone'){
 
 }
   const successFun=()=>{
-   console.log("success")
 	const formDiv = document.getElementById('submitForm');
    const register=document.querySelector('.register')
 	formDiv.style.display="none"

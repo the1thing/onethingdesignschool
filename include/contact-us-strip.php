@@ -1,7 +1,8 @@
+
 <section class="contact-us-strip-wrapper">
 	<div class="contact-main">
 		<div class="container">
-			<div class="div-wrap">
+			<div class="div-wrap " >
 				<div class="heading-wrap">
 					<h2 class="section-title-main">
 						<div class="svg-icon">
@@ -29,10 +30,10 @@
 				</div> -->
 				<form id="submitForm" class="contact-content">
 					<input type="text" id="studentname" name="name"  placeholder="Enter your name" class="inputfield">
-					<p class="error-text-name">Please enter your name</p>
+					<p class="error-text error-text-name">Please enter your name</p>
 					<input type="text" id="studentemail" name="email"  placeholder="Enter your Email ID" class="inputfield">
-					<p class="error-text-email">Please enter your email address</p>
-					<p class="error-invalid-text-email">Please enter valid email address</p>
+					<p class="error-text error-text-email">Please enter your email address</p>
+					<p class="error-text error-invalid-text-email">Please enter valid email address</p>
 
 					<button id="mentorsubmit" class="bttn bttn-primary" type="submit"><span>Register Now</span></button>
 				</form>
@@ -52,9 +53,20 @@
 			<img src="assets/images/elements/footer/vector.svg" class="icon svg-icon" id="vector-5" />
 		</div>
 	</div>
+	<div class="falling-elements">
+		<img class="element fade-in-element" data-class="element1" src="assets/images/footer/image1.png">
+		<img class="element fade-in-element" data-class="element2" src="assets/images/footer/image2.png">
+		<img class="element fade-in-element" data-class="element3" src="assets/images/footer/image3.svg">
+		<img class="element fade-in-element" data-class="element4" src="assets/images/footer/image4.png">
+		<img class="element fade-in-element" data-class="element5"  src="assets/images/footer/image5.png">
+	</div>
+	<img src="assets/images/backgrounds/footer-mob-bg.svg" class="background-img">
+	<!-- <img src="assets/images/backgrounds/footer-mob-bg.png" class="mobile-background-img"> -->
+
 </section>
+
 <script>
-	
+
 	const config={
 		FORM_API_URL:"https://dashboard.onething.design/wp-json/contact-form-7/v1/contact-forms/",
 		ODS_FORM_ENDPOINT: "7754/feedback",
@@ -65,6 +77,10 @@
     const formData = new FormData();
     formData.append("text-166",form.name.value)
     formData.append("email-935",form.email.value)
+	formData.append("number-264",12345)
+	formData.append("hidden-field","ods-footer-form")
+
+	
 
     const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -79,7 +95,6 @@
     .then(response => response.json())
     .then(data => {
 	     successFun()
-    	console.log(data);
     })
     .catch(error => {
     	console.error('Error:', error);
@@ -87,26 +102,25 @@
    
   }
   else{
-	if(form.name.value==='' && form.email.value!==''){
-		document.querySelector('.error-invalid-text-email').style.display="none"
-
-		document.querySelector('.error-text-name').style.display="flex"
-		document.querySelector('.error-text-email').style.display="none"
-
-	}
-	else if(form.email.value==='' && form.name.value!==''){
-		document.querySelector('.error-invalid-text-email').style.display="none"
-
-		document.querySelector('.error-text-email').style.display="flex"
-		document.querySelector('.error-text-name').style.display="nones"
-
-	}
-	else if(!pattern.test(form.email.value)){
-		document.querySelector('.error-invalid-text-email').style.display="flex"
+	if(form.name.value!==''){
 		document.querySelector('.error-text-name').style.display="none"
-		document.querySelector('.error-text-email').style.display="none"
-
 	}
+	if(form.email.value!==''){
+		document.querySelector('.error-text-email').style.display="none"
+	}
+	if(form.name.value===''){
+		document.querySelector('.error-text-name').style.display="flex"
+	}
+	if(form.email.value===''){
+		document.querySelector('.error-text-email').style.display="flex"
+	}
+	if(!pattern.test(form.email.value) && form.email.value!==''){
+		document.querySelector('.error-invalid-text-email').style.display="flex"
+	}
+	if(pattern.test(form.email.value) && form.name.email!==''){
+		document.querySelector('.error-invalid-text-email').style.display="none"
+	}
+	
   }
 }
   
@@ -114,23 +128,39 @@
 	const formDiv = document.getElementById('submitForm');
 	formDiv.style.display="none"
 	const successText=document.querySelector('.success-text');
-	console.log(successText,"success")
 	successText.style.display="flex"
   }
 
   const form = document.getElementById('submitForm');
   form.addEventListener('submit', handleSubmit);
 
-
-
 </script>
+<script>
 
+document.addEventListener('DOMContentLoaded', function () {
+  const elements = document.querySelectorAll('.element');
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains(entry.target.dataset.class)) {
+        const className = entry.target.dataset.class;
+        setTimeout(() => {
+        entry.target.classList.add(className);
+		const element=document.querySelectorAll('.element')
+		element.forEach(item=>item.style.opacity=1)
+	}, 2000);
+        if (entry.target.dataset.once) {
+          observer.unobserve(entry.target); // Unobserve the element to prevent further animations
+        } 
+      }  
+    });
+  })
+  
 
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+},{ once: true })
 
-
-
-
-
-
+  </script>
 

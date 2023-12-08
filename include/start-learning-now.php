@@ -3,8 +3,8 @@
 		<div class="main-container">
 			<div class="container">
 				<div class="heading-wrap">
-					<div class="heading-div">
-						<h2>Programme<br/> launching soon <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+					<div  class="heading-div">
+						<h2>Programme<br/> launching soon <svg  xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
 							<rect width="80" height="80" rx="40" fill="#5A86FD"/>
 							<g filter="url(#filter0_d_168_5537)">
 								<path d="M53.4264 40.4148L26.5732 24.8955L32.4109 54.8256L39.416 43.7404L53.4264 40.4148Z" fill="#FF7583"/>
@@ -28,9 +28,13 @@
 				<p>Here’s your chance to shape better <span>User Experiences.</span></p>
 			</div>
 			<div id="card-container" class="image-div">
+
 				<div class="learning-cards card1">
+					
+					<div class="card-inner">
 					<h3 class="card-head">Submit<br/> Application</h3>
 					<p class="card-body">Have a conversation with our student counselor to check if this course is the right fit for you.</p>
+</div>
 				</div>
 				<div class="learning-cards card2">
 					<h3 class="card-head">Interview<br/> Round</h3>

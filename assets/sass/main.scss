@@ -33,10 +33,23 @@
 @import "contact-strip.scss";
 @import "contact-page.scss";
 
-  //will be uncommented when faq will be added
-// .template-faq {
-//     padding-top: 1300px;             
-
+// .blob {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 650px;
+//   height: 650px;
+//   border-radius: 100%;
+//   background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,114,121,0.9710477941176471) 35%, rgba(0,212,255,1) 100%);
+//   filter: blur(250px);
+//   transition: all 450ms ease-out;
+//   position: fixed;
+//   pointer-events: none;
+//   left: 0;
+//   top: 0;
+//   transform: translate(calc(-50% + 15px), -50%);
+//   z-index: -1;
+// }
 // @include for-tablet-only {
 //     padding-top: 1700px;
 // }

@@ -1,38 +1,78 @@
+
 section {
 	&.contact-us-strip-wrapper {
-		background-image: url('../images/elements/footer/footer-bg.png');
+		// background-image: url('../images/elements/footer/footer-bg.png');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding-bottom: 150px; //this is temp, we'll add matter js                        //these two lines will be removed when faq will be added
 		margin-top: 280px !important;
+		position: relative;
+@include for-full-screen{
+	padding-bottom:unset;
+}
 
 		@include for-tablet-only {
 			margin-top: 300px !important;
+		
 		}
 		@include phone {
+
 			background-size: contain;
 			background-position: bottom center;
 			padding-bottom: 0; //this is temp, we'll add matter js
-			margin-top: 480px !important;
+			// margin-top: 480px !important;
 		}
+		@include iphone{
+			// margin-top: 540px !important;
+		}
+		
 		.strip-divider {
 			border-top: 1px solid $ods-deep-grey;
 			padding: 120px 0;
-			@include for-tablet-only {}
+			 
+			@include for-tablet-only {
+				display: none;
+			}
 			@include phone {
 				padding: 72px 0;
 				width: 90%;
+				// display: none;
+
+			}
+			@include for-full-screen{
+				opacity: 0;
 			}
 		}
 		.contact-main {
 			padding: 120px 0;
+			@keyframes fadeIn {
+				0% { opacity: 0; }
+				100% { opacity: 1; }
+			  }
 			@include for-tablet-only {}
 			@include phone {
 				padding: 40px 16px;
 			}
+			.container{
+				// background-color: #0E100F;
+			}
+			.visibility-delay{
+                //  transition: 0.5s all;
+				// opacity: 0;
+				// opacity: 0;
+  transform: translateY(20px); /* Adjust the initial position as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+				@include for-tablet-only{
+					opacity: 1;
+				}
+				@include phone{
+					opacity: 1;
+				}
+			}
 			.div-wrap {
 				display: flex;
+				
 				justify-content: space-between;
 				@include for-tablet-only {
 					flex-direction: column;
@@ -43,6 +83,7 @@ section {
 					flex-direction: column;
 					align-items: flex-start;
 					gap: 16px;
+					padding-bottom: 140px;
 				}
 				.success-text{
 					display: none;
@@ -54,37 +95,28 @@ section {
     justify-content: center;
     align-items: center;
 				}
-          .error-text-name{
+          .error-text{
 			color: red !important;
 			font-size: 12px;
 			margin-top: -16px;
 			margin-bottom: 0px !important;
 			display: none;
+			margin-left: 24px;
 		  }
-		  .error-text-email{
-			color: red !important;
-			font-size: 12px;
-			margin-top: -16px;
-			margin-bottom: 0px !important;
-
-			display: none;
-		  }
-		  .error-invalid-text-email{
-			color: red !important;
-			font-size: 12px;
-			margin-top: -16px;
-			margin-bottom: 0px !important;
-
-			display: none;
-		  }
+		
 				.contact-content {
 					padding-top: 24px;
 					display: flex;
 					flex-direction: column;
-					gap: 24px;
+					gap: 48px;
 					width: 100%;
 					@include for-tablet-only {
 						width: 80%;
+					}
+					@include phone{
+						width: 100%;
+					gap: 24px;
+
 					}
 					.bttn-primary:hover{
                    color: #000 !important;
@@ -102,7 +134,7 @@ section {
 						border: 0.5px solid $ods-light-grey;
 						width: 100%;
 						@include phone {
-							padding: 16px 24px 16px 24px;
+							padding: 18px;
 						}
 						@include for-tablet-only {
 							padding: 16px 24px 16px 24px;
@@ -111,7 +143,7 @@ section {
 					button{
 						background: none;
 						width: 180px;
-						margin:24px 0;
+						// margin:24px 0;
 						display: flex;
 						font-size: 16px;
 						line-height: 150%;
@@ -119,6 +151,10 @@ section {
 						&:hover{
 							background-color: #fff;
 							color: #000;
+						}
+						@include phone{
+							width: 100%;
+    justify-content: center;
 						}
 					}
 					p{
@@ -162,9 +198,386 @@ section {
 				&#vector-5 {}
 			}
 		}
+		.background-img{
+		
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: 1;
+				display: none;
+			
+			
+			@include for-tablet-only{
+				display: flex;
+				width: 100%;
+				bottom: -156px;
+    right: -7px;
+			}
+			@include phone{
+				display: flex;
+				bottom: -56px;
+    right: 14px;
+	width: 90%;
+				// height: 18%;
+				// width: 100%;
+			}
+		}
+		.falling-elements {
+			z-index: -10;
+             top: 0;
+			 position: absolute;
+			width: 100%;
+			height: 100%;
+			// opacity: 0;
+			pointer-events: none; /* Ensure falling elements don't block interactions */
+			@include for-extra-large-screen{
+				top: 100px;
+			}
+			@include for-tablet-only{
+				display: none;
+			}
+			@include phone {
+				display: none;
+			}
+		  }
+		 
+
+    .element{
+  position: absolute;
+//   animation-name: falling;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+  animation-fill-mode: forwards; 
+//   opacity: 0;
 	}
+	.fade-in-element {
+		opacity: 0;
+		transition: opacity 2s ease; /* Adjust the duration and easing function as needed */
+	}
+	
+	
+	
+     .element1{
+	left:100px;
+	bottom: -60px;
+	animation: falling 1.5s linear, rotate 1.5s linear forwards;
+	 animation-fill-mode: forwards;
+	 animation-play-state: running;
+	 
+     @keyframes falling{
+		0% {
+			top: -20vh;
+		  }
+		  25% {
+			top: 40vh; /* Bounce up */
+			
+		  }
+		  50% {
+			top: 80vh; /* Fall down */
+		  }
+		  75% {
+			top: 60vh; /* Bounce up */
+		  }
+		  100% {
+			top: 80vh; /* Fall down */
+			animation-play-state: paused;
+		  }
+      }
+	  
+	  
+	  @include for-extra-large-screen{
+		@keyframes falling{
+			0% {
+				top: -20vh;
+
+			  }
+			  25% {
+				top: 50vh; /* Bounce up */
+			  }
+			  50% {
+				top: 90vh; /* Fall down */
+			  }
+			  75% {
+				top: 50vh; /* Bounce up */
+			  }
+			  100% {
+				top: 90vh; /* Fall down */
+			  }
+			  }}
+			  @include for-full-screen{
+				@keyframes falling{
+					0% {
+						top: -20vh;
+
+					  }
+					  25% {
+						top: 40vh; /* Bounce up */
+						
+					  }
+					  50% {
+						top: 84vh; /* Fall down */
+					  }
+					  75% {
+						top: 60vh; /* Bounce up */
+					  }
+					  100% {
+						top: 84vh; /* Fall down */
+						animation-play-state: paused;
+					  }
+				  }
+			  }
+	  }
+     .element2{
+		left:330px;
+		bottom: 79px;
+	animation: element2Falling 2.5s linear,rotate 2.5s linear forwards;
+	  animation-fill-mode: forwards;
+	 
+
+	  @include for-extra-large-screen {
+		left: 336px;
+	  }
+      @keyframes element2Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		  25% {
+			top: 40vh; /* Bounce up */
+		  }
+		  50% {
+			top: 70vh; /* Fall down */
+		  }
+		  75% {
+			top: 50vh; /* Bounce up */
+		  }
+		  100% {
+			top: 70vh; /* Fall down */
+		  }
+	}
+	@include for-extra-large-screen{
+		@keyframes element2Falling{
+			0% {
+				top: -20vh;
+
+			  }
+			  25% {
+				top: 45vh; /* Bounce up */
+			  }
+			  50% {
+				top: 75vh; /* Fall down */
+			  }
+			  75% {
+				top: 45vh; /* Bounce up */
+			  }
+			  100% {
+				top: 75vh; /* Fall down */
+			  }
+			  }}
+			  @include for-full-screen{
+				@keyframes element2Falling{
+					0% {
+						top: -20vh;
+
+					  }
+					  25% {
+						top: 40vh; /* Bounce up */
+					  }
+					  50% {
+						top: 67vh; /* Fall down */
+					  }
+					  75% {
+						top: 40vh; /* Bounce up */
+					  }
+					  100% {
+						top: 67vh; /* Fall down */
+					  }
+					  }
+			  }
+}
+.element3{
+	left:535px;
+	bottom: -179px;
+	animation-duration: 4s;
+	animation-name: element3Falling;
+	animation-fill-mode: forwards;
+	
+
+	@include for-extra-large-screen{
+		left:502px;
+
+	}
+	@keyframes element3Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		//   25% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		  50% {
+			top: 75vh; /* Fall down */
+			left:535px;
+		  }
+		//   75% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 80vh; /* Fall down */
+			left:502px;
+		  }
+  }
+  @include for-extra-large-screen{
+	@keyframes element3Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		//   25% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 90vh; /* Fall down */
+		//   }
+		//   75% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 90vh; /* Fall down */
+		  }
+		  }}
+} 
+.element4{
+	left:850px;
+	// left: 990px;
+	bottom: 128px;
+	
+	animation: element4Falling 4s linear, rotate 4s linear forwards;
+
+	animation-fill-mode: forwards;
+	
+
+	
+	@keyframes element4Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		
+		  50% {
+			top: 69vh; /* Fall down */
+	       left: 850px;
+
+		  }
+		  75% {
+			top: 49vh; /* Bounce up */
+		  }
+		  100% {
+			top: 69vh; /* Fall down */
+			left:922px;
+		  }
+  }
+  @include for-extra-large-screen{
+	@keyframes element4Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		  25% {
+			top: 50vh; /* Bounce up */
+		  }
+		  50% {
+			top: 76vh; /* Fall down */
+			left: 850px;
+		  }
+		  75% {
+			top: 50vh; /* Bounce up */
+		  }
+		  100% {
+			top: 76vh; /* Fall down */
+			left:922px;
+		  }
+		  }}
+		  @include for-full-screen{
+			@keyframes element4Falling{
+				0% {
+					top: -20vh;
+
+				  }
+				
+				  50% {
+					top: 64vh; /* Fall down */
+				   left: 850px;
+		
+				  }
+				  75% {
+					top: 49vh; /* Bounce up */
+				  }
+				  100% {
+					top: 64vh; /* Fall down */
+					left:922px;
+				  }
+		  }
+		  }
+}
+ .element5{
+	left:500px;
+	bottom: -200px;
+	animation-duration: 4s;
+	animation-name: element5Falling;
+	animation-fill-mode: forwards;
+	
+
+	@include for-extra-large-screen {
+		left:620px;
+
+	}
+	@keyframes element5Falling{
+		0% {
+			top: -20vh;
+
+            //  left:5000px;
+		  }
+		//   25% {
+		// 	top: 40vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 80vh; /* Fall down */
+		//   }
+		  75% {
+			// top: 40vh; /* Bounce up */
+			left:500px;
+		  }
+		  100% {
+			top: 80vh; /* Fall down */
+			left:620px;
+
+		  }
+  }
+  @include for-extra-large-screen{
+	@keyframes element5Falling{
+		0% {
+			top: -20vh;
+
+		  }
+		//   25% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		//   50% {
+		// 	top: 90vh; /* Fall down */
+		//   }
+		//   75% {
+		// 	top: 50vh; /* Bounce up */
+		//   }
+		  100% {
+			top: 90vh; /* Fall down */
+		  }
+		  }}
+}
+}
 }
 
+  
 
 
 

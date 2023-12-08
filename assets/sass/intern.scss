@@ -1,5 +1,12 @@
 .intern-wrapper {
     padding: 120px;
+    background-image: url('../images/backgrounds/apply-bg.svg');
+
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+
     @include for-tablet-only {
         padding: 80px;
     }
@@ -48,13 +55,15 @@
         width: 50%;
         position: relative;
         @include phone {
-           
+           width: 100%;
             padding: 40px 20px;
         }
         a{
             margin-top: 32px;
             @include phone {
+                width: 100%;
                 margin-top: 24px;
+                text-align: center;
             }
         }
     }
@@ -104,7 +113,7 @@ width: 157px;
         display: flex;
         position: absolute;
         bottom: 0;
-        left: 56px;
+        width: 100%;
         z-index: 1;
         }
     }
@@ -145,7 +154,7 @@ width: 267px;
     }
     }
     .animation-section{
-        height: 780px;
+        height: auto;
         overflow: hidden;
         width: 50%;
         z-index: 2;
@@ -155,70 +164,82 @@ width: 267px;
     padding:0 40px;
     @include phone {
         flex-direction: column;
+        padding: unset;
     }
     @include for-tablet-only {
         flex-direction: column;
+        padding: unset;
+
     }
     }
+   
     .image-section1{
         width: 50%;
         overflow: hidden;
         position: relative;
-        height: 780px;
+        height: auto;
         display: flex;
     flex-direction: column;
     gap: 20px;
+    max-height: auto;
     @include phone{
         display: none;
     }
     @include for-tablet-only{
         display: none;
     }
-   
+    .slick-slide{
+   margin:10px 0;
     }
+    }
+    .scroller-inner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .scroller[data-animated="true"]{
+        overflow: hidden;
+    }
+    .scroller[data-animated="true"] .scroller-inner{
+        width: max-content;
+       flex-wrap: nowrap;
+       animation: scroll 20s reverse linear infinite;
+
+       @keyframes scroll {
+          to{
+ transform: translateY(calc( -50% - 0.5rem));
+          }
+       }
+    }
+
+   
     .scrolling-image {
-        animation: scrollImage 10s linear infinite;
-       
+        width: 100%;
+        height: auto;
+        // animation: scrollImage 10s linear infinite;
+        // animation-delay: 0ms;
+        // background:url("../images/intern/sliding1.png")
       }
       
-      @keyframes scrollImage {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
-      @keyframes phoneScrollImage {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
+    
      
       .upscroll-image {
-        animation: upscrollImage 10s linear infinite;
-        animation-direction: reverse;
+        width: 100%;
+        height: auto;
+        // animation: upscrollImage 4s linear infinite;
+        // animation-direction: reverse;
+      }
+      @keyframes upscrollImage {
+        // 0% {
+        //   transform: translateY(0);
+        // }
+        100% {
+          transform: translateY(-50%);
+        }
       }
       
-      @keyframes upscrollImage {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
-      @keyframes phoneUpscrollImage {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-200%); /* Adjust this value to control the scrolling speed */
-        }
-      }
+     
     .image-section2{
         width: 50%;
         overflow: hidden;
@@ -234,11 +255,17 @@ width: 267px;
     @include for-tablet-only{
         display: none;
     }
+    .slick-slide{
+        margin:10px 0;
+         }
+       
+        
     }
 
     
     
 }
+
 
 .phone-image-section1{
     display: none;
@@ -250,16 +277,17 @@ width: 267px;
         display: flex;
         gap: 20px;
     }
+    .slick-slide{
+        margin:0 10px;
+         }
 }
 .phone-scrolling-image{
     @include phone {
-        animation: phoneScrollImage 10s linear infinite;
         width: 240px;
-        height: 120px;
+        height: 100px !important;
         
     }
     @include for-tablet-only {
-        animation: phoneScrollImage 10s linear infinite;
         width: 240px;
         height: 120px;
         
@@ -269,15 +297,11 @@ width: 267px;
 .phone-upscroll-image{
     @include phone{
     width: 240px;
-height: 120px;
-animation: phoneUpscrollImage 10s linear infinite;
-animation-direction: reverse;
+height: 100px !important;
     }
     @include for-tablet-only{
         width: 240px;
     height: 120px;
-    animation: phoneUpscrollImage 10s linear infinite;
-    animation-direction: reverse;
         }
 }
 .phone-image-section2{
@@ -290,4 +314,8 @@ animation-direction: reverse;
         display: flex;
         gap: 20px;
     }
+    .slick-slide{
+        margin:0 10px;
+
+         }
 }

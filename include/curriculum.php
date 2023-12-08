@@ -14,7 +14,7 @@
 				<!-- <button>Contact US</button> -->
 				<a href="#" class="bttn bttn-primary bttn-primary-dark">
            <span>Contact us</span>
-       </a>
+             </a>
 			</div>
 			<img class="card-pattern1" src="assets/images/curriculum/card-pattern1.png">
 			<img class="card-pattern2" src="assets/images/curriculum/card-pattern2.png">

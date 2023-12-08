@@ -1,8 +1,9 @@
 .who-can-apply-wrapper {
-  background-image: url('../images/backgrounds/ods-writing-bg.png');
+  background-image: url('../images/backgrounds/apply-bg.svg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+
   // padding: 102px 0 120px 0;          //because of removing curriculum
   padding: 102px 0 0 0;
   @include for-tablet-only {
@@ -19,6 +20,15 @@
     margin-top: 40px;
     @include for-tablet-only {
       margin-top: 80px;
+    }
+    @include phone{
+      margin-top: unset;
+      width: 100%;
+    }
+    a{
+      @include phone{
+        width: 100%;
+      }
     }
   }
   .heading-wrap {
@@ -45,14 +55,38 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+   
     .star-svg {
-      animation: 5s rotate infinite;
-      animation-timing-function: linear;
+      animation: rotateAnimation 2s linear infinite;
       @include for-tablet-only {}
       @include phone {
         width: 180px;
         height: 80px;
       }
+      @keyframes rotateAnimation {
+				0% {
+				  }
+				  100% {
+					transform: rotate(360deg); 
+				  }
+			  }
+    }
+    .star-in-viewport{
+			transform: rotate(0deg);
+      animation: rotateAnimation 2s linear infinite,new 0.5s linear ;
+     
+			  @keyframes new {
+				0% {
+				
+				transform: translateX(-60px); 
+				  }
+				  100% {
+            transform: rotate(360deg); 
+					
+            transform: translateX(24px),rotate(360deg); 
+
+				  }
+			  }
     }
   }
   .brief-para {
@@ -116,18 +150,42 @@
       color: $ods-white;
       width: min(336px, 100%);
       width: 45%;
-      @include for-tablet-only {}
+      @include for-tablet-only {
+      width: 60%;
+      font-size: 16px;
+      }
       @include phone {
         width: 100%;
+        font-size: 12px;
       }
     }
     .svg-icon {
       position: absolute;
-      bottom: 40px;
+      top: 40px;
       right: 40px;
+      @include for-tablet-only{
+        right: 24px;
+      }
+     
+      @include phone{
+       top: 20px;
+      }
       svg {
         width: 80px;
         height: 80px;
+        @include for-tablet-only{
+          width: 40px;
+    height: 40px;
+        }
+        @include phone{
+          width: 40px;
+          height: 40px;
+        
+        }
+        @include iphone{
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
@@ -144,6 +202,8 @@
     @include phone {
       width: 90%;
       margin-top: 0;
+      margin-left: -6px;
+      height: 234px;
     }
   }
   .pink {
@@ -158,7 +218,9 @@
     }
     @include phone {
       width: 90%;
-      margin-top: -64%;
+      margin-top: -38%;
+      margin-right: -6px;
+      height: 194px;
     }
     p {
       width: 75%;
@@ -184,12 +246,15 @@
     @include phone {
       width: 84%;
       margin: 0 auto;
-      margin-top: -70%;
+      margin-top: -24%;
       margin-left: 10px;
+      height: 164px;
     }
     p {
       width: 40%;
-      @include for-tablet-only {}
+      @include for-tablet-only {
+        width: 60%;
+      }
       @include phone {
         width: 100%;
       }
@@ -201,6 +266,7 @@
     margin-left: auto;
     margin-right: 8.5%;
     margin-top: auto;
+    position: relative;
     margin-bottom: -30px;
     background-color: $ods-white;
     color: $ods-black;
@@ -211,19 +277,27 @@
     @include phone {
       width: 80%;
       margin-bottom: 0;
-      margin-top: -40%;
-      margin-right: 32px;
-      height: 250px;
+      margin-top: -16%;
+      margin-right: 18px;
+      height: 164px;
+      overflow: hidden;
     }
     p {
       color: $ods-black;
+      font-size: 12px;
     }
-    .svg-icon {
-      svg {
-        width: 40px;
-        height: 40px;
-      }
+    .card-bg-img{
+      position: absolute;
+      bottom: 0;
+    width: 100%;
+    left: 0;
+    @include phone{
+      bottom: -9px;
     }
+    
+  
+    }
+   
   }
   .front {
     z-index: 1;

@@ -1,16 +1,30 @@
+// var cursor = document.querySelector('.blob');
+
+// document.addEventListener('mousemove', function(e){
+//   var x = e.clientX;
+//   var y = e.clientY;
+//   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+// });
+$(document).ready(function() {
+
+AOS.init({
+	duration:1000
+});})
+
+
 $(document).ready(function() {
 	const cards = gsap.utils.toArray(".testimonialcard");
   
 	cards.forEach((card, index) => {
-	  const yOffset = 70;
+	  const yOffset = 50;
 	  const marginTop = index * yOffset;
         gsap.set(card, { marginTop: `${marginTop}px` });
 	  const animationTimeline = gsap.timeline({ paused: true });
 	  animationTimeline.to(card, {
-		scale: 1 - (cards.length - index) * 0.025,
-		duration: 0.5,
-		ease: "power2.inOut",
-		y: `-500px`,
+		// scale: 1 - (cards.length - index) * 0.025,
+		duration: 0.3,
+		// ease: "power2.inOut",
+		// y: `-600px`,
 
 	  });
 	  

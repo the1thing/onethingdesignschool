@@ -12,20 +12,22 @@
       <link href="assets/vendors/aos/css/aos.css" rel="stylesheet" type="text/css" />
       <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
       <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
+	  <link rel="stylesheet" href="assets/vendors/aos/css/aos.css" type="text/css" >
+
    </head>
    <body class="<?php echo isset($page_details['body_class']) ? $page_details['body_class'] : ''; ?>">
       <header class="header" id="header">
          <div class="container">
             <div class="container-wrapper">
                <div class="logo clearfix">
-                  <a href="#" class="logo-link">
+                  <a href="./" class="logo-link">
                      <figure>
                         <img src="assets/images/logo/logo.svg">
                      </figure>
                   </a>
                </div>
                <div class="header-contact">
-                  <a href="/contact.php" class="bttn bttn-primary">
+                  <a href="./contact" class="bttn bttn-primary">
                      <span>Contact us</span>
                   </a>
                </div>
