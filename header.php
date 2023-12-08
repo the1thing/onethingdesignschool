@@ -13,6 +13,9 @@
       <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
       <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
 	  <link rel="stylesheet" href="assets/vendors/aos/css/aos.css" type="text/css" >
+	  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
 
    </head>
    <body class="<?php echo isset($page_details['body_class']) ? $page_details['body_class'] : ''; ?>">

@@ -5,12 +5,13 @@
 //   var y = e.clientY;
 //   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 // });
+
 $(document).ready(function() {
 
 AOS.init({
 	duration:1000
-});})
-
+})
+})
 
 $(document).ready(function() {
 	const cards = gsap.utils.toArray(".testimonialcard");
