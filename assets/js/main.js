@@ -163,7 +163,7 @@ setInterval(function() {
 		hasScrolled();
 		didScroll = false;
 	}
-}, 250);
+}, 150);
 
 function hasScrolled() {
 	var st = $(this).scrollTop();
