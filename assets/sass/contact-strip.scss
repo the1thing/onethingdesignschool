@@ -15,7 +15,7 @@ section {
 }
 
 		@include for-tablet-only {
-			margin-top: 300px !important;
+			margin-top: 1000px !important;
 		
 		}
 		@include phone {
@@ -23,10 +23,10 @@ section {
 			background-size: contain;
 			background-position: bottom center;
 			padding-bottom: 0; //this is temp, we'll add matter js
-			margin-top: 480px !important;
+			margin-top: 800px !important;
 		}
 		@include iphone{
-			margin-top: 540px !important;
+			margin-top: 700px !important;
 		}
 		
 		.strip-divider {
