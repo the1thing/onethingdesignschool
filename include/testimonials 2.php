@@ -12,7 +12,7 @@
 				</h2>
 			</div>
 			<div class="testimonial-decking-card-container">
-				<div class="container card-deck-js" id="cardDeck">
+				<div class="container card-deck-js">
 					
 					<div class="cardss pink" style="transform: translateY(0px);">
 						<div class="card-body">
@@ -148,126 +148,38 @@ $(document).ready(function() {
 	
 </script> -->
 <script>
-
-// function setupAnimations() {
-	
 	const cards = gsap.utils.toArray(".cardss");
 cards.forEach((card, index) => {
-	
   const tween = gsap.to(card, {
     scrollTrigger: {
+		// y:index*20,
       trigger: card,
-      start: () => window.innerWidth>1000?`top bottom-=100`:`top top-=40`,
-      end: () => window.innerWidth>1000?`top top+=40`:'top top+=90',        //scroller-end
+      start: () => window.innerWidth>1000?`top bottom-=100`:`top 10%`,
+      end: () => window.innerWidth>1000?`top top+=40`:'top top+=40',        //scroller-end
       scrub: true,
       markers: true,
+	//   pinSpacing: false,
       invalidateOnRefresh: true,
+	  
     },
     ease: "none",
-	duration: 0.4,
+    // scaleY: () => 1 - (cards.length - index) * 0.025
   });
+  
 
   ScrollTrigger.create({
     trigger: card,
-    start: ()=>window.innerWidth>1000?"top 18%":`top 10%`,         //scroller-start-pin
+	// y:()=>window.innerWidth>1000?"":'30px',
+    start: ()=>window.innerWidth>1000?"top 18%":'top 10%',         //scroller-start-pin
     pin: true,
-	pinSpacing: false,
+	snap: 1 / window.innerWidth,
     markers: true,
     id: 'pin',
-    end: () => window.innerWidth > 1000 ? 'top 70%' : 'top 5%',   //scroller-end-pin
+    end: () => window.innerWidth > 1000 ? 'top 70%' : 'top top+=40',   //scroller-end-pin
 	endTrigger:'.template-faq',
-    invalidateOnRefresh: true,	
+    invalidateOnRefresh: true,
+	
+  });
+ 
 });
-
-})
-function triggerWindowResize() {
-  var event = window.document.createEvent('UIEvents');
-  event.initUIEvent('resize', true, false, window, 0);
-  window.dispatchEvent(event);
-}
-window.onload = function () {
-  // Your other initialization code here
-  
-  // Trigger window resize
-  triggerWindowResize();
-};
 </script>
-<!-- <script>
-	var StackCards = function(element) {
-  this.element = element;
-  this.items = this.element.getElementsByClassName("cardss");
-  console.log(this.items)
-  this.scrollingListener = false;
-  this.scrolling = false;
-  initStackCardsEffect(this);
-};
-
-function initStackCardsEffect(element) {
-  // use Intersection Observer to trigger animation
-  var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-  observer.observe(element.element);
-}
-
-function stackCardsCallback(entries) {
-  // Intersection Observer callback
-  if (entries[0].isIntersecting) {
-    // cards inside viewport - add scroll listener
-    if (this.scrollingListener) return; // listener for scroll event already added
-    stackCardsInitEvent(this);
-  } else {
-    // cards not inside viewport - remove scroll listener
-    if (!this.scrollingListener) return; // listener for scroll event already removed
-    window.removeEventListener("scroll", this.scrollingListener);
-    this.scrollingListener = false;
-  }
-}
-
-function stackCardsInitEvent(element) {
-  element.scrollingListener = stackCardsScrolling.bind(element);
-  window.addEventListener("scroll", element.scrollingListener);
-}
-
-function stackCardsScrolling() {
-  if (this.scrolling) return;
-  this.scrolling = true;
-  window.requestAnimationFrame(animateStackCards.bind(this));
-}
-
-function animateStackCards() {
-  var top = this.element.getBoundingClientRect().top;
-  var offsetTop = 100,
-    cardHeight = 300,
-    marginY = 15;
-  for (var i = 0; i < this.items.length; i++) {
-    // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
-    var scrolling = offsetTop - top - i * (cardHeight + marginY);
-    // debugger;
-    if (scrolling > 0) {
-	
-      // card is fixed - we can scale it down
-    //   this.items[i].setAttribute(
-    //     "style",
-    //     "transform: translateY(" +
-    //       marginY * i +
-    //       "px) "
-    //   );
-    }
-  }
-
-  this.scrolling = false;
-}
-
-var stackCards = document.getElementsByClassName("card-deck-js");
-console.log(stackCards,"stack")
-var intersectionObserverSupported =
-  "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
-
-if (stackCards.length > 0 && intersectionObserverSupported) {
-  for (var i = 0; i < stackCards.length; i++) {
-    new StackCards(stackCards[i]);
-  }
-}
-</script> -->
-
-
-	

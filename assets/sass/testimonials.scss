@@ -39,19 +39,24 @@
 			}
 		}
 		.testimonial-decking-card-container {
+			
 			display: flex;
-			// @mixin translateY {
-			// 	@for $i from 0 through 15 {
-			// 	  &:nth-child(#{$i}) {
-			// 		transform: translateY(#{$i * 16}px);
-			// 	  }
-			// 	}
-			//   }
+			@mixin translateY {
+				@for $i from 0 through 15 {
+				  &:nth-child(#{$i}) {
+					transform: translateY(#{$i * 16}px);
+				  }
+				}
+			  }
 			  .card-deck-js{
-				display: flex;
-    flex-direction: column;
-    gap: 24px;
+				// display: unset;
+				// height: 240vh;
+	// 			display: flex;
+    // flex-direction: column;
+    // gap: 24px;
 	// overflow: hidden;
+	height: 200%;
+	
 	@include phone{
 		// margin-top: 24px;
 	}
@@ -96,16 +101,15 @@
 			}
 			.cardss {
 				// position: sticky;
-				// top: 20%;
-				// transform-origin: center top;
-				// margin-bottom: 50px;
-				// position: absolute;
+				// top: 0; /* required */
+				// margin:0.5em;
+				
 				height: 500px;
 				border-radius: 40px;
-				// margin-bottom: 50px;
 				// @include translateY;
 				@include for-tablet-only {
-					height: auto;
+					// height: auto;
+					height: 800px ;
 					border-radius: 24px;
 
 				}
@@ -129,6 +133,7 @@
 				&.pink {
 					background: $pink;
 				}
+				
 			}
 			.card-body {
 				padding: 0;
@@ -153,6 +158,11 @@
 					padding: 16px 16px 16px 16px;
 
 				}
+				@include tablet-portrait{
+					gap: 64px ;
+				padding: 32px 42px 56px 56px;
+
+				}
 				.visual-glance {
 					figure {
 						width: 489px;
@@ -173,6 +183,9 @@
 					@include phone {
 						padding-top: 0;
 					}
+					@include tablet-portrait{
+						padding-top: unset;
+					}
 					.card-text {
 						margin-bottom: 48px;
 						color: $ods-white;
@@ -184,6 +197,12 @@
 							font-size: 12px;
 							line-height: 20px;
 						}
+						@include tablet-portrait{
+							margin-bottom: 16px;
+							height: 306px;
+    font-size: 14px;
+    line-height: 24px;
+						}
 					}
 					.details__ {
 						display: flex;
@@ -194,6 +213,9 @@
 							display: flex;
 							flex-direction: column;
 							gap: 4px;
+							@include tablet-portrait{
+								gap: unset;
+							}
 							.name {
 								color: $ods-white;
 								font-size: 28px;
@@ -203,6 +225,9 @@
 								@include phone {
 									font-size: 16px;
 									line-height: 24px;
+								}
+								@include tablet-portrait{
+									font-size: 20px;
 								}
 							}
 							.position{

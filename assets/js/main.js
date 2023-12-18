@@ -178,7 +178,7 @@ function hasScrolled() {
 		}
 	}
 	else{
-		if(st > lastScrollTop && st > navbarHeight) {
+		if(st > lastScrollTop && st > 10) {          //navbarHeight
 			$('header').removeClass('nav-down').addClass('nav-up');
 		} else {
 			if(st + $(window).height() < $(document).height()) {

@@ -142,7 +142,11 @@
       font-size: 2rem;
       font-weight: 600;
       @include for-tablet-only {
-        font-size: 24px;
+        // font-size: 24px;
+        font-size: 22px;
+      }
+      @include phone{
+        font-size: 18px;
       }
     }
     p {
@@ -168,7 +172,7 @@
       }
      
       @include phone{
-       top: 20px;
+       top: 9% ;
       }
       svg {
         width: 80px;
@@ -178,13 +182,13 @@
     height: 40px;
         }
         @include phone{
-          width: 40px;
-          height: 40px;
+          width: 24px;
+          height: 24px;
         
         }
         @include iphone{
-          width: 40px;
-          height: 40px;
+          width: 24px;
+          height: 24px;
         }
       }
     }

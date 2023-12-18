@@ -1,6 +1,7 @@
 <section class="ods-hero-wrapper">
    <div class="left-container">
       <h1 class="hero-big-text">
+
          <span  class="text-span type-span-1">Design Your</span>
          <div class="hero-head-div">
          <span class="text-span type-span-2">Future with</span>
@@ -111,7 +112,6 @@ gsap.to(".scrollimgzoom", {
 
 
 
-
       </script>
       <script>
     const squareHover = document.getElementById('squareHover');
@@ -134,3 +134,4 @@ gsap.to(".scrollimgzoom", {
       squareImage.style.opacity = '1'; // Optionally fade in the original image
     });
   </script>
+ 

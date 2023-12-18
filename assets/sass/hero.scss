@@ -6,6 +6,9 @@
 		@include phone{
 			padding-left: 16px;
 		}
+		@include tablet-portrait{
+			padding-left: 114px;
+		}
 	}
 	.hero-big-text {
 		position: relative;
@@ -19,6 +22,9 @@
 			padding-bottom: 0px;
 			line-height: 42px;
 		}
+		@include tablet-portrait{
+			font-size: 80px;
+		}
 		.hero-head-div{
 			display: flex;
 			gap: 24px;
@@ -26,6 +32,14 @@
 				flex-direction: column;
 				gap: unset;
 			}
+		@include tablet-portrait{
+			flex-direction: row;
+
+		}
+		@include phone{
+			flex-direction: column;
+			gap: unset;
+		}
 		}
 		.elem1{
 			position: absolute;
@@ -67,6 +81,9 @@
 			bottom: -6%;
     left: 3%;
     z-index: -1;
+	@include tablet-portrait{
+		left: 1.3%;
+	}
 	@include for-tablet-only{
 		bottom: 6%;
     left: 2%;
@@ -207,7 +224,8 @@
 			  
 				@include for-tablet-only {
 				  margin-top: 0;
-				  padding-left: 13%;
+				  display: flex;
+				  justify-content: center;
 				
 				}
 			  
@@ -224,8 +242,8 @@
 				@include for-tablet-only{
 					display: block;
 					border-radius: 50%;
-					height: 600px;
-					width: 600px;
+					height: 450px;
+					width: 450px;
 				}
 				@include phone{
 					display: block;
@@ -250,6 +268,9 @@
 						padding-right: unset;
 						padding-left: unset;
 						max-width: 1198px;
+						@include tablet-portrait{
+							max-width: 1140px ;
+						}
 					}
 				}
 			  
@@ -336,6 +357,11 @@
 				@include phone {
 					margin-bottom: 0;
 				}
+				.container{
+					@include tablet-portrait{
+					display: flex;
+					}
+				}
 				.grid-content {
 					border-radius: 500px;
 					border: 1px solid rgba($ods-lime, 0.3);
@@ -353,7 +379,7 @@
 						grid-template-columns: repeat(1,1fr);
 					}
 					@include phone {
-					
+					width: 100%;
 						display: inline-flex;
 padding: 56px 65px;
 flex-direction: column;
@@ -368,6 +394,9 @@ gap: 32px;
     align-items: center;
 						}
 						@include phone {
+							display: flex;
+    flex-direction: column;
+    align-items: center;
 							border-bottom: 1px solid rgba($ods-light-grey, 0.1);
 							// margin-bottom: 32px;
 							gap: 16px;
@@ -488,4 +517,7 @@ gap: 32px;
 			}
 		}
 	}
+}
+.window{
+	color: #ffff;
 }

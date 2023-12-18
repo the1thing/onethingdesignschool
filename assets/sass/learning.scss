@@ -26,6 +26,9 @@ section {
 							line-height: 80px;
 
 						}
+						@include tablet-portrait{
+							font-size: 64px;
+						}
 					}
 					svg {
 						@include for-tablet-only {}
@@ -55,6 +58,9 @@ section {
 					font-weight: 400;
 line-height: 40px; /* 166.667% */
 width: 384px;
+@include tablet-portrait{
+	width: 328px ;
+}
 span{
 	font-family: "galano-grotesque-medium";
 }
@@ -115,7 +121,10 @@ span{
 				width: 472px;
 			
 				cursor: pointer;
-				@include for-tablet-only {}
+				@include for-tablet-only {
+				height: 380px;
+
+				}
 				@include phone {
 					height: auto;
 					width: 100%;
@@ -127,6 +136,9 @@ span{
 					@include for-tablet-only {			
                   font-size: 32px;
 					}
+					@include phone{
+						font-size: 24px;
+					}
 				}
 				.card-body {
 					width: 336px;
@@ -137,6 +149,12 @@ span{
 					padding: 8px 0;
 					@include for-tablet-only{
 						width: 200px;
+					}
+					@include tablet-portrait{
+						width: 274px;
+					}
+					@include phone {
+						width: 300px;
 					}
 				}
 				&.card1{

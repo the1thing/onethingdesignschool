@@ -142,6 +142,9 @@ width: 267px;
     font-weight: 400;
     line-height: 40px; /* 166.667% */
 width: 495px;
+@include tablet-portrait{
+    width: 476px ;
+}
 
     @include phone{
         font-family: "galano-grotesque-regular";
@@ -227,6 +230,9 @@ width: 267px;
       .upscroll-image {
         width: 100%;
         height: auto;
+        @include tablet-portrait{
+            width: 74%;
+        }
         // animation: upscrollImage 4s linear infinite;
         // animation-direction: reverse;
       }
@@ -261,6 +267,14 @@ width: 267px;
        
         
     }
+    .gallery-phone{
+   z-index: -10;
+    }
+    .gallery-phone2{
+   z-index: -10;
+
+
+    }
 
     
     
@@ -282,19 +296,26 @@ width: 267px;
          }
 }
 .phone-scrolling-image{
+    object-fit: cover;
+    border-radius: 16px;
     @include phone {
         width: 240px;
         height: 100px !important;
+
         
     }
     @include for-tablet-only {
         width: 240px;
         height: 120px;
+
         
     }
 
 }
 .phone-upscroll-image{
+    border-radius: 15%;
+
+    object-fit: cover;
     @include phone{
     width: 240px;
 height: 100px !important;

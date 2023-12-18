@@ -135,6 +135,9 @@
 				}
 			}
 			.cta-wrapper{
+				@include phone{
+					width: 100%;
+				}
 				a{
 					@include phone{
 						width: 100%;
