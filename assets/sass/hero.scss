@@ -152,6 +152,7 @@
 			}
 			&.type-span-2 {
 				padding-left: 120px;
+				white-space: nowrap;
 				@include for-tablet-only {
 					padding-left: 240px;
 				}

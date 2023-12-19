@@ -134,4 +134,8 @@ gsap.to(".scrollimgzoom", {
       squareImage.style.opacity = '1'; // Optionally fade in the original image
     });
   </script>
+  <!-- <script>
+   const width=document.querySelector('.width')
+   width.innerHTML=window.innerHeight
+   </script> -->
  

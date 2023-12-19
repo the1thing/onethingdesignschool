@@ -149,18 +149,17 @@ $(document).ready(function() {
 </script> -->
 <script>
 
-// function setupAnimations() {
-	
+function setupAnimations() {
 	const cards = gsap.utils.toArray(".cardss");
 cards.forEach((card, index) => {
 	
   const tween = gsap.to(card, {
     scrollTrigger: {
       trigger: card,
-      start: () => window.innerWidth>1000?`top bottom-=100`:`top top-=40`,
-      end: () => window.innerWidth>1000?`top top+=40`:'top top+=90',        //scroller-end
+      start: () =>`top bottom-=100`,
+      end: () =>`top top+=40`,        //scroller-end
       scrub: true,
-    //   markers: true,
+      markers: true,
       invalidateOnRefresh: true,
     },
     ease: "none",
@@ -169,28 +168,65 @@ cards.forEach((card, index) => {
 
   ScrollTrigger.create({
     trigger: card,
-    start: ()=>window.innerWidth>1000?"top 18%":`top 10%`,         //scroller-start-pin
+    start: ()=>"top 18%",         //scroller-start-pin
     pin: true,
 	pinSpacing: false,
-    // markers: true,
+    markers: true,
     id: 'pin',
-    end: () => window.innerWidth > 1000 ? 'top 70%' : 'top 5%',   //scroller-end-pin
+    end: () =>'top 70%' ,   //scroller-end-pin
 	endTrigger:'.template-faq',
     invalidateOnRefresh: true,	
 });
-
 })
-function triggerWindowResize() {
-  var event = window.document.createEvent('UIEvents');
-  event.initUIEvent('resize', true, false, window, 0);
-  window.dispatchEvent(event);
+console.log("animation")
 }
-window.onload = function () {
-  // Your other initialization code here
-  
-  // Trigger window resize
-  triggerWindowResize();
-};
+function setupPhoneAnimations() {
+	const cards = gsap.utils.toArray(".cardss");
+cards.forEach((card, index) => {
+	
+  const tween = gsap.to(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: () => `top top-=40`,
+      end: () => 'top top+=90',        //scroller-end
+      scrub: true,
+      markers: true,
+      invalidateOnRefresh: true,
+    },
+    ease: "none",
+	duration: 0.4,
+  });
+
+  ScrollTrigger.create({
+    trigger: card,
+    start: ()=>`top 10%`,         //scroller-start-pin
+    pin: true,
+	pinSpacing: false,
+    markers: true,
+    id: 'pin',
+    end: () => 'top 5%',   //scroller-end-pin
+	endTrigger:'.template-faq',
+    invalidateOnRefresh: true,	
+});
+})
+console.log("phone animation")
+}
+function triggerResizeEvent() {
+	console.log("resize")
+	window.dispatchEvent(new Event('resize'));
+}
+document.addEventListener('DOMContentLoaded', function () {
+	// console.log("loaded")
+	triggerResizeEvent()
+if(window.innerWidth>1000){
+	setupAnimations();
+
+}
+else{
+	setupPhoneAnimations()
+}
+//   triggerResizeEvent(); // Trigger a resize event after setting up animations
+});
 </script>
 <!-- <script>
 	var StackCards = function(element) {
