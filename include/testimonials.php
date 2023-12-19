@@ -160,7 +160,7 @@ cards.forEach((card, index) => {
       start: () => window.innerWidth>1000?`top bottom-=100`:`top top-=40`,
       end: () => window.innerWidth>1000?`top top+=40`:'top top+=90',        //scroller-end
       scrub: true,
-      markers: true,
+    //   markers: true,
       invalidateOnRefresh: true,
     },
     ease: "none",
@@ -172,7 +172,7 @@ cards.forEach((card, index) => {
     start: ()=>window.innerWidth>1000?"top 18%":`top 10%`,         //scroller-start-pin
     pin: true,
 	pinSpacing: false,
-    markers: true,
+    // markers: true,
     id: 'pin',
     end: () => window.innerWidth > 1000 ? 'top 70%' : 'top 5%',   //scroller-end-pin
 	endTrigger:'.template-faq',
