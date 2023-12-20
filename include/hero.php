@@ -1,4 +1,4 @@
-<section class="ods-hero-wrapper">
+<section class="ods-hero-wrapper" id="zoomBg">
    <div class="left-container">
       <h1 class="hero-big-text">
 
@@ -21,7 +21,7 @@
                         <!-- <div class="scrollimgzoom" style="background: url(assets/images/home/hero-circle.png)"></div>  -->
                         <div class="video-container scrollimgzoomcontainer">
   <!-- <video src="assets/images/home/video3.mp4"  autoplay muted class="scrollimgzoom"></video> -->
-                        <div class="scrollimgzoom" style="background: url(assets/images/home/man-img.png);background-position:35% 0%;"></div> 
+                        <div class="scrollimgzoom" style="background: url(assets/images/home/main-img.png);background-position:35% 0%;background-repeat:no-repeat;background-size: cover;"></div> 
 
 </div>                  
                     <!-- </div> -->
@@ -96,16 +96,18 @@
 // });
 
 gsap.to(".scrollimgzoom", {
-  width: "100%",
-  height:"544px",
-  left:"0%",
-  borderRadius: "300px",
+//   width: "100%",
+width:"1044px",
+//   height:"544px",
+height:"595px",
+//   left:"0%",          //new-animation
+  borderRadius: "40px",
   duration: 10,
   ease: "power2.inOut", 
   scrollTrigger: {
     trigger: ".scrollimgzoom",
-    start: "top 90%",
-    end: "bottom 50%",
+    start: "top 110%",
+    end: "bottom 80%",
     scrub: true,
   },
 });
@@ -138,4 +140,22 @@ gsap.to(".scrollimgzoom", {
    const width=document.querySelector('.width')
    width.innerHTML=window.innerHeight
    </script> -->
- 
+   <script>
+    window.addEventListener('scroll', function() {
+      // Get the scroll position
+      var scrollPos = window.scrollY || window.scrollTop || document.documentElement.scrollTop;
+      var newSize
+      // Calculate the new background size based on the scroll position
+      if(window.innerWidth>1000){
+         newSize = 120 + scrollPos * 0.1;
+      }
+      if(window.innerWidth<1000){
+         newSize = 200 + scrollPos * 0.1;
+
+      }
+        // Adjust the factor based on your preference
+
+      // Update the background size
+      document.getElementById('zoomBg').style.backgroundSize = newSize + '% ' + newSize + '%';
+    });
+  </script>
