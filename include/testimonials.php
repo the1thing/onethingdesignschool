@@ -159,7 +159,7 @@ cards.forEach((card, index) => {
       start: () =>`top bottom-=100`,
       end: () =>`top top+=40`,        //scroller-end
       scrub: true,
-      markers: true,
+    //   markers: true,
       invalidateOnRefresh: true,
     },
     ease: "none",
@@ -171,7 +171,7 @@ cards.forEach((card, index) => {
     start: ()=>"top 18%",         //scroller-start-pin
     pin: true,
 	pinSpacing: false,
-    markers: true,
+    // markers: true,
     id: 'pin',
     end: () =>'top 70%' ,   //scroller-end-pin
 	endTrigger:'.template-faq',
@@ -190,7 +190,7 @@ cards.forEach((card, index) => {
       start: () => `top top-=40`,
       end: () => 'top top+=90',        //scroller-end
       scrub: true,
-      markers: true,
+    //   markers: true,
       invalidateOnRefresh: true,
     },
     ease: "none",
@@ -202,7 +202,7 @@ cards.forEach((card, index) => {
     start: ()=>`top 10%`,         //scroller-start-pin
     pin: true,
 	pinSpacing: false,
-    markers: true,
+    // markers: true,
     id: 'pin',
     end: () => 'top 5%',   //scroller-end-pin
 	endTrigger:'.template-faq',
