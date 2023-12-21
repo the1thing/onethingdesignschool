@@ -169,7 +169,7 @@ function hasScrolled() {
 	var st = $(this).scrollTop();
 	if(Math.abs(lastScrollTop - st) <= delta) return;
 	if(window.location.pathname.includes('contact')){
-		if(st > lastScrollTop && st > 10) {
+		if(st > lastScrollTop && st > 5) {
 			$('header').removeClass('nav-down').addClass('nav-up');
 		} else {
 			if(st + $(window).height() < $(document).height()) {

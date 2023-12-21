@@ -14,7 +14,7 @@
 			<div class="testimonial-decking-card-container">
 				<div class="container card-deck-js" id="cardDeck">
 					
-					<div class="cardss pink" style="transform: translateY(0px);">
+					<div class="cardss pink cards1" style="transform: translateY(0px);">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="cardss yellow">
+					<div class="cardss yellow cards2">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="cardss blue">
+					<div class="cardss blue cards3">
 						<div class="card-body">
 							<div class="group-content">
 								<div class="visual-glance">
@@ -146,164 +146,118 @@ $(document).ready(function() {
   });
 
 	
-</script> -->
+</script> --> 
 <script>
 
-function setupAnimations() {
-	const cards = gsap.utils.toArray(".cardss");
-cards.forEach((card, index) => {
+// function setupAnimations() {
+// 	const cards = gsap.utils.toArray(".cardss");
+// cards.forEach((card, index) => {
 	
-  const tween = gsap.to(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: () =>`top bottom-=100`,
-      end: () =>`top top+=40`,        //scroller-end
-      scrub: true,
-    //   markers: true,
-      invalidateOnRefresh: true,
-    },
-    ease: "none",
-	duration: 0.4,
-  });
-
-  ScrollTrigger.create({
-    trigger: card,
-    start: ()=>"top 18%",         //scroller-start-pin
-    pin: true,
-	pinSpacing: false,
-    // markers: true,
-    id: 'pin',
-    end: () =>'top 70%' ,   //scroller-end-pin
-	endTrigger:'.template-faq',
-    invalidateOnRefresh: true,	
-});
-})
-console.log("animation")
-}
-function setupPhoneAnimations() {
-	const cards = gsap.utils.toArray(".cardss");
-cards.forEach((card, index) => {
+//   const tween = gsap.to(card, {
+//     scrollTrigger: {
+//       trigger: card,
+//       start: () =>`top bottom-=100`,
+//       end: () =>`top top+=40`,        //scroller-end
+//       scrub: true,
+//       markers: true,
+//       invalidateOnRefresh: true,
+//     },
+//     ease: "none",
+// 	duration: 0.4,
 	
-  const tween = gsap.to(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: () => `top top-=40`,
-      end: () => 'top top+=90',        //scroller-end
-      scrub: true,
-    //   markers: true,
-      invalidateOnRefresh: true,
-    },
-    ease: "none",
-	duration: 0.4,
-  });
+//   });
+//   ScrollTrigger.create({
+//     trigger: card,
+//     start: ()=>"top 18%",         //scroller-start-pin
+//     pin: true,
+// 	pinSpacing: false,
+//     markers: true,
+//     id: 'pin',
+//     end: () =>'top 70%' ,   //scroller-end-pin
+// 	endTrigger:'.template-faq',
+//     invalidateOnRefresh: true,	
+// });
+// })
 
-  ScrollTrigger.create({
-    trigger: card,
-    start: ()=>`top 10%`,         //scroller-start-pin
-    pin: true,
-	pinSpacing: false,
-    // markers: true,
-    id: 'pin',
-    end: () => 'top 5%',   //scroller-end-pin
-	endTrigger:'.template-faq',
-    invalidateOnRefresh: true,	
-});
-})
-console.log("phone animation")
-}
-function triggerResizeEvent() {
-	console.log("resize")
-	window.dispatchEvent(new Event('resize'));
-}
-document.addEventListener('DOMContentLoaded', function () {
-	// console.log("loaded")
-	triggerResizeEvent()
-if(window.innerWidth>1000){
-	setupAnimations();
+// }
 
-}
-else{
-	setupPhoneAnimations()
-}
-//   triggerResizeEvent(); // Trigger a resize event after setting up animations
-});
+// function setupPhoneAnimations() {
+// 	const cards = gsap.utils.toArray(".cardss");
+// cards.forEach((card, index) => {
+	
+//   const tween = gsap.to(card, {
+//     scrollTrigger: {
+//       trigger: card,
+//       start: () => `top top-=40`,
+//       end: () => 'top top+=90',        //scroller-end
+//       scrub: true,
+//       markers: true,
+//       invalidateOnRefresh: true,
+//     },
+//     ease: "none",
+// 	duration: 0.4,
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: card,
+//     start: ()=>`top 10%`,         //scroller-start-pin
+//     pin: true,
+// 	pinSpacing: false,
+//     markers: true,
+//     id: 'pin',
+//     end: () => 'top 5%',   //scroller-end-pin
+// 	endTrigger:'.template-faq',
+//     invalidateOnRefresh: true,	
+// });
+// })
+// }
+// // function triggerResizeEvent() {
+// // 	console.log("resize")
+// // 	window.dispatchEvent(new Event('resize'));
+// // }
+// // triggerResizeEvent()
+
+// document.addEventListener('DOMContentLoaded', function () {
+// 	// triggerResizeEvent()
+// if(window.innerWidth>1000){
+// 	setupAnimations();
+
+// }
+// else{
+// 	setupPhoneAnimations()
+// }
+// });
+
 </script>
-<!-- <script>
-	var StackCards = function(element) {
-  this.element = element;
-  this.items = this.element.getElementsByClassName("cardss");
-  console.log(this.items)
-  this.scrollingListener = false;
-  this.scrolling = false;
-  initStackCardsEffect(this);
-};
+<script>
 
-function initStackCardsEffect(element) {
-  // use Intersection Observer to trigger animation
-  var observer = new IntersectionObserver(stackCardsCallback.bind(element));
-  observer.observe(element.element);
-}
+// const cardBlocks = document.querySelectorAll(".cardss");
 
-function stackCardsCallback(entries) {
-  // Intersection Observer callback
-  if (entries[0].isIntersecting) {
-    // cards inside viewport - add scroll listener
-    if (this.scrollingListener) return; // listener for scroll event already added
-    stackCardsInitEvent(this);
-  } else {
-    // cards not inside viewport - remove scroll listener
-    if (!this.scrollingListener) return; // listener for scroll event already removed
-    window.removeEventListener("scroll", this.scrollingListener);
-    this.scrollingListener = false;
-  }
-}
+// cardBlocks.forEach((cardBlock) => {
+//   cardBlock.style.paddingBottom = `${Math.max(cardBlock.children.length, 1)}em`;
 
-function stackCardsInitEvent(element) {
-  element.scrollingListener = stackCardsScrolling.bind(element);
-  window.addEventListener("scroll", element.scrollingListener);
-}
-
-function stackCardsScrolling() {
-  if (this.scrolling) return;
-  this.scrolling = true;
-  window.requestAnimationFrame(animateStackCards.bind(this));
-}
-
-function animateStackCards() {
-  var top = this.element.getBoundingClientRect().top;
-  var offsetTop = 100,
-    cardHeight = 300,
-    marginY = 15;
-  for (var i = 0; i < this.items.length; i++) {
-    // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
-    var scrolling = offsetTop - top - i * (cardHeight + marginY);
-    // debugger;
-    if (scrolling > 0) {
-	
-      // card is fixed - we can scale it down
-    //   this.items[i].setAttribute(
-    //     "style",
-    //     "transform: translateY(" +
-    //       marginY * i +
-    //       "px) "
-    //   );
-    }
-  }
-
-  this.scrolling = false;
-}
-
-var stackCards = document.getElementsByClassName("card-deck-js");
-console.log(stackCards,"stack")
-var intersectionObserverSupported =
-  "IntersectionObserver" in window && "IntersectionObserverEntry" in window;
-
-if (stackCards.length > 0 && intersectionObserverSupported) {
-  for (var i = 0; i < stackCards.length; i++) {
-    new StackCards(stackCards[i]);
-  }
-}
-</script> -->
+//   Array.from(cardBlock.children).forEach(
+//     (card, i) => (card.style.transform = `translateY(${i}em)`)
+//   );
+// });
 
 
-	
+	// Register the scroll event
+// window.addEventListener('scroll', onScroll, false);
+
+// Get all the section references
+// var sectionOne = document.querySelector('.cards1');
+// var sectionTwo = document.querySelector('.cards2');
+// var sectionThree = document.querySelector('.cards3');
+
+
+
+// function addClass(elem) {
+//   elem.classList.add('fixed');
+// }
+
+// function removeClass(elemOne, elemTwo) {
+//   elemOne.classList.remove('fixed');
+//   elemTwo.style.marginTop = '0px';
+// }
+</script>

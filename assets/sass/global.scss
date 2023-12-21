@@ -5,9 +5,13 @@ html {
 body {
 	font-size: 16px;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
+	// overflow-x: hidden;
+	overflow-x: clip;
+
 	@include phone {
-		overflow-x: hidden;
+		// overflow-x: hidden;
+		overflow-x: clip;
+
 	}
 }
 
@@ -47,7 +51,9 @@ figure {
 }
 
 .page-wrapper {
-	overflow: hidden;
+	// overflow: hidden;
+	overflow: clip;
+
 }
 
 

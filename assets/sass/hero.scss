@@ -220,6 +220,7 @@
 				padding-bottom: 64px;
 			}
 			.hero-video-wrapper {
+				position: relative;
 				margin-top: -40px;
 				margin-bottom: 64px;
 			  
@@ -232,30 +233,104 @@
 			  
 				@include phone {
 				  margin-top: 24px;
-				padding: 32px;
+				padding: unset;
 				}
 				@include iphone{
-					padding: 0px 36px;
+					// padding: 0px 36px;
+				padding: unset;
+
 				}
 				
 			  .hero-img{
-				display: none;
+				display: none; 
 				@include for-tablet-only{
 					display: block;
-					border-radius: 50%;
-					height: 450px;
-					width: 450px;
+					// border-radius: 50%;
+					// height: 450px;
+					width: 100%;
+					padding: 56px 0;
 				}
 				@include phone{
 					display: block;
-					border-radius: 50%;
-					height: 350px;
-					width: 350px;
+					// border-radius: 50%;
+					// height: 350px;
+					// width: 350px;
+					width: 100%;
+					padding: 56px 0 20px 0;
+
 				}
 				@include iphone{
-					height: 300px;
-					width: 300px;
+					// height: 300px;
+					// width: 300px;
+					width: 100%;
+					padding: 56px 0 16px 0;
+
+
 				}
+			}
+			
+			.scroll-down-div{
+				
+				position: absolute;
+				top: 20%;
+    right: 3%;
+	align-items: center;
+				display: flex;
+				gap: 8px;
+				transform: translate(-50%, -50%);
+      opacity: 1;
+      transition: opacity 0.5s ease;
+	  @include for-tablet-only{
+		display: none;
+	  }
+	  @include phone{
+		display: none;
+	  }
+				.scroll-content-div{
+					h6{
+						color: #FFF;
+font-family: "galano-grotesque-semibold";
+font-size: 16px;
+
+line-height: 130%; /* 20.8px */
+					}
+					p{
+						color: #676767;
+font-family:"galano-grotesque-regular";
+line-height: 130%; /* 18.2px */
+					}
+				}
+				.mouse-btn{
+
+					width: 14px;
+                 height: 29px;
+					border: 1px solid white;
+					border-radius: 30px;
+					display: flex;
+					flex-shrink: 0;
+				.mouse-scroll{
+	
+					display: block;
+					width: 3px;
+					height: 6px;
+					background: white;
+					margin: auto;
+					animation: scrolling 1.8s linear infinite;
+					border-radius: 8px;
+				  
+				  @keyframes scrolling {
+					0% {
+					  opacity: 0;
+					  transform: translateY(-12px);
+					}
+				  
+					100% {
+					  opacity: 1;
+					  transform: translateY(10px);
+					}
+				  }
+				}
+			}
 			}
 				.animate{
                     @include for-tablet-only{

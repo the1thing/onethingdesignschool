@@ -1,5 +1,5 @@
 .testimonial-wrapper {
-	margin-bottom: 120px;
+	// margin-bottom: 120px;
 	padding-top: 120px;
 	position: relative;
 	@include for-tablet-only {
@@ -51,9 +51,9 @@
 			  .card-deck-js{
 				// display: unset;
 				// height: 240vh;
-	// 			display: flex;
-    // flex-direction: column;
-    // gap: 24px;
+				display: flex;
+    flex-direction: column;
+    gap: 24px;
 	// overflow: hidden;
 	height: 200%;
 	
@@ -89,6 +89,7 @@
 				&.yellow {
 					background: $yellow;
 					// margin-top: 20px !important;
+					top: 40%;
 				}
 				&.blue {
 					background: $blue;
@@ -100,8 +101,8 @@
 				}
 			}
 			.cardss {
-				// position: sticky;
-				// top: 0; /* required */
+				position: sticky;
+				top: 20%; /* required */
 				// margin:0.5em;
 				
 				height: 500px;
@@ -110,22 +111,36 @@
 				@include for-tablet-only {
 					// height: auto;
 					height: 800px ;
+				top: 10%; /* required */
+
 					border-radius: 24px;
 
 				}
 				@include phone {
 					height: auto;
 					border-radius: 24px;
+				top: 10%; /* required */
+
 				}
 				&.yellow {
 					background: $yellow;
-					top: 20px;
+					// top: 20px;
+					top: 26%;
+
 					// margin-top: 20px !important;
+					@include for-tablet-only{
+						top: 16%;
+						// top: unset;
+					}
+					@include phone{
+						top: 14%;
+					}
 					
 				}
 				&.blue {
 					background: $blue;
-					top: 40px;
+					top: 40%;
+
 
 					// margin-top: 40px !important;
 				

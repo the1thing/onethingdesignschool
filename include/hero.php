@@ -26,8 +26,19 @@
 </div>                  
                     <!-- </div> -->
         </div>
+      
     </section>
-    <img src="assets/images/home/samp-img.png"  class="hero-img">
+    <img src="assets/images/home/samp.png"  class="hero-img">
+    <div id="contentToHide" class="scroll-down-div">
+      <div class="scroll-content-div">
+      <h6>Scroll down</h6>
+      <p>to discover more</p>
+</div>
+<span class="mouse-btn">
+<span class="mouse-scroll"></span>
+</span>
+
+</div>
    </div>
    <div class="hero-stats-wrapper">
       <div class="container">
@@ -110,7 +121,9 @@ height:"595px",
     end: "bottom 80%",
     scrub: true,
   },
+  
 });
+ScrollTrigger.refresh(true);
 
 
 
@@ -150,12 +163,29 @@ height:"595px",
          newSize = 120 + scrollPos * 0.1;
       }
       if(window.innerWidth<1000){
-         newSize = 200 + scrollPos * 0.1;
+         newSize = 200 + scrollPos * 0;
 
       }
         // Adjust the factor based on your preference
 
       // Update the background size
+      if(window.innerWidth>1000){
       document.getElementById('zoomBg').style.backgroundSize = newSize + '% ' + newSize + '%';
+      }
+    });
+  </script>
+  <script>
+    var contentToHide = document.getElementById('contentToHide');
+    
+    window.addEventListener('scroll', function() {
+      // Adjust the scroll height at which the element should be hidden
+      var scrollHeightToHide = 240;
+      
+      // Check if the scroll position is beyond the specified height
+      if (window.scrollY > scrollHeightToHide) {
+         contentToHide.style.opacity = 0;
+      } else {
+        contentToHide.style.opacity = 1;
+      }
     });
   </script>
