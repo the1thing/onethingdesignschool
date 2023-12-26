@@ -13,47 +13,6 @@ AOS.init({
 })
 })
 
-$(document).ready(function() {
-	const cards = gsap.utils.toArray(".testimonialcard");
-  
-	cards.forEach((card, index) => {
-	  const yOffset = 50;
-	  const marginTop = index * yOffset;
-        gsap.set(card, { marginTop: `${marginTop}px` });
-	  const animationTimeline = gsap.timeline({ paused: true });
-	  animationTimeline.to(card, {
-		// scale: 1 - (cards.length - index) * 0.025,
-		duration: 0.3,
-		// ease: "power2.inOut",
-		// y: `-600px`,
-
-	  });
-	  
-	  const tween = gsap.to(card, {
-		// y: index * yOffset,           //changable value
-		scrollTrigger: {
-		  trigger: card,
-		  start: "top bottom-=100",
-		  end: "top top+=40",
-		  scrub: true,
-		//   y:index*yOffset,
-		  invalidateOnRefresh: true,
-		  animation: animationTimeline,
-		},
-	  });
-	  
-	  ScrollTrigger.create({
-		trigger: card,
-		start: "top 15%",
-		pin: true,
-		pinSpacing: false,
-		id: 'pin',
-		end: "center 60%",
-		invalidateOnRefresh: true,
-		endTrigger: ".template-faq",
-	  });
-	});
-  });
   
 // gsap.registerPlugin(ScrollTrigger);
 // let sections = gsap.utils.toArray(".curriculum-card");
@@ -70,48 +29,6 @@ $(document).ready(function() {
 //     }
 //   });
 
-
-
-// const scrollContainers = document.querySelectorAll("#infiniteScroll--left");
-// console.log(scrollContainers,"scroll")
-// scrollContainers.forEach((container) => {
-// 	const scrollWidth = container.scrollWidth;
-// 	let isScrollingPaused = false;
-// 	window.addEventListener("load", () => {
-// 		self.setInterval(() => {
-// 			if (isScrollingPaused) {
-// 				return;
-// 			}
-// 			const first = container.querySelector("article");
-
-// 			if (!isElementInViewport(first)) {
-// 				container.appendChild(first);
-// 				container.scrollTo(container.scrollLeft - first.offsetWidth, 0);
-// 			}
-// 			if (container.scrollLeft !== scrollWidth) {
-// 				container.scrollTo(container.scrollLeft + 1, 0);
-// 			}
-// 		}, 15);
-// 	});
-
-// 	function isElementInViewport(el) {
-// 		var rect = el.getBoundingClientRect();
-// 		return rect.right > 0;
-// 	}
-
-// 	function pauseScrolling() {
-// 		isScrollingPaused = true;
-// 	}
-
-// 	function resumeScrolling() {
-// 		isScrollingPaused = false;
-// 	}
-// 	const allArticles = container.querySelectorAll("article");
-// 	for (let article of allArticles) {
-// 		article.addEventListener("mouseenter", pauseScrolling);
-// 		article.addEventListener("mouseleave", resumeScrolling);
-// 	}
-// });
 
 
 
@@ -143,6 +60,8 @@ $(document).ready(function() {
 // });
 // });
 
+
+//header
 $(window).on("scroll", function() {
 	if($(window).scrollTop() > 150) {
 		$(".header").addClass("is-fixed");

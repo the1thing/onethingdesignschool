@@ -229,35 +229,3 @@ $(document).ready(function() {
 // });
 
 </script>
-<script>
-
-// const cardBlocks = document.querySelectorAll(".cardss");
-
-// cardBlocks.forEach((cardBlock) => {
-//   cardBlock.style.paddingBottom = `${Math.max(cardBlock.children.length, 1)}em`;
-
-//   Array.from(cardBlock.children).forEach(
-//     (card, i) => (card.style.transform = `translateY(${i}em)`)
-//   );
-// });
-
-
-	// Register the scroll event
-// window.addEventListener('scroll', onScroll, false);
-
-// Get all the section references
-// var sectionOne = document.querySelector('.cards1');
-// var sectionTwo = document.querySelector('.cards2');
-// var sectionThree = document.querySelector('.cards3');
-
-
-
-// function addClass(elem) {
-//   elem.classList.add('fixed');
-// }
-
-// function removeClass(elemOne, elemTwo) {
-//   elemOne.classList.remove('fixed');
-//   elemTwo.style.marginTop = '0px';
-// }
-</script>

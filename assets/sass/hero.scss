@@ -12,13 +12,14 @@
 	}
 	.hero-big-text {
 		position: relative;
-		padding-top: 180px;
+		// padding-top: 180px;
+		padding-top: 100px ;
 		@include for-tablet-only {
-			padding-top: 124px;
+			padding-top: 100px;
 			padding-bottom: 64px;
 		}
 		@include phone {
-			padding-top: 80px;
+			padding-top: 30px;
 			padding-bottom: 0px;
 			line-height: 42px;
 		}
@@ -43,19 +44,19 @@
 		}
 		.elem1{
 			position: absolute;
-			top: 20%;
-			left: 0%;
-			z-index: 1;
+			top: 12%;
+    left: 6%;
+    z-index: 1;
 			transform: rotate(0deg);
 			animation: coming 0.5s linear,rotateAnimation 3s linear infinite; /* 5s duration, linear timing, infinite loop */
-			
+			width: 60px;
 			@include for-tablet-only{
 				top: 9%;
 			}
 			@include phone{
 				height: 40px;
 				width: 40px;
-				top: 14%;
+				top: 3%;
 			}
 			@keyframes rotateAnimation {
 				0% {
@@ -71,7 +72,7 @@
 				  }
 				  100% {
 					// opacity: 1;
-					left: 0%; /* Move to the target position */
+					left: 6%; /* Move to the target position */
 				  }
 			  }
 			
@@ -207,17 +208,28 @@
 	}
 	section {
 		&.ods-hero-wrapper {
-			background-image: url('../images/backgrounds/hero-bg-dark.svg');
-			background-position: center center;
-			background-size: cover;
-			background-repeat: no-repeat;
+			// background-image: url('../images/backgrounds/hero-bg-dark.svg');
+			// background-position: center center;
+			// background-size: cover;
+			// background-repeat: no-repeat;
+			overflow: clip;
 			padding-top: 108px;
 			padding-bottom: 120px;
+			position: relative;
 			@include for-tablet-only {
 				padding-bottom: 72px;
 			}
 			@include phone {
 				padding-bottom: 64px;
+			}
+			.section-bg{
+				will-change: scale;
+				transform-origin: center;
+                position: absolute;
+				height: 100%;
+                width: 100%;
+				top: 0;
+				pointer-events: none;
 			}
 			.hero-video-wrapper {
 				position: relative;
@@ -321,12 +333,12 @@ line-height: 130%; /* 18.2px */
 				  @keyframes scrolling {
 					0% {
 					  opacity: 0;
-					  transform: translateY(-12px);
+					  transform: translateY(-6px);
 					}
 				  
 					100% {
 					  opacity: 1;
-					  transform: translateY(10px);
+					  transform: translateY(6px);
 					}
 				  }
 				}

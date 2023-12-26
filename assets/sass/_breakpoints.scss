@@ -123,6 +123,12 @@
   }
 }
 
+@mixin full-screen{
+  @media (height: 813px) and (width: 1440px) {
+    @content;
+  }
+}
+
 
 
 

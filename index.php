@@ -19,7 +19,7 @@ require_once './header.php';
          <?php include './include/hero.php'; ?>
       </div>
       
-      <div data-aos="fade-up"  class="template-import template-mentors">
+      <div data-aos="fade-up" data-aos-duration="900"  data-aos-offset="0" class="template-import template-mentors">
          <?php include './include/mentors.php'; ?>
       </div>
 

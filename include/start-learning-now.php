@@ -37,14 +37,25 @@
 </div>
 				</div>
 				<div class="learning-cards card2">
+				<div class="card-inner">
+
 					<h3 class="card-head">Interview<br/> Round</h3>
 					<p class="card-body">Our mentors will select 20 students through a careful interview process.</p>
+			
 				</div>
+<!-- <div class="no-hover"></div> -->
+
+</div>
+
 				<div class="learning-cards card3">
+				<div class="card-inner">
+
 					<h3 class="card-head">Course<br/> Begins</h3>
 					<p class="card-body">Pay the fee and receive curated pre-reads to help you prepare better for the class.</p>
 				</div>
+<!-- <div class="no-hover-card3"></div> -->
 
+</div>
 			</div>
 		</div>
 	</div>

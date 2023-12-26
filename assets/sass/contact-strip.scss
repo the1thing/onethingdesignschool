@@ -267,6 +267,9 @@ section {
 			
 				top: 24px 
 			}
+			@include full-screen{
+				top: -96px;
+			}
 		  }
 		 
 
@@ -583,7 +586,7 @@ section {
 
 		  }
   }
-  @include for-extra-large-screen{
+  @include for-extra-large-screen {
 	@keyframes element5Falling{
 		0% {
 			top: -20vh;
