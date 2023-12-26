@@ -111,16 +111,29 @@ span{
 }
 
 			.learning-cards {
-				display: flex;
-				flex-direction: column;
-				display: inline-flex;
-				padding: 40px 24px 40px 24px;
-				flex-direction: column;
-				border-radius: 40px;
-				position: relative;
-				overflow: hidden;
-				height: 472px;
-				width: 472px;
+				// display: flex;
+				// flex-direction: column;
+				// display: inline-flex;
+				// // padding: 40px 24px 40px 24px;
+				// padding: 10px 6px;
+				// flex-direction: column;
+				// border-radius: 40px;
+				// position: relative;
+				// overflow: hidden;
+				// height: 472px;
+				// width: 472px;
+				--padding-block: 40px;
+                --padding-inline: 24px;
+                display: flex;
+                flex-direction: column;
+                display: inline-flex;
+                padding: calc(var(--padding-block) * 0.2) calc(var(--padding-inline) * 0.2);
+                flex-direction: column;
+                border-radius: 40px;
+                position: relative;
+                overflow: hidden;
+                height: 472px;
+                width: 472px;
 			
 				cursor: pointer;
 				@include for-tablet-only {
@@ -131,6 +144,10 @@ span{
 					height: auto;
 					width: 100%;
 				}
+				.card-inner {
+                    padding: calc(var(--padding-block) * 0.8) calc(var(--padding-inline) * 0.8);
+                    height: 100%;
+                }
 				
 				.card-head {
 					color: $ods-white;
@@ -172,22 +189,33 @@ span{
 					@include phone {
 						transform: unset;
 					}
-					&:hover{
-						// transform: translate(10px, 50px) rotate(-2deg);
+					// &:hover{
+					// 	// transform: translate(10px, 50px) rotate(-2deg);
+					// 	// transform: translate(10px,25px) rotate(-2deg);
+					// 	@include for-tablet-only {}
+					// 	@include phone {
+					// 		transform: unset;
+					// 	}
+					// 	// .card-inner {
+					// 	// 	pointer-events: none;						
+					// 	//   }
+					// }
+					&:has(.card-inner:hover){
 						transform: translate(10px,25px) rotate(-2deg);
 						@include for-tablet-only {}
 						@include phone {
 							transform: unset;
 						}
-						.card-inner {
-							pointer-events: none;						
-						  }
+
 					}
 					
-					.card-inner {		
-						transform: translate(0);
-						transition: transform 0.3s ease; 
-					  }
+					// .card-inner {		
+					// 	transform: translate(0);
+					// 	transition: transform 0.3s ease; 
+					// 	height: 100%;
+					// 	padding: 30px 18px;
+						
+					//   }
 					  
 				}
 				&.card2{
@@ -202,22 +230,25 @@ span{
 					@include phone {
 						transform: unset;
 					}
-					&:hover{
+					&:has(.card-inner:hover){
 						// transform: translateY(20px) rotate(4.326deg);
 						transform: translate(-20px,50px) rotate(10deg);
 						@include for-tablet-only {}
 						@include phone {
 							transform: unset;
 						}
-						.card-inner {
-							pointer-events: none;
-						  }
+						// .card-inner {
+						// 	pointer-events: none;
+						//   }
 					}
 					
-					.card-inner {					
-						transform: translate(0);
-						transition: transform 0.3s ease; 
-					  }
+					// .card-inner {					
+					// 	transform: translate(0);
+					// 	transition: transform 0.3s ease; 
+					// 	height: 100%;
+					// 	padding: 30px 18px;
+
+					//   }
 					  
 				}
 				&.card3 {
@@ -232,24 +263,27 @@ span{
 					@include phone {
 						transform: unset;
 					}
-					&:hover{
+					&:has(.card-inner:hover){
 						// transform: translateY(10px) rotate(-2.334deg); 
 						// transform: translate(20px,25px) rotate(-12deg);
-					transform: translate(-10px, 16px) rotate(-6deg);
+					transform: translate(-20px, 16px) rotate(-3deg);
 
 						@include for-tablet-only {}
 						@include phone {
 							transform: unset;
 						}
-						.card-inner {
-							pointer-events: none;
-						  }
+						// .card-inner {
+						// 	pointer-events: none;
+						//   }
 					}   
 					
-					.card-inner {						
-						transform: translate(0);
-						transition: transform 0.3s ease; 
-					  }
+					// .card-inner {						
+					// 	transform: translate(0);
+					// 	transition: transform 0.3s ease; 
+					// 	height: 100%;
+					// 	padding: 30px 18px;
+
+					//   }
 				}
 				
 			}

@@ -43,7 +43,6 @@
 					<p class="card-body">Our mentors will select 20 students through a careful interview process.</p>
 			
 				</div>
-<!-- <div class="no-hover"></div> -->
 
 </div>
 
@@ -53,7 +52,6 @@
 					<h3 class="card-head">Course<br/> Begins</h3>
 					<p class="card-body">Pay the fee and receive curated pre-reads to help you prepare better for the class.</p>
 				</div>
-<!-- <div class="no-hover-card3"></div> -->
 
 </div>
 			</div>
@@ -61,6 +59,7 @@
 	</div>
 </section>
 <script>
+	
 // 	const cardContainer = document.getElementById('card-container');
 
 // cardContainer.addEventListener('mouseover', function (event) {
