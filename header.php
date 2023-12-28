@@ -152,12 +152,22 @@ jQuery(function($) {
 			scrollTop >= top - 45 && scrollTop < bottom - 45 ? Header.addClass('white') : Header.removeClass('white');
 		});
 	}
-	$(window).scroll(function() {
+	// if(!window.location.pathname.includes('contact')){
+		$(window).scroll(function() {
 		HeaderWhiteMode();
 	});
+	// }
+	
 });
 		
          </script>
+		 <script>
+			if(window.location.pathname.includes('/contact')){
+			const contactHeader=document.getElementById('header')
+			console.log(contactHeader,"header")
+			contactHeader.style.background="#0e100f"
+			}
+			</script>
 
 
 

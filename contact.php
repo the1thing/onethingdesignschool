@@ -62,7 +62,7 @@ require_once './header.php';
    <p class="error-text error-text-email">Please enter your email address</p>
 	<p class="error-text error-invalid-text-email">Please enter valid email address</p>
    <button><div class="cta-wrapper">
-					<a href="#" class="bttn bttn-primary bttn-primary-dark">
+					<a href="#" class="bttn bttn-primary contact-bttn-primary-dark">
 						<span>SUBMIT</span>
 					</a>
 				</div></button>
